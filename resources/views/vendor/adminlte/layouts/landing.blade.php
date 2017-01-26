@@ -15,7 +15,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <meta property="og:sitename" content="sgehealthcare.com" />
     <meta property="og:url" content="http://www.sgehealthcare.com" />
 
-    <title>{{ trans('adminlte_lang::message.landingdescriptionpratt') }}</title>
+    <title>SGE&MAK HEALTHCARE, INC.</title>
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('/css/all.css') }}" rel="stylesheet">
@@ -23,6 +23,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body data-spy="scroll" data-offset="0" data-target="#navigation">
