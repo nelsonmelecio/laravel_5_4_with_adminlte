@@ -41,12 +41,17 @@
                     <li><a href="#"><i class='fa fa-magic'></i> <span>Corrective Maintenance</span></a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class='fa fa-database'></i> <span>Manage Equipments</span></a></li>
-            <li><a href="#"><i class='fa fa-dollar'></i> <span>Manage Purchases</span></a></li>
-            <li><a href="#"><i class='fa fa-flag'></i> <span>Manage Departments</span></a></li>
-            <li><a href="#"><i class='fa fa-truck'></i> <span>Manage Manufacturers</span></a></li>
-            <li><a href="#"><i class='fa fa-tags'></i> <span>Manage Suppliers</span></a></li>
-            <li><a href="#"><i class='fa fa-map-marker'></i> <span>Manage Locations</span></a></li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-list'></i> <span>Manage Internal Records</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class='fa fa-database'></i> <span>Equipments</span></a></li>
+                    <li><a href="#"><i class='fa fa-dollar'></i> <span>Purchases</span></a></li>
+                    <li><a href="#"><i class='fa fa-flag'></i> <span>Departments</span></a></li>
+                    <li><a href="#"><i class='fa fa-truck'></i> <span>Manufacturers</span></a></li>
+                    <li><a href="#"><i class='fa fa-tags'></i> <span>Suppliers</span></a></li>
+                    <li><a href="#"><i class='fa fa-map-marker'></i> <span>Locations</span></a></li>
+                </ul>
+            </li>
             <li class="treeview">
                 <a href="#"><i class='fa fa-book'></i> <span>Manage Other List</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
@@ -61,7 +66,7 @@
                     <li><a href="#"><i class='fa fa-list-ul'></i> Status</a></li>
                     <li><a href="#"><i class='fa fa-list-ul'></i> Utilizations</a></li>
                     <li><a href="#"><i class='fa fa-list-ul'></i> Work Status</a></li>
-                `    <li><a href="#"><i class='fa fa-list-ul'></i> Work Types</a></li>
+                    <li><a href="#"><i class='fa fa-list-ul'></i> Work Types</a></li>
                 </ul>
             </li>
             <li><a href="#"><i class='fa fa-briefcase'></i> <span>Manage Employees</span></a></li>
