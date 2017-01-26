@@ -31,17 +31,41 @@
 
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
-            <li class="header">{{ trans('adminlte_lang::message.header') }}</li>
+            <li class="header">Menu</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
-            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.anotherlink') }}</span></a></li>
+            <li class="active"><a href="{{ url('home') }}"><i class='fa fa-home'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
             <li class="treeview">
-                <a href="#"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.multilevel') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-gears'></i> <span>Manage Services</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#">{{ trans('adminlte_lang::message.linklevel2') }}</a></li>
-                    <li><a href="#">{{ trans('adminlte_lang::message.linklevel2') }}</a></li>
+                    <li><a href="#"><i class='fa fa-wrench'></i> <span>Preventive Maintenance</span></a></li>
+                    <li><a href="#"><i class='fa fa-magic'></i> <span>Corrective Maintenance</span></a></li>
                 </ul>
             </li>
+            <li><a href="#"><i class='fa fa-database'></i> <span>Manage Equipments</span></a></li>
+            <li><a href="#"><i class='fa fa-dollar'></i> <span>Manage Purchases</span></a></li>
+            <li><a href="#"><i class='fa fa-flag'></i> <span>Manage Departments</span></a></li>
+            <li><a href="#"><i class='fa fa-truck'></i> <span>Manage Manufacturers</span></a></li>
+            <li><a href="#"><i class='fa fa-tags'></i> <span>Manage Suppliers</span></a></li>
+            <li><a href="#"><i class='fa fa-map-marker'></i> <span>Manage Locations</span></a></li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-book'></i> <span>Manage Other List</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class='fa fa-list-ul'></i> Classification Types</a></li>
+                    <li><a href="#"><i class='fa fa-list-ul'></i> Condition Status Types</a></li>
+                    <li><a href="#"><i class='fa fa-list-ul'></i> Critical Types</a></li>
+                    <li><a href="#"><i class='fa fa-list-ul'></i> Frequency Types</a></li>
+                    <li><a href="#"><i class='fa fa-list-ul'></i> Proficiency Types</a></li>
+                    <li><a href="#"><i class='fa fa-list-ul'></i> Request Types</a></li>
+                    <li><a href="#"><i class='fa fa-list-ul'></i> Risks</a></li>
+                    <li><a href="#"><i class='fa fa-list-ul'></i> Specifications</a></li>
+                    <li><a href="#"><i class='fa fa-list-ul'></i> Status</a></li>
+                    <li><a href="#"><i class='fa fa-list-ul'></i> Utilizations</a></li>
+                    <li><a href="#"><i class='fa fa-list-ul'></i> Work Status</a></li>
+                `    <li><a href="#"><i class='fa fa-list-ul'></i> Work Types</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class='fa fa-briefcase'></i> <span>Manage Employees</span></a></li>
+            <li><a href="#"><i class='fa fa-group'></i> <span>Manage User Accounts</span></a></li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
