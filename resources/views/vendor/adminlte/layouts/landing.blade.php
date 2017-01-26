@@ -50,7 +50,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">{{ trans('adminlte_lang::message.login') }}</a></li>
-                        <li><a href="{{ url('/register') }}">{{ trans('adminlte_lang::message.register') }}</a></li>
+                        <!-- <li><a href="{{ url('/register') }}">{{ trans('adminlte_lang::message.register') }}</a></li> -->
                     @else
                         <li><a href="/home">{{ Auth::user()->name }}</a></li>
                     @endif
@@ -65,7 +65,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         <div class="container">
             <div class="row centered">
                 <div class="col-lg-12">
-                    <h1>Acacha <b><a href="https://github.com/acacha/adminlte-laravel">adminlte-laravel</a></b></h1>
+                    <h1 style="font-size: 60px !important;">Welcome to <b><a href="https://www.sgehealthcare.com"> SGE&MAK Healtcare, Inc.</a></b></h1>
                     <h3>A <a href="https://laravel.com/">Laravel</a> {{ trans('adminlte_lang::message.laravelpackage') }}
                         scaffolding/boilerplate {{ trans('adminlte_lang::message.to') }} <a href="https://almsaeedstudio.com/preview">AdminLTE</a> {{ trans('adminlte_lang::message.templatewith') }}
                         <a href="http://getbootstrap.com/">Bootstrap</a> 3.0 {{ trans('adminlte_lang::message.and') }} <a href="http://blacktie.co/demo/pratt/">Pratt</a> Landing page</h3>
@@ -236,10 +236,10 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
             <div class="col-lg-5">
                 <h3>{{ trans('adminlte_lang::message.address') }}</h3>
                 <p>
-                    Av. Greenville 987,<br/>
-                    New York,<br/>
-                    90873<br/>
-                    United States
+                    Room 602-A, Culmat Bldg.,<br/>
+                    #1270 E. Rodriguez Sr., <br/>
+                    Avenue, Quezon City<br/>
+                    1102 Philippines
                 </p>
             </div>
 
@@ -268,10 +268,10 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <div id="c">
         <div class="container">
             <p>
-                <a href="https://github.com/acacha/adminlte-laravel"></a><b>admin-lte-laravel</b></a>. {{ trans('adminlte_lang::message.descriptionpackage') }}.<br/>
-                <strong>Copyright &copy; 2015 <a href="http://acacha.org">Acacha.org</a>.</strong> {{ trans('adminlte_lang::message.createdby') }} <a href="http://acacha.org/sergitur">Sergi Tur Badenas</a>. {{ trans('adminlte_lang::message.seecode') }} <a href="https://github.com/acacha/adminlte-laravel">Github</a>
+                <a href="https://github.com/acacha/adminlte-laravel"></a><b>SGE&MAK HEALTHCARE, INC.</b></a><br/>
+                <strong>Copyright &copy; 2015 <a href="http://www.sgeheathcare.com">www.sgehealthcare.com</a>. </strong>This theme is modified by: <a href="https://nelsonmelecio.com">Nelson T. Melecio</a>. 
                 <br/>
-                AdminLTE {{ trans('adminlte_lang::message.createdby') }} Abdullah Almsaeed <a href="https://almsaeedstudio.com/">almsaeedstudio.com</a>
+                This website is using AdminLTE theme created by Abdullah Almsaeed <a href="https://almsaeedstudio.com/">almsaeedstudio.com</a>
                 <br/>
                  Pratt Landing Page {{ trans('adminlte_lang::message.createdby') }} <a href="http://www.blacktie.co">BLACKTIE.CO</a>
             </p>
