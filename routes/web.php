@@ -20,6 +20,11 @@ Route::group(['middleware' => 'auth'], function () {
 //        // Uses Auth Middleware
 //    });
 
+
+Route::get('/risk', 'RiskController@index');
+
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
 });
+
+
