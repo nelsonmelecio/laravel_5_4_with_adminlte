@@ -43,7 +43,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#home" class="smoothScroll">{{ trans('adminlte_lang::message.home') }}</a></li>
-                    <li><a href="#desc" class="smoothScroll">{{ trans('adminlte_lang::message.description') }}</a></li>
+                    <li><a href="#desc" class="smoothScroll">Services</a></li>
                     <li><a href="#showcase" class="smoothScroll">{{ trans('adminlte_lang::message.showcase') }}</a></li>
                     <li><a href="#contact" class="smoothScroll">{{ trans('adminlte_lang::message.contact') }}</a></li>
                 </ul>
@@ -66,25 +66,18 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
             <div class="row centered">
                 <div class="col-lg-12">
                     <h1 style="font-size: 60px !important;">Welcome to <b><a href="https://www.sgehealthcare.com"> SGE&MAK Healtcare, Inc.</a></b></h1>
-                    <h3>A <a href="https://laravel.com/">Laravel</a> {{ trans('adminlte_lang::message.laravelpackage') }}
-                        scaffolding/boilerplate {{ trans('adminlte_lang::message.to') }} <a href="https://almsaeedstudio.com/preview">AdminLTE</a> {{ trans('adminlte_lang::message.templatewith') }}
-                        <a href="http://getbootstrap.com/">Bootstrap</a> 3.0 {{ trans('adminlte_lang::message.and') }} <a href="http://blacktie.co/demo/pratt/">Pratt</a> Landing page</h3>
-                    <h3><a href="{{ url('/register') }}" class="btn btn-lg btn-success">{{ trans('adminlte_lang::message.gedstarted') }}</a></h3>
+                    <h4>&nbsp;</h4>
+                    <h3><span>A <a href="#"><i>biomedical engineering</i></a> company and is solely dedicated</span></h3>
+                    <h3><span>in integrated biomedical engineering <a href="#"><i>maintenance</i></a> and <a href="#"> <i>management </i></a>services.</span></h3>
+                    <h4>&nbsp;</h4>
                 </div>
-                <div class="col-lg-2">
-                    <h5>{{ trans('adminlte_lang::message.amazing') }}</h5>
-                    <p>{{ trans('adminlte_lang::message.basedadminlte') }}</p>
-                    <img class="hidden-xs hidden-sm hidden-md" src="{{ asset('/img/arrow1.png') }}">
-                </div>
+            </div>
+            <div class="row centered">
+                <div class="col-lg-2"></div>
                 <div class="col-lg-8">
                     <img class="img-responsive" src="{{ asset('/img/app-bg.png') }}" alt="">
                 </div>
-                <div class="col-lg-2">
-                    <br>
-                    <img class="hidden-xs hidden-sm hidden-md" src="{{ asset('/img/arrow2.png') }}">
-                    <h5>{{ trans('adminlte_lang::message.awesomepackaged') }}</h5>
-                    <p>... {{ trans('adminlte_lang::message.by') }} <a href="http://acacha.org/sergitur">Sergi Tur Badenas</a> {{ trans('adminlte_lang::message.at') }} <a href="http://acacha.org">acacha.org</a> {{ trans('adminlte_lang::message.readytouse') }}</p>
-                </div>
+                <div class="col-lg-2"></div>
             </div>
         </div> <!--/ .container -->
     </div><!--/ #headerwrap -->
@@ -95,27 +88,131 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <div id="intro">
         <div class="container">
             <div class="row centered">
-                <h1>{{ trans('adminlte_lang::message.designed') }}</h1>
+                <h1>Our Core Services</h1>
                 <br>
                 <br>
-                <div class="col-lg-4">
-                    <img src="{{ asset('/img/intro01.png') }}" alt="">
-                    <h3>{{ trans('adminlte_lang::message.community') }}</h3>
-                    <p>{{ trans('adminlte_lang::message.see') }} <a href="https://github.com/acacha/adminlte-laravel">{{ trans('adminlte_lang::message.githubproject') }}</a>, {{ trans('adminlte_lang::message.post') }} <a href="https://github.com/acacha/adminlte-laravel/issues">{{ trans('adminlte_lang::message.issues') }}</a> {{ trans('adminlte_lang::message.and') }} <a href="https://github.com/acacha/adminlte-laravel/pulls">{{ trans('adminlte_lang::message.pullrequests') }}</a></p>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{{ asset('/img/intro01.png') }}" alt="">
+                        <h3>Fully Outsourced BioMedical Engineering Solutions</h3>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="{{ asset('/img/intro02.png') }}" alt="">
+                        <h3>Asset Management Programs and Condition Reporting</h3>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="{{ asset('/img/intro03.png') }}" alt="">
+                        <h3>Planned Preventive Maintenance & Calibration Programs</h3>
+                    </div>
                 </div>
-                <div class="col-lg-4">
-                    <img src="{{ asset('/img/intro02.png') }}" alt="">
-                    <h3>{{ trans('adminlte_lang::message.schedule') }}</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-                <div class="col-lg-4">
-                    <img src="{{ asset('/img/intro03.png') }}" alt="">
-                    <h3>{{ trans('adminlte_lang::message.monitoring') }}</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <br><br>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="{{ asset('/img/intro03.png') }}" alt="">
+                        <h3>Management of Hospital Biomedical Departments</h3>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="{{ asset('/img/intro01.png') }}" alt="">
+                        <h3>Breakdown/Corrective Maintenance Programs (Repairs)</h3>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="{{ asset('/img/intro02.png') }}" alt="">
+                        <h3>Asset Resource Management System (Software)</h3>
+                    </div>
                 </div>
             </div>
             <br>
+            <br>
             <hr>
+            <div class="row centered">
+                <h1>Other Value-Added Services</h1>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        <span><i class="fa fa-calendar-check-o fa-5x"></i></span>
+                        <h3>Spare Part Planning and Procurement Supports</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <span><i class="fa fa-diamond fa-5x"></i></span>
+                        <h3>Refurbish of Medical Equipment according to the original specification of the manufacturers</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <span><i class="fa fa-share-alt-square fa-5x"></i></span>
+                        <h3>End-User Training Supports</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <span><i class="fa fa-puzzle-piece fa-5x"></i></span>
+                        <h3>Advisory Services / Equipment Condition Appraisals</h3>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <br><br>
+            <hr>
+            <div class="row centered">
+                <h1>Our Valued Customers</h1>
+                <br>
+                <br>
+                <div class="row centered">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-4" style="text-align: left;">
+                        <div class="row">
+                            <h4> &#10004; &nbsp; University of Santo Tomas Hospital</h4>
+                        </div>
+                        <div class="row">
+                            <h4> &#10004; &nbsp; Davao Doctors Hospital</h4>
+                        </div>
+                        <div class="row">
+                            <h4> &#10004; &nbsp; Davao Medical School Foundation, Inc. </h4>
+                        </div>
+                        <div class="row">
+                            <h4> &#10004; &nbsp; Brokenshire Memorial Hospital</h4>
+                        </div>
+                        <div class="row">
+                            <h4> &#10004; &nbsp; Ma. Reyna Xavier University Hospital </h4>
+                        </div>
+                        <div class="row">
+                            <h4> &#10004; &nbsp; St. Elizabeth Hospital</h4>
+                        </div>
+                        <div class="row">
+                            <h4> &#10004; &nbsp; Western Visayas Sanitarium. </h4>
+                        </div>
+                        <div class="row">
+                            <h4> &#10004; &nbsp; Aquinas University Hospital Foundation, Inc.</h4>
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4" style="text-align: left;">
+                        <div class="row">
+                            <h4> &#10004; &nbsp; MCU-FDT Medical Foundation </h4>
+                        </div>
+                        <div class="row">
+                            <h4> &#10004; &nbsp; Gingoog Sanitarium & Hospital </h4>
+                        </div>
+                        <div class="row">
+                            <h4> &#10004; &nbsp; United Doctors Medical Center, Inc. </h4>
+                        </div>
+                        <div class="row">
+                            <h4> &#10004; &nbsp; Metro North Medical Center </h4>
+                        </div>
+                        <div class="row">
+                            <h4> &#10004; &nbsp; Manila East Medical Center </h4>
+                        </div>
+                        <div class="row">
+                            <h4> &#10004; &nbsp; Cardinal Santos Medical Center </h4>
+                        </div>
+                        <div class="row">
+                            <h4> &#10004; &nbsp; Paranaque Doctors Hospital </h4>
+                        </div>
+                        
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+                <br><br>
+            </div>
+            <br>
+            <hr>            
         </div> <!--/ .container -->
     </div><!--/ #introwrap -->
 
@@ -241,22 +338,25 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                     Avenue, Quezon City<br/>
                     1102 Philippines
                 </p>
+                <p>Tel      : (632) 616 9867 / 577 7391 <br>
+                   Mobile      : 0998 561 5443 / 0917 568 0760 <br>
+                   Email       : sgecustomerservice@yahoo.com.ph</p>
             </div>
 
             <div class="col-lg-7">
-                <h3>{{ trans('adminlte_lang::message.dropus') }}</h3>
+                <h3>Drop Us A Message For Inquiry</h3>
                 <br>
                 <form role="form" action="#" method="post" enctype="plain">
                     <div class="form-group">
-                        <label for="name1">{{ trans('adminlte_lang::message.yourname') }}</label>
+                        <label for="name1">Full Name</label>
                         <input type="name" name="Name" class="form-control" id="name1" placeholder="{{ trans('adminlte_lang::message.yourname') }}">
                     </div>
                     <div class="form-group">
-                        <label for="email1">{{ trans('adminlte_lang::message.emailaddress') }}</label>
+                        <label for="email1">Email Address</label>
                         <input type="email" name="Mail" class="form-control" id="email1" placeholder="{{ trans('adminlte_lang::message.enteremail') }}">
                     </div>
                     <div class="form-group">
-                        <label>{{ trans('adminlte_lang::message.yourtext') }}</label>
+                        <label>Message</label>
                         <textarea class="form-control" name="Message" rows="3"></textarea>
                     </div>
                     <br>
@@ -269,13 +369,9 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         <div class="container">
             <p>
                 <a href="https://github.com/acacha/adminlte-laravel"></a><b>SGE&MAK HEALTHCARE, INC.</b></a><br/>
-                <strong>Copyright &copy; 2017 <a href="http://www.sgeheathcare.com">www.sgehealthcare.com</a>. </strong>This theme is modified by: <a href="https://nelsonmelecio.com">Nelson T. Melecio</a>. 
-                <br/>
-                This website is using AdminLTE theme created by Abdullah Almsaeed <a href="https://almsaeedstudio.com/">almsaeedstudio.com</a>
-                <br/>
-                 Pratt Landing Page {{ trans('adminlte_lang::message.createdby') }} <a href="http://www.blacktie.co">BLACKTIE.CO</a>
+                <a href="http://www.sgeheathcare.com">sgehealthcare.com</a> is powered by <a href="https://nelsonmelecio.com">nelsonmelecio.com</a>
+                <br><strong>Copyright &copy; 2017</strong>
             </p>
-
         </div>
     </div>
 </div>
