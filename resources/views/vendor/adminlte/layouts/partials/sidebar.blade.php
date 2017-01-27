@@ -42,6 +42,13 @@
                 </ul>
             </li>
             <li class="treeview">
+                <a href="#"><i class='fa fa-ticket'></i> <span>Manage Tickets</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class='fa fa-folder-open'></i> <span>Open a New Ticket</span></a></li>
+                    <li><a href="#"><i class='fa fa-ticket'></i> <span>View All Tickets</span></a></li>
+                </ul>
+            </li>
+            <li class="treeview">
                 <a href="#"><i class='fa fa-list'></i> <span>Manage Internal Records</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="#"><i class='fa fa-database'></i> <span>Equipments</span></a></li>
@@ -50,6 +57,18 @@
                     <li><a href="#"><i class='fa fa-truck'></i> <span>Manufacturers</span></a></li>
                     <li><a href="#"><i class='fa fa-tags'></i> <span>Suppliers</span></a></li>
                     <li><a href="#"><i class='fa fa-map-marker'></i> <span>Locations</span></a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-list'></i> <span>Manage Reports</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class='fa fa-file-text'></i> <span>CM Accomplishment</span></a></li>
+                    <li><a href="#"><i class='fa fa-file-text'></i> <span>PPM Accomplishment</span></a></li>
+                    <li><a href="#"><i class='fa fa-file-text'></i> <span>Equipments</span></a></li>
+                    <li><a href="#"><i class='fa fa-file-text'></i> <span>Analysis</span></a></li>
+                    <li><a href="#"><i class='fa fa-file-text'></i> <span>Department</span></a></li>
+                    <li><a href="#"><i class='fa fa-file-text'></i> <span>Employee</span></a></li>
+                    <li><a href="#"><i class='fa fa-file-text'></i> <span>Category</span></a></li>
                 </ul>
             </li>
             <li class="treeview">

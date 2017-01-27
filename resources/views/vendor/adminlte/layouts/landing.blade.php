@@ -269,7 +269,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         <div class="container">
             <p>
                 <a href="https://github.com/acacha/adminlte-laravel"></a><b>SGE&MAK HEALTHCARE, INC.</b></a><br/>
-                <strong>Copyright &copy; 2015 <a href="http://www.sgeheathcare.com">www.sgehealthcare.com</a>. </strong>This theme is modified by: <a href="https://nelsonmelecio.com">Nelson T. Melecio</a>. 
+                <strong>Copyright &copy; 2017 <a href="http://www.sgeheathcare.com">www.sgehealthcare.com</a>. </strong>This theme is modified by: <a href="https://nelsonmelecio.com">Nelson T. Melecio</a>. 
                 <br/>
                 This website is using AdminLTE theme created by Abdullah Almsaeed <a href="https://almsaeedstudio.com/">almsaeedstudio.com</a>
                 <br/>
