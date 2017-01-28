@@ -15,13 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/inquiry', 'InquiryController@inquiry');
+
 Route::group(['middleware' => 'auth'], function () {
-    //    Route::get('/link1', function ()    {
-//        // Uses Auth Middleware
-//    });
 
-
-Route::get('/risk', 'RiskController@index');
+	Route::get('/risks', 'RiskController@index');
 
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
