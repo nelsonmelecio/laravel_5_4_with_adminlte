@@ -37,59 +37,59 @@
             <li class="treeview">
                 <a href="#"><i class='fa fa-gears'></i> <span>Manage Services</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class='fa fa-wrench'></i> <span>Preventive Maintenance</span></a></li>
-                    <li><a href="#"><i class='fa fa-magic'></i> <span>Corrective Maintenance</span></a></li>
+                    <li><a href="{{ url('preventive') }}"><i class='fa fa-wrench'></i> <span>Preventive Maintenance</span></a></li>
+                    <li><a href="{{ url('corrective') }}"><i class='fa fa-magic'></i> <span>Corrective Maintenance</span></a></li>
                 </ul>
             </li>
             <li class="treeview">
                 <a href="#"><i class='fa fa-ticket'></i> <span>Manage Tickets</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="#"><i class='fa fa-folder-open'></i> <span>Open a New Ticket</span></a></li>
-                    <li><a href="#"><i class='fa fa-ticket'></i> <span>View All Tickets</span></a></li>
+                    <li><a href=""><i class='fa fa-ticket'></i> <span>View All Tickets</span></a></li>
                 </ul>
             </li>
             <li class="treeview">
                 <a href="#"><i class='fa fa-list'></i> <span>Manage Internal Records</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class='fa fa-database'></i> <span>Equipments</span></a></li>
-                    <li><a href="#"><i class='fa fa-dollar'></i> <span>Purchases</span></a></li>
-                    <li><a href="#"><i class='fa fa-flag'></i> <span>Departments</span></a></li>
-                    <li><a href="#"><i class='fa fa-truck'></i> <span>Manufacturers</span></a></li>
-                    <li><a href="#"><i class='fa fa-tags'></i> <span>Suppliers</span></a></li>
-                    <li><a href="#"><i class='fa fa-map-marker'></i> <span>Locations</span></a></li>
+                    <li><a href="{{ url('equipments') }}"><i class='fa fa-database'></i> <span>Equipments</span></a></li>
+                    <li><a href="{{ url('purhcases') }}"><i class='fa fa-dollar'></i> <span>Purchases</span></a></li>
+                    <li><a href="{{ url('depatments') }}"><i class='fa fa-flag'></i> <span>Departments</span></a></li>
+                    <li><a href="{{ url('manufacturers') }}"><i class='fa fa-truck'></i> <span>Manufacturers</span></a></li>
+                    <li><a href="{{ url('suppliers') }}"><i class='fa fa-tags'></i> <span>Suppliers</span></a></li>
+                    <li><a href="{{ url('locations') }}"><i class='fa fa-map-marker'></i> <span>Locations</span></a></li>
                 </ul>
             </li>
             <li class="treeview">
                 <a href="#"><i class='fa fa-list'></i> <span>Manage Reports</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class='fa fa-file-text'></i> <span>CM Accomplishment</span></a></li>
-                    <li><a href="#"><i class='fa fa-file-text'></i> <span>PPM Accomplishment</span></a></li>
-                    <li><a href="#"><i class='fa fa-file-text'></i> <span>Equipments</span></a></li>
-                    <li><a href="#"><i class='fa fa-file-text'></i> <span>Analysis</span></a></li>
-                    <li><a href="#"><i class='fa fa-file-text'></i> <span>Department</span></a></li>
-                    <li><a href="#"><i class='fa fa-file-text'></i> <span>Employee</span></a></li>
-                    <li><a href="#"><i class='fa fa-file-text'></i> <span>Category</span></a></li>
+                    <li><a href="{{ url('cma') }}"><i class='fa fa-file-text'></i> <span>CM Accomplishment</span></a></li>
+                    <li><a href="{{ url('ppma') }}"><i class='fa fa-file-text'></i> <span>PPM Accomplishment</span></a></li>
+                    <li><a href="{{ url('equipments') }}"><i class='fa fa-file-text'></i> <span>Equipments</span></a></li>
+                    <li><a href="{{ url('analysis') }}"><i class='fa fa-file-text'></i> <span>Analysis</span></a></li>
+                    <li><a href="{{ url('departments') }}"><i class='fa fa-file-text'></i> <span>Department</span></a></li>
+                    <li><a href="{{ url('employee') }}"><i class='fa fa-file-text'></i> <span>Employee</span></a></li>
+                    <li><a href="{{ url('category') }}"><i class='fa fa-file-text'></i> <span>Category</span></a></li>
                 </ul>
             </li>
             <li class="treeview">
                 <a href="#"><i class='fa fa-book'></i> <span>Manage Other List</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class='fa fa-list-ul'></i> Classification Types</a></li>
-                    <li><a href="#"><i class='fa fa-list-ul'></i> Condition Status Types</a></li>
-                    <li><a href="#"><i class='fa fa-list-ul'></i> Critical Types</a></li>
-                    <li><a href="#"><i class='fa fa-list-ul'></i> Frequency Types</a></li>
-                    <li><a href="#"><i class='fa fa-list-ul'></i> Proficiency Types</a></li>
-                    <li><a href="#"><i class='fa fa-list-ul'></i> Request Types</a></li>
-                    <li><a href="#"><i class='fa fa-list-ul'></i> Risks</a></li>
-                    <li><a href="#"><i class='fa fa-list-ul'></i> Specifications</a></li>
-                    <li><a href="#"><i class='fa fa-list-ul'></i> Status</a></li>
-                    <li><a href="#"><i class='fa fa-list-ul'></i> Utilizations</a></li>
-                    <li><a href="#"><i class='fa fa-list-ul'></i> Work Status</a></li>
-                    <li><a href="#"><i class='fa fa-list-ul'></i> Work Types</a></li>
+                    <li><a href="{{ url('classifications') }}"><i class='fa fa-list-ul'></i> Classification Types</a></li>
+                    <li><a href="{{ url('conditions') }}"><i class='fa fa-list-ul'></i> Condition Status Types</a></li>
+                    <li><a href="{{ url('critical') }}"><i class='fa fa-list-ul'></i> Critical Types</a></li>
+                    <li><a href="{{ url('frequency') }}"><i class='fa fa-list-ul'></i> Frequency Types</a></li>
+                    <li><a href="{{ url('proficiency') }}"><i class='fa fa-list-ul'></i> Proficiency Types</a></li>
+                    <li><a href="{{ url('requests') }}"><i class='fa fa-list-ul'></i> Request Types</a></li>
+                    <li><a href="{{ url('risks') }}"><i class='fa fa-list-ul'></i> Risks</a></li>
+                    <li><a href="{{ url('specifications') }}"><i class='fa fa-list-ul'></i> Specifications</a></li>
+                    <li><a href="{{ url('statuses') }}"><i class='fa fa-list-ul'></i> Status</a></li>
+                    <li><a href="{{ url('utilizations') }}"><i class='fa fa-list-ul'></i> Utilizations</a></li>
+                    <li><a href="{{ url('work_statuses') }}"><i class='fa fa-list-ul'></i> Work Status</a></li>
+                    <li><a href="{{ url('work_types') }}"><i class='fa fa-list-ul'></i> Work Types</a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class='fa fa-briefcase'></i> <span>Manage Employees</span></a></li>
-            <li><a href="#"><i class='fa fa-group'></i> <span>Manage User Accounts</span></a></li>
+            <!-- <li><a href="#"><i class='fa fa-briefcase'></i> <span>Manage Employees</span></a></li> -->
+            <li><a href="{{ url('accounts') }}"><i class='fa fa-group'></i> <span>Manage User Accounts</span></a></li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
