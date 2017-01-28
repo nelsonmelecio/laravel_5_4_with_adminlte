@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Risk;
+use App\Models\Risk;
 
 class RiskController extends Controller
 {
@@ -12,6 +12,6 @@ class RiskController extends Controller
     {
     	$risks = new Risk();
 
-    	return view('vendor.adminlte.risk')->with('risks', $risks->all());
+    	return view('vendor.adminlte.risks.index')->with('risks', $risks->all());
     }
 }

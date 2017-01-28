@@ -11,7 +11,7 @@
 <section class="content">
 	<div class="row">
 		<div class="text-right">
-			<button class="btn btn-success" style="width: 160px;"> Add New Risk </button>
+			<button class="btn btn-success" style="width: 170px;"> Add New Risk </button>
 		</div>
 		<br>
 		<div class="box">
@@ -28,11 +28,11 @@
 					<tbody>
 					@foreach($risks as $risk)
 						<tr>
-							<td>{{ $risk->id }}</td>
-							<td>{{ $risk->name }}</td>
-							<td>
-								<button class="btn btn-info" style="width: 48%;"> Edit </button>
-								<button class="btn btn-danger" style="width: 48%;"> Delete </button>
+							<td style="vertical-align: middle;">{{ $risk->id }}</td>
+							<td style="vertical-align: middle;">{{ $risk->name }}</td>
+							<td style="vertical-align: middle;">
+								<button class="btn btn-info btn-xs" style="width: 48%;"> Edit </button>
+								<button class="btn btn-danger btn-xs" style="width: 48%;"> Delete </button>
 							</td>
 						</tr>
 					@endforeach
