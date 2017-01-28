@@ -33,6 +33,7 @@ class CreateTenantTable extends Migration
             $table->string('fax_number');
             $table->string('mobile_number1');
             $table->string('mobile_number2');
+            $table->timestamps();
         });
 
     }

@@ -16,6 +16,7 @@ class CreateClassificationTable extends Migration
         Schema::create('classification', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->timestamps();
         });
     }
 

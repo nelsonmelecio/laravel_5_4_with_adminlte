@@ -16,6 +16,7 @@ class CreateProficiencyTable extends Migration
         Schema::create('proficiency', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->timestamps();
         });
     }
 

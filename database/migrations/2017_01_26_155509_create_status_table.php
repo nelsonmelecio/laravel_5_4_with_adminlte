@@ -18,6 +18,7 @@ class CreateStatusTable extends Migration
             $table->string('code')->unique();
             $table->string('name');
             $table->string('color_coding');
+            $table->timestamps();
         });
 
     }

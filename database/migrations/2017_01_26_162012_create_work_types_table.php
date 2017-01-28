@@ -17,6 +17,7 @@ class CreateWorkTypesTable extends Migration
             $table->increments('id');
             $table->string('code')->unique();
             $table->string('name');
+            $table->timestamps();
         });
     }
 
