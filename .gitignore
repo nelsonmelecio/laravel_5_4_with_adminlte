@@ -14,3 +14,4 @@ app/storage/
 .rocketeer/
 sge-final.sublime-project
 sge-final.sublime-workspace
+*.sublime-workspace
