@@ -31,6 +31,8 @@ class TenantTableSeeder extends Seeder
             'fax_number' => '221-0940',
             'mobile_number1' => '09068100820',
             'mobile_number2' => '09068100820',
+            'created_at' => date('Y/m/d H:i:s'),
+            'updated_at' => date('Y/m/d H:i:s'),
         ]);
 
     }
