@@ -9,8 +9,8 @@
 
 	@include('vendor.adminlte.layouts.partials.contentheader_v2', 
 			[	
-				'title' => 'New Risk Category',
-				'indexes' => 'Risks, Add'
+				'title' => 'Delete Risk Category',
+				'indexes' => 'Risks, Delete'
 			])
 
 @endsection
@@ -28,20 +28,19 @@
 
 					<div class="box box-primary">
 						<div class="box-header with-border">
-							<h3 class="box-title">Create a new category name.</h3>
+							<h3 class="box-title">Are you sure you wan to delete this category name?</h3>
 						</div>
-						<form role="form" action="{{ url('risk/add') }}" method="POST">
+						<form role="form" action="{{ url('risk/delete') }}" method="POST">
                     		{{ csrf_field() }}
 							<div class="box-body">
 								<div class="form-group">
 									<label for="name">Name</label>
-									<input class="form-control" id="name" name="name" placeholder="name" type="text" style="color: #000 !important;" >
-									@php json_encode($errors) @endphp
-
+									<input class="form-control" id="name" name="name" placeholder="name" type="text" value="{{ $name }}"  style="color: #000 !important;" >
 								</div>
+								<input type="hidden" name="id" value="{{ $id }}">
 							</div>
 							<div class="box-footer">
-								<button class="btn btn-success" type="submit">Submit</button>
+								<button class="btn btn-danger" type="submit">Delete</button>
 								<a href=" {{ url('risks') }}" class="btn btn-warning btn-md"> Cancel </a>
 							</div>
 						</form>
