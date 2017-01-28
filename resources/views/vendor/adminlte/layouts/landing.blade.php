@@ -52,7 +52,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                         <li><a href="{{ url('/login') }}">{{ trans('adminlte_lang::message.login') }}</a></li>
                         <!-- <li><a href="{{ url('/register') }}">{{ trans('adminlte_lang::message.register') }}</a></li> -->
                     @else
-                        <li><a href="/home">{{ Auth::user()->name }}</a></li>
+                        <li><a href="{{ url('/home') }}">{{ Auth::user()->name }}</a></li>
                     @endif
                 </ul>
             </div><!--/.nav-collapse -->
@@ -346,18 +346,19 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
             <div class="col-lg-7">
                 <h3>Drop Us A Message For Inquiry</h3>
                 <br>
-                <form role="form" action="#" method="post" enctype="plain">
+                <form role="form" action="{{ url('inquiry') }}" method="POST">
+                    {{ csrf_field() }}
                     <div class="form-group">
-                        <label for="name1">Full Name</label>
-                        <input type="name" name="Name" class="form-control" id="name1" placeholder="{{ trans('adminlte_lang::message.yourname') }}">
+                        <label for="name">Full Name</label>
+                        <input type="name" name="name" class="form-control" style="color: #000 !important;" id="name1" placeholder="{{ trans('adminlte_lang::message.yourname') }}" maxlength="100">
                     </div>
                     <div class="form-group">
-                        <label for="email1">Email Address</label>
-                        <input type="email" name="Mail" class="form-control" id="email1" placeholder="{{ trans('adminlte_lang::message.enteremail') }}">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" class="form-control" style="color: #000 !important;" id="email1" placeholder="{{ trans('adminlte_lang::message.enteremail') }}" maxlength="100">
                     </div>
                     <div class="form-group">
-                        <label>Message</label>
-                        <textarea class="form-control" name="Message" rows="3"></textarea>
+                        <label for="message">Message</label>
+                        <textarea class="form-control" style="color: #000 !important;" name="message" rows="3" maxlength="200"></textarea>
                     </div>
                     <br>
                     <button type="submit" class="btn btn-large btn-success">{{ trans('adminlte_lang::message.submit') }}</button>
@@ -369,7 +370,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         <div class="container">
             <p>
                 <a href="https://github.com/acacha/adminlte-laravel"></a><b>SGE&MAK HEALTHCARE, INC.</b></a><br/>
-                <a href="http://www.sgeheathcare.com">sgehealthcare.com</a> is powered by <a href="https://nelsonmelecio.com">nelsonmelecio.com</a>
+                <a href="http://www.sgehealthcare.com">www.sgehealthcare.com</a> is powered by <a href="https://nelsonmelecio.com">nelsonmelecio.com</a>
                 <br><strong>Copyright &copy; 2017</strong>
             </p>
         </div>
