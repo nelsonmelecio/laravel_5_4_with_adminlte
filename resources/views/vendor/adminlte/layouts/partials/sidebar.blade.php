@@ -72,7 +72,7 @@
                 </ul>
             </li>
             <li class="treeview">
-                <a href="#"><i class='fa fa-book'></i> <span>Manage Other List</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-book'></i> <span>Manage Categories</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('classifications') }}"><i class='fa fa-list-ul'></i> Classification Types</a></li>
                     <li><a href="{{ url('conditions') }}"><i class='fa fa-list-ul'></i> Condition Status Types</a></li>
