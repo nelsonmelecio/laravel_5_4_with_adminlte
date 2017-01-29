@@ -9,8 +9,8 @@
 
 	@include('vendor.adminlte.layouts.partials.contentheader_v2', 
 			[	
-				'title' => 'New Risk Category',
-				'indexes' => 'Risks, Add'
+				'title' => 'New Frequency Category',
+				'indexes' => 'Frequencies, Add'
 			])
 
 @endsection
@@ -20,7 +20,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="text-left">
-				<a href=" {{ url('risks') }}" class="btn btn-info btn-md"><i class="fa fa-arrow-circle-left"></i> Back </a>
+				<a href=" {{ url('frequencies') }}" class="btn btn-info btn-md"><i class="fa fa-arrow-circle-left"></i> Back </a>
 			</div>
 			<br>
 			<div class="box" style="border-top: 0;">
@@ -30,7 +30,7 @@
 						<div class="box-header with-border">
 							<h3 class="box-title">Create a new category name.</h3>
 						</div>
-						<form role="form" action="{{ url('risk/add') }}" method="POST">
+						<form role="form" action="{{ url('frequency/add') }}" method="POST">
                     		{{ csrf_field() }}
 							<div class="box-body">
 								
@@ -38,7 +38,7 @@
 							</div>
 							<div class="box-footer">
 								<button class="btn btn-success" type="submit">Submit</button>
-								<a href=" {{ url('risks') }}" class="btn btn-info btn-md"> Cancel </a>
+								<a href=" {{ url('frequencies') }}" class="btn btn-info btn-md"> Cancel </a>
 							</div>
 						</form>
 					</div>

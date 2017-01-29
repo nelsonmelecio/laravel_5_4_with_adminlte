@@ -74,17 +74,17 @@
             <li class="treeview">
                 <a href="#"><i class='fa fa-book'></i> <span>Manage Categories</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('classifications') }}"><i class='fa fa-list-ul'></i> Classification Types</a></li>
-                    <li><a href="{{ url('conditions') }}"><i class='fa fa-list-ul'></i> Condition Status Types</a></li>
-                    <li><a href="{{ url('critical') }}"><i class='fa fa-list-ul'></i> Critical Types</a></li>
-                    <li><a href="{{ url('frequency') }}"><i class='fa fa-list-ul'></i> Frequency Types</a></li>
-                    <li><a href="{{ url('proficiency') }}"><i class='fa fa-list-ul'></i> Proficiency Types</a></li>
-                    <li><a href="{{ url('requests') }}"><i class='fa fa-list-ul'></i> Request Types</a></li>
+                    <li><a href="{{ url('classifications') }}"><i class='fa fa-list-ul'></i> Classifications</a></li>
+                    <li><a href="{{ url('conditions') }}"><i class='fa fa-list-ul'></i> Condition Statuses</a></li>
+                    <li><a href="{{ url('criticals') }}"><i class='fa fa-list-ul'></i> Critical</a></li>
+                    <li><a href="{{ url('frequencies') }}"><i class='fa fa-list-ul'></i> Frequencies</a></li>
+                    <li><a href="{{ url('proficiencies') }}"><i class='fa fa-list-ul'></i> Proficiencies</a></li>
+                    <li><a href="{{ url('requests') }}"><i class='fa fa-list-ul'></i> Requests</a></li>
                     <li><a href="{{ url('risks') }}"><i class='fa fa-list-ul'></i> Risks</a></li>
                     <li><a href="{{ url('specifications') }}"><i class='fa fa-list-ul'></i> Specifications</a></li>
-                    <li><a href="{{ url('statuses') }}"><i class='fa fa-list-ul'></i> Status</a></li>
+                    <li><a href="{{ url('statuses') }}"><i class='fa fa-list-ul'></i> Statuses</a></li>
                     <li><a href="{{ url('utilizations') }}"><i class='fa fa-list-ul'></i> Utilizations</a></li>
-                    <li><a href="{{ url('work_statuses') }}"><i class='fa fa-list-ul'></i> Work Status</a></li>
+                    <li><a href="{{ url('work_statuses') }}"><i class='fa fa-list-ul'></i> Work Statuses</a></li>
                     <li><a href="{{ url('work_types') }}"><i class='fa fa-list-ul'></i> Work Types</a></li>
                 </ul>
             </li>

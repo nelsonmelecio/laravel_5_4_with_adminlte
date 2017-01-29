@@ -12,13 +12,6 @@ class FrequencyTableSeeder extends Seeder
     public function run()
     {
         DB::table('frequency')->insert([
-            'id' => '0',
-            'name' => 'Unknown',
-            'created_at' => date('Y/m/d H:i:s'),
-            'updated_at' => date('Y/m/d H:i:s'),
-        ]);
-
-        DB::table('frequency')->insert([
             'id' => 1,
             'name' => 'Annual',
             'created_at' => date('Y/m/d H:i:s'),
@@ -67,6 +60,12 @@ class FrequencyTableSeeder extends Seeder
             'updated_at' => date('Y/m/d H:i:s'),
         ]);
 
+        DB::table('frequency')->insert([
+            'id' => 13, // original = 0
+            'name' => 'Unknown',
+            'created_at' => date('Y/m/d H:i:s'),
+            'updated_at' => date('Y/m/d H:i:s'),
+        ]);
 
     }
 }

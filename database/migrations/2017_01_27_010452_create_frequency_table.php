@@ -14,7 +14,7 @@ class CreateFrequencyTable extends Migration
     public function up()
     {
         Schema::create('frequency', function (Blueprint $table) {
-            $table->smallInteger('id');
+            $table->increments('id');
             $table->string('name');
             $table->timestamps();
         });
