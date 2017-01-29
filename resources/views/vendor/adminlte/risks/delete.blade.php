@@ -28,20 +28,17 @@
 
 					<div class="box box-primary">
 						<div class="box-header with-border">
-							<h3 class="box-title">Are you sure you wan to delete this category name?</h3>
+							<h3 class="box-title">Are you sure you want to delete this category name?</h3>
 						</div>
 						<form role="form" action="{{ url('risk/delete') }}" method="POST">
                     		{{ csrf_field() }}
 							<div class="box-body">
-								<div class="form-group">
-									<label for="name">Name</label>
-									<input class="form-control" id="name" name="name" placeholder="name" type="text" value="{{ $name }}"  style="color: #000 !important;" >
-								</div>
+								@include('macro.text_disabled', ['data' => array('Name', 'name', $name, 'name' )])
 								<input type="hidden" name="id" value="{{ $id }}">
 							</div>
 							<div class="box-footer">
 								<button class="btn btn-danger" type="submit">Delete</button>
-								<a href=" {{ url('risks') }}" class="btn btn-warning btn-md"> Cancel </a>
+								<a href=" {{ url('risks') }}" class="btn btn-info btn-md"> Cancel </a>
 							</div>
 						</form>
 					</div>

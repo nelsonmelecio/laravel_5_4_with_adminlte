@@ -33,15 +33,12 @@
 						<form role="form" action="{{ url('risk/update') }}" method="POST">
                     		{{ csrf_field() }}
 							<div class="box-body">
-								<div class="form-group">
-									<label for="name">Name</label>
-									<input class="form-control" id="name" name="name" placeholder="name" type="text" value="{{ $name }}"  style="color: #000 !important;" >
-								</div>
+								@include('macro.text', ['data' => array('Name', 'name', $name, 'name', $errors->has('name'), $errors->first('name') )])
 								<input type="hidden" name="id" value="{{ $id }}">
 							</div>
 							<div class="box-footer">
-								<button class="btn btn-success" type="submit">Submit</button>
-								<a href=" {{ url('risks') }}" class="btn btn-warning btn-md"> Cancel </a>
+								<button class="btn btn-success" type="submit">Update</button>
+								<a href=" {{ url('risks') }}" class="btn btn-info btn-md"> Cancel </a>
 							</div>
 						</form>
 					</div>

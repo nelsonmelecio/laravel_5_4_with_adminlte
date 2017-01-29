@@ -26,7 +26,7 @@ class RiskController extends Controller
     public function postAddRiskView(Request $request) 
     {
     	$validator = Validator::make($request->all(), [
-            'name' => 'required|max:255',
+            'name' => 'required|min:5|max:255',
         ]);
 
         if ($validator->fails()) {
@@ -44,13 +44,24 @@ class RiskController extends Controller
 
     public function getEditRiskView($id) 
     {
-    	$risk = Risk::find($id);
+        $risk = Risk::find($id);
 
     	return view('vendor.adminlte.risks.edit', $risk);
     }
 
     public function postEditRiskView(Request $request) 
     {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|max:255',
+        ]);
+
+        if ($validator->fails()) {
+
+            return redirect()->back()
+                             ->withErrors($validator)
+                             ->withInput($request->all());
+        }
+
     	$risk = Risk::find($request->input('id'));
     	$risk->name = $request->input('name');
     	$risk->update();

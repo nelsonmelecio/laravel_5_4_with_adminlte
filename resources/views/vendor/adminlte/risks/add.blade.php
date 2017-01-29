@@ -33,12 +33,8 @@
 						<form role="form" action="{{ url('risk/add') }}" method="POST">
                     		{{ csrf_field() }}
 							<div class="box-body">
-								<div class="form-group">
-									<label for="name">Name</label>
-									<input class="form-control" id="name" name="name" placeholder="name" type="text" style="color: #000 !important;" >
-									@php json_encode($errors) @endphp
-
-								</div>
+								
+								@include('macro.text', ['data' => array('Name', 'name', null, 'name', $errors->has('name'), $errors->first('name') )])
 							</div>
 							<div class="box-footer">
 								<button class="btn btn-success" type="submit">Submit</button>
