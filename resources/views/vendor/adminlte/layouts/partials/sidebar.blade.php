@@ -52,8 +52,8 @@
                 <a href="#"><i class='fa fa-list'></i> <span>Manage Internal Records</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('equipments') }}"><i class='fa fa-database'></i> <span>Equipments</span></a></li>
-                    <li><a href="{{ url('purhcases') }}"><i class='fa fa-dollar'></i> <span>Purchases</span></a></li>
-                    <li><a href="{{ url('depatments') }}"><i class='fa fa-flag'></i> <span>Departments</span></a></li>
+                    <li><a href="{{ url('purchases') }}"><i class='fa fa-dollar'></i> <span>Purchases</span></a></li>
+                    <li><a href="{{ url('departments') }}"><i class='fa fa-flag'></i> <span>Departments</span></a></li>
                     <li><a href="{{ url('manufacturers') }}"><i class='fa fa-truck'></i> <span>Manufacturers</span></a></li>
                     <li><a href="{{ url('suppliers') }}"><i class='fa fa-tags'></i> <span>Suppliers</span></a></li>
                     <li><a href="{{ url('locations') }}"><i class='fa fa-map-marker'></i> <span>Locations</span></a></li>
@@ -64,9 +64,7 @@
                 <ul class="treeview-menu">
                     <li><a href="{{ url('cma') }}"><i class='fa fa-file-text'></i> <span>CM Accomplishment</span></a></li>
                     <li><a href="{{ url('ppma') }}"><i class='fa fa-file-text'></i> <span>PPM Accomplishment</span></a></li>
-                    <li><a href="{{ url('equipments') }}"><i class='fa fa-file-text'></i> <span>Equipments</span></a></li>
                     <li><a href="{{ url('analysis') }}"><i class='fa fa-file-text'></i> <span>Analysis</span></a></li>
-                    <li><a href="{{ url('departments') }}"><i class='fa fa-file-text'></i> <span>Department</span></a></li>
                     <li><a href="{{ url('employee') }}"><i class='fa fa-file-text'></i> <span>Employee</span></a></li>
                     <li><a href="{{ url('category') }}"><i class='fa fa-file-text'></i> <span>Category</span></a></li>
                 </ul>

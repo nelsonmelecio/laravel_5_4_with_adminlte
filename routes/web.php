@@ -56,6 +56,40 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/proficiency/delete/{id}', 'ProficiencyController@getDeleteView');
 	Route::post('/proficiency/delete', 'ProficiencyController@postDeleteView');
 
+	//  FREQUENCIES Routes 
+	Route::get('/frequencies', 'FrequencyController@index');
+	Route::get('/frequency/add', 'FrequencyController@getAddView');
+	Route::post('/frequency/add', 'FrequencyController@postAddView');
+	Route::get('/frequency/edit/{id}', 'FrequencyController@getEditView');
+	Route::post('/frequency/update', 'FrequencyController@postEditView');
+	Route::get('/frequency/delete/{id}', 'FrequencyController@getDeleteView');
+	Route::post('/frequency/delete', 'FrequencyController@postDeleteView');
+
+
+	// ROUTES UNDER CONSTUCTION
+	Route::get('preventive', 'HomeController@empty');
+	Route::get('corrective', 'HomeController@empty');
+
+	Route::get('equipments', 'HomeController@empty');
+	Route::get('purchases', 'HomeController@empty');
+	Route::get('departments', 'HomeController@empty');
+	Route::get('manufacturers', 'HomeController@empty');
+	Route::get('suppliers', 'HomeController@empty');
+	Route::get('locations', 'HomeController@empty');
+
+	Route::get('cma', 'HomeController@empty');
+	Route::get('ppma', 'HomeController@empty');
+	Route::get('analysis', 'HomeController@empty');
+	Route::get('employee', 'HomeController@empty');
+	Route::get('category', 'HomeController@empty');
+
+	Route::get('conditions', 'HomeController@empty');
+	Route::get('requests', 'HomeController@empty');
+	Route::get('specifications', 'HomeController@empty');
+	Route::get('statuses', 'HomeController@empty');
+	Route::get('utilizations', 'HomeController@empty');
+	Route::get('work_statuses', 'HomeController@empty');
+	Route::get('work_types', 'HomeController@empty');
 
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
