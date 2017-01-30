@@ -65,6 +65,35 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/frequency/delete/{id}', 'FrequencyController@getDeleteView');
 	Route::post('/frequency/delete', 'FrequencyController@postDeleteView');
 
+	//  STATUS's Routes 
+	Route::get('/statuses', 'StatusController@index');
+	Route::get('/status/add', 'StatusController@getAddView');
+	Route::post('/status/add', 'StatusController@postAddView');
+	Route::get('/status/edit/{id}', 'StatusController@getEditView');
+	Route::post('/status/update', 'StatusController@postEditView');
+	Route::get('/status/delete/{id}', 'StatusController@getDeleteView');
+	Route::post('/status/delete', 'StatusController@postDeleteView');
+
+	//  REQUEST TYPES Routes 
+	Route::get('/requests', 'RequestTypeController@index');
+	Route::get('/request/add', 'RequestTypeController@getAddView');
+	Route::post('/request/add', 'RequestTypeController@postAddView');
+	Route::get('/request/edit/{id}', 'RequestTypeController@getEditView');
+	Route::post('/request/update', 'RequestTypeController@postEditView');
+	Route::get('/request/delete/{id}', 'RequestTypeController@getDeleteView');
+	Route::post('/request/delete', 'RequestTypeController@postDeleteView');
+
+	//  UTILIZATIONS Routes 
+	Route::get('/utilizations', 'UtilizationController@index');
+	Route::get('/utilization/add', 'UtilizationController@getAddView');
+	Route::post('/utilization/add', 'UtilizationController@postAddView');
+	Route::get('/utilization/edit/{id}', 'UtilizationController@getEditView');
+	Route::post('/utilization/update', 'UtilizationController@postEditView');
+	Route::get('/utilization/delete/{id}', 'UtilizationController@getDeleteView');
+	Route::post('/utilization/delete', 'UtilizationController@postDeleteView');
+
+
+	
 
 	// ROUTES UNDER CONSTUCTION
 	Route::get('preventive', 'HomeController@empty');
@@ -84,12 +113,14 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('category', 'HomeController@empty');
 
 	Route::get('conditions', 'HomeController@empty');
-	Route::get('requests', 'HomeController@empty');
+	// Route::get('requests', 'HomeController@empty');
 	Route::get('specifications', 'HomeController@empty');
-	Route::get('statuses', 'HomeController@empty');
-	Route::get('utilizations', 'HomeController@empty');
+	// Route::get('statuses', 'HomeController@empty');
+	// Route::get('utilizations', 'HomeController@empty');
 	Route::get('work_statuses', 'HomeController@empty');
 	Route::get('work_types', 'HomeController@empty');
+
+	Route::get('accounts', 'HomeController@empty');
 
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes

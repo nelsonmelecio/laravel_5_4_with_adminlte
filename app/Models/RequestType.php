@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Status extends Model
+class RequestType extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'status';
+    protected $table = 'request_type';
 
     /**
      * Indicates if the model should be timestamped.
@@ -25,5 +25,5 @@ class Status extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'code', 'color'];
+    protected $fillable = ['name', 'code'];
 }

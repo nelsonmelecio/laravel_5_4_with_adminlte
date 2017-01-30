@@ -9,8 +9,8 @@
 
 	@include('vendor.adminlte.layouts.partials.contentheader_v2', 
 			[	
-				'title' => 'New Status Category',
-				'indexes' => 'Statuses, Add'
+				'title' => 'Edit Status Category',
+				'indexes' => 'Statuses, Edit'
 			])
 
 @endsection
@@ -28,17 +28,18 @@
 
 					<div class="box box-primary">
 						<div class="box-header with-border">
-							<h3 class="box-title">Create a new category name.</h3>
+							<h3 class="box-title">Modify a category name.</h3>
 						</div>
-						<form role="form" action="{{ url('status/add') }}" method="POST">
+						<form role="form" action="{{ url('status/update') }}" method="POST">
                     		{{ csrf_field() }}
 							<div class="box-body">
-								@include('macro.text', ['data' => array('Code', 'code', null, 'code', $errors->has('code'), $errors->first('code') )])
-								@include('macro.text', ['data' => array('Name', 'name', null, 'name', $errors->has('name'), $errors->first('name') )])
-								@include('macro.text', ['data' => array('Color Code', 'color', null, 'color', $errors->has('color'), $errors->first('color') )])
+								@include('macro.text', ['data' => array('Code', 'code', $code, 'code', $errors->has('code'), $errors->first('code') )])
+								@include('macro.text', ['data' => array('Name', 'name', $name, 'name', $errors->has('name'), $errors->first('name') )])
+								@include('macro.text', ['data' => array('Color', 'color', $color, 'color', $errors->has('color'), $errors->first('color') )])
+								<input type="hidden" name="id" value="{{ $id }}">
 							</div>
 							<div class="box-footer">
-								<button class="btn btn-success" type="submit">Submit</button>
+								<button class="btn btn-success" type="submit">Update</button>
 								<a href=" {{ url('statuses') }}" class="btn btn-info btn-md"> Cancel </a>
 							</div>
 						</form>

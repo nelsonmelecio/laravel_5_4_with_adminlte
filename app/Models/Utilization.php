@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Status extends Model
+class Utilization extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'status';
+    protected $table = 'utilization';
 
     /**
      * Indicates if the model should be timestamped.

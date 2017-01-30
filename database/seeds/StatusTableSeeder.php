@@ -14,7 +14,7 @@ class StatusTableSeeder extends Seeder
         DB::table('status')->insert([
             'code' => 'ST101',
             'name' => 'Replace',
-            'color_coding' => 'Black',
+            'color' => 'Black',
             'created_at' => date('Y/m/d H:i:s'),
             'updated_at' => date('Y/m/d H:i:s'),
         ]);
@@ -22,7 +22,7 @@ class StatusTableSeeder extends Seeder
         DB::table('status')->insert([
             'code' => 'ST102',
             'name' => 'Not Working',
-            'color_coding' => 'Red',
+            'color' => 'Red',
             'created_at' => date('Y/m/d H:i:s'),
             'updated_at' => date('Y/m/d H:i:s'),
         ]);
@@ -30,7 +30,7 @@ class StatusTableSeeder extends Seeder
         DB::table('status')->insert([
             'code' => 'ST103',
             'name' => 'Missing Parts',
-            'color_coding' => 'Yellow',
+            'color' => 'Yellow',
             'created_at' => date('Y/m/d H:i:s'),
             'updated_at' => date('Y/m/d H:i:s'),
         ]);
@@ -38,7 +38,7 @@ class StatusTableSeeder extends Seeder
         DB::table('status')->insert([
             'code' => 'ST104',
             'name' => 'Partly Functional',
-            'color_coding' => 'Green',
+            'color' => 'Green',
             'created_at' => date('Y/m/d H:i:s'),
             'updated_at' => date('Y/m/d H:i:s'),
         ]);
@@ -46,7 +46,7 @@ class StatusTableSeeder extends Seeder
         DB::table('status')->insert([
             'code' => 'ST105',
             'name' => 'Fully Functional',
-            'color_coding' => 'Blue',
+            'color' => 'Blue',
             'created_at' => date('Y/m/d H:i:s'),
             'updated_at' => date('Y/m/d H:i:s'),
         ]);
