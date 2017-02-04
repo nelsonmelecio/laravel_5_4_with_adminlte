@@ -9,8 +9,8 @@
 
 	@include('vendor.adminlte.layouts.partials.contentheader_v2', 
 			[	
-				'title' => 'Edit Utilizations Category',
-				'indexes' => 'Utilizations, Edit'
+				'title' => 'Edit Conditions Category',
+				'indexes' => 'Conditions, Edit'
 			])
 
 @endsection
@@ -20,7 +20,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="text-left">
-				<a href=" {{ url('utilizations') }}" class="btn btn-info btn-md"><i class="fa fa-arrow-circle-left"></i> Back </a>
+				<a href=" {{ url('conditions') }}" class="btn btn-info btn-md"><i class="fa fa-arrow-circle-left"></i> Back </a>
 			</div>
 			<br>
 			<div class="box" style="border-top: 0;">
@@ -30,7 +30,7 @@
 						<div class="box-header with-border">
 							<h3 class="box-title">Modify a category name.</h3>
 						</div>
-						<form role="form" action="{{ url('utilization/update') }}" method="POST">
+						<form role="form" action="{{ url('condition/update') }}" method="POST">
                     		{{ csrf_field() }}
 							<div class="box-body">
 								@include('macro.text', ['data' => array('Code', 'code', $code, 'code', $errors->has('code'), $errors->first('code') )])
@@ -40,7 +40,7 @@
 							</div>
 							<div class="box-footer">
 								<button class="btn btn-success" type="submit">Update</button>
-								<a href=" {{ url('utilizations') }}" class="btn btn-info btn-md"> Cancel </a>
+								<a href=" {{ url('conditions') }}" class="btn btn-info btn-md"> Cancel </a>
 							</div>
 						</form>
 					</div>

@@ -24,8 +24,8 @@ class StatusController extends Controller
     public function postAddView(Request $request) 
     {
     	$validator = Validator::make($request->all(), [
-            'code' => 'required|unique:request_type|max:50',
-            'name' => 'required|max:100',
+            'code' => 'required|unique:status|max:50',
+            'name' => 'required|unique:status|max:100',
             'color' => 'required|max:100',
         ]);
 
@@ -54,8 +54,8 @@ class StatusController extends Controller
     public function postEditView(Request $request) 
     {
         $validator = Validator::make($request->all(), [
-            'code' => 'required|unique:request_type|max:50',
-            'name' => 'required|max:100',
+            'code' => 'required|unique:status|max:50',
+            'name' => 'required|unique:status|max:100',
             'color' => 'required|max:100',
         ]);
 

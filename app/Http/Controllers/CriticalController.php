@@ -24,7 +24,7 @@ class CriticalController extends Controller
     public function postAddView(Request $request) 
     {
     	$validator = Validator::make($request->all(), [
-            'name' => 'required|max:255',
+            'name' => 'required|unique:critical|max:255',
         ]);
 
         if ($validator->fails()) {
@@ -50,7 +50,7 @@ class CriticalController extends Controller
     public function postEditView(Request $request) 
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|max:255',
+            'name' => 'required|unique:critical|max:255',
         ]);
 
         if ($validator->fails()) {

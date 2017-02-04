@@ -25,7 +25,7 @@ class UtilizationController extends Controller
     {
     	$validator = Validator::make($request->all(), [
             'code' => 'required|unique:utilization|max:50',
-            'name' => 'required|max:100',
+            'name' => 'required|unique:utilization|max:100',
             'color' => 'required|max:100',
         ]);
 
@@ -54,8 +54,8 @@ class UtilizationController extends Controller
     public function postEditView(Request $request) 
     {
         $validator = Validator::make($request->all(), [
-            'code' => 'required|unique:request_type|max:50',
-            'name' => 'required|max:100',
+            'code' => 'required|unique:utilization|max:50',
+            'name' => 'required|unique:utilization|max:100',
             'color' => 'required|max:100',
         ]);
 

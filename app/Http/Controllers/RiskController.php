@@ -26,7 +26,7 @@ class RiskController extends Controller
     public function postAddRiskView(Request $request) 
     {
     	$validator = Validator::make($request->all(), [
-            'name' => 'required|min:5|max:255',
+            'name' => 'required|unique:risk|max:255',
         ]);
 
         if ($validator->fails()) {
@@ -52,7 +52,7 @@ class RiskController extends Controller
     public function postEditRiskView(Request $request) 
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|max:255',
+            'name' => 'required|unique:risk|max:255',
         ]);
 
         if ($validator->fails()) {

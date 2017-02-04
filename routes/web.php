@@ -92,8 +92,36 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/utilization/delete/{id}', 'UtilizationController@getDeleteView');
 	Route::post('/utilization/delete', 'UtilizationController@postDeleteView');
 
+	//  CONDITIONS Routes 
+	Route::get('/conditions', 'ConditionController@index');
+	Route::get('/condition/add', 'ConditionController@getAddView');
+	Route::post('/condition/add', 'ConditionController@postAddView');
+	Route::get('/condition/edit/{id}', 'ConditionController@getEditView');
+	Route::post('/condition/update', 'ConditionController@postEditView');
+	Route::get('/condition/delete/{id}', 'ConditionController@getDeleteView');
+	Route::post('/condition/delete', 'ConditionController@postDeleteView');
 
-	
+	//  WORK STATUS Routes 
+	Route::get('/work_statuses', 'WorkStatusController@index');
+	Route::get('/work_status/add', 'WorkStatusController@getAddView');
+	Route::post('/work_status/add', 'WorkStatusController@postAddView');
+	Route::get('/work_status/edit/{id}', 'WorkStatusController@getEditView');
+	Route::post('/work_status/update', 'WorkStatusController@postEditView');
+	Route::get('/work_status/delete/{id}', 'WorkStatusController@getDeleteView');
+	Route::post('/work_status/delete', 'WorkStatusController@postDeleteView');
+
+	//  WORK TYPE Routes 
+	Route::get('/work_types', 'WorkTypeController@index');
+	Route::get('/work_type/add', 'WorkTypeController@getAddView');
+	Route::post('/work_type/add', 'WorkTypeController@postAddView');
+	Route::get('/work_type/edit/{id}', 'WorkTypeController@getEditView');
+	Route::post('/work_type/update', 'WorkTypeController@postEditView');
+	Route::get('/work_type/delete/{id}', 'WorkTypeController@getDeleteView');
+	Route::post('/work_type/delete', 'WorkTypeController@postDeleteView');
+
+
+
+
 
 	// ROUTES UNDER CONSTUCTION
 	Route::get('preventive', 'HomeController@empty');
@@ -112,13 +140,13 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('employee', 'HomeController@empty');
 	Route::get('category', 'HomeController@empty');
 
-	Route::get('conditions', 'HomeController@empty');
+	// Route::get('conditions', 'HomeController@empty');
 	// Route::get('requests', 'HomeController@empty');
 	Route::get('specifications', 'HomeController@empty');
 	// Route::get('statuses', 'HomeController@empty');
 	// Route::get('utilizations', 'HomeController@empty');
-	Route::get('work_statuses', 'HomeController@empty');
-	Route::get('work_types', 'HomeController@empty');
+	// Route::get('work_statuses', 'HomeController@empty');
+	// Route::get('work_types', 'HomeController@empty');
 
 	Route::get('accounts', 'HomeController@empty');
 

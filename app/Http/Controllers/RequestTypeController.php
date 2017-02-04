@@ -25,7 +25,7 @@ class RequestTypeController extends Controller
     {
     	$validator = Validator::make($request->all(), [
             'code' => 'required|unique:request_type|max:50',
-            'name' => 'required|max:100',
+            'name' => 'required|unique:request_type|max:100',
         ]);
 
         if ($validator->fails()) {
@@ -53,7 +53,7 @@ class RequestTypeController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'code' => 'required|unique:request_type|max:50',
-            'name' => 'required|max:100',
+            'name' => 'required|unique:request_type|max:100',
         ]);
 
         if ($validator->fails()) {

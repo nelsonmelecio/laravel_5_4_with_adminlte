@@ -7,13 +7,31 @@
 					$strIndex = ''
 				@endphp
 		        @foreach( explode(",", $indexes) as $index )
+
 		        	@php
-		        		$strIndex .= strtolower(trim($index)) . '/' 
+
+		        		$indexLabel = $index;
+
+		        		switch($index)
+		        		{
+		        			case 'work_status':
+		        			case 'work_statuses':
+		        				$indexLabel = 'Work Status';
+		        				break;
+		        			case 'work_type':
+		        			case 'work_types':
+		        				$indexLabel = 'Work Types';
+		        				break;
+		        		}
+
+		        		$strIndex .= strtolower(trim($index)) . '/';
+		        		 
 		        	@endphp
+
 				    @if( $loop->last )
-				        <li>{{ $index }}</li>
+				        <li>{{ $indexLabel }}</li>
 			        @else
-				        <li class="active"><a href="{!! url( $strIndex ) !!}">{{ $index }}</a></li>
+				        <li class="active"><a href="{!! url( $strIndex ) !!}">{{ $indexLabel }}</a></li>
 				    @endif
 				@endforeach
 		    </ol>
