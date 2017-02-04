@@ -131,6 +131,15 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/tenant/delete/{id}', 'TenantController@getDeleteView');
 	Route::post('/tenant/delete', 'TenantController@postDeleteView');
 
+	//  LOCALTIONS Routes 
+	Route::get('/locations', 'LocationController@index');
+	Route::get('/location/add', 'LocationController@getAddView');
+	Route::post('/location/add', 'LocationController@postAddView');
+	Route::get('/location/edit/{id}', 'LocationController@getEditView');
+	Route::post('/location/update', 'LocationController@postEditView');
+	Route::get('/location/delete/{id}', 'LocationController@getDeleteView');
+	Route::post('/location/delete', 'LocationController@postDeleteView');
+
 
 
 	// ------------------------ ROUTES UNDER CONSTUCTION ------------------------- //
@@ -143,7 +152,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('departments', 'HomeController@empty');
 	Route::get('manufacturers', 'HomeController@empty');
 	Route::get('suppliers', 'HomeController@empty');
-	Route::get('locations', 'HomeController@empty');
+	// Route::get('locations', 'HomeController@empty');
 
 	Route::get('cma', 'HomeController@empty');
 	Route::get('ppma', 'HomeController@empty');

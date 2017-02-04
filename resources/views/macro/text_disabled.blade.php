@@ -2,5 +2,5 @@
 
 <div class="form-group">
 	<label for="{{ $data[1] }}">{{ $data[0] }}</label>
-	<input class="form-control" name="{{ $data[1] }}" placeholder="{{ $data[1] }}" type="text" value="{{ $data[2] }}"  style="color: #000 !important;" disabled>
+	<input class="form-control" name="{{ $data[1] }}" placeholder="{{ $data[0] }}" type="text" value="{{ $data[2] }}"  style="color: #000 !important;" disabled>
 </div>
