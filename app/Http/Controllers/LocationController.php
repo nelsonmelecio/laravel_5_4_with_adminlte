@@ -68,7 +68,7 @@ class LocationController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'code' => 'required|max:50|unique:location,id,' . $request->input('id'),
-            'company_name' => 'required|max:100|unique:location,id,'. $request->input('id'),
+            'name' => 'required|max:100|unique:location,id,'. $request->input('id'),
         ]);
 
         if ($validator->fails()) {

@@ -140,8 +140,27 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/location/delete/{id}', 'LocationController@getDeleteView');
 	Route::post('/location/delete', 'LocationController@postDeleteView');
 
+	//  MANUFACTURERS Routes 
+	Route::get('/manufacturers', 'ManufacturerController@index');
+	Route::get('/manufacturer/add', 'ManufacturerController@getAddView');
+	Route::post('/manufacturer/add', 'ManufacturerController@postAddView');
+	Route::get('/manufacturer/edit/{id}', 'ManufacturerController@getEditView');
+	Route::post('/manufacturer/update', 'ManufacturerController@postEditView');
+	Route::get('/manufacturer/delete/{id}', 'ManufacturerController@getDeleteView');
+	Route::post('/manufacturer/delete', 'ManufacturerController@postDeleteView');
+
+	//  SUPPLIERS Routes 
+	Route::get('/suppliers', 'SupplierController@index');
+	Route::get('/supplier/add', 'SupplierController@getAddView');
+	Route::post('/supplier/add', 'SupplierController@postAddView');
+	Route::get('/supplier/edit/{id}', 'SupplierController@getEditView');
+	Route::post('/supplier/update', 'SupplierController@postEditView');
+	Route::get('/supplier/delete/{id}', 'SupplierController@getDeleteView');
+	Route::post('/supplier/delete', 'SupplierController@postDeleteView');
 
 
+
+	
 	// ------------------------ ROUTES UNDER CONSTUCTION ------------------------- //
 
 	Route::get('preventive', 'HomeController@empty');
@@ -150,8 +169,8 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('equipments', 'HomeController@empty');
 	Route::get('purchases', 'HomeController@empty');
 	Route::get('departments', 'HomeController@empty');
-	Route::get('manufacturers', 'HomeController@empty');
-	Route::get('suppliers', 'HomeController@empty');
+	// Route::get('manufacturers', 'HomeController@empty');
+	// Route::get('suppliers', 'HomeController@empty');
 	// Route::get('locations', 'HomeController@empty');
 
 	Route::get('cma', 'HomeController@empty');
