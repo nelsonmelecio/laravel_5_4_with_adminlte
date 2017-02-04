@@ -19,6 +19,7 @@ Route::post('/inquiry', 'InquiryController@inquiry');
 
 Route::group(['middleware' => 'auth'], function () {
 
+	// ------------------------ CATEGORIES ------------------------- //
 
 	//  RISK Routes 
 	Route::get('/risks', 'RiskController@index');
@@ -119,11 +120,21 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/work_type/delete/{id}', 'WorkTypeController@getDeleteView');
 	Route::post('/work_type/delete', 'WorkTypeController@postDeleteView');
 
+	// ------------------------ INTERNAL RECORDS------------------------- //
+
+	//  TENANTS Routes 
+	Route::get('/tenants', 'TenantController@index');
+	Route::get('/tenant/add', 'TenantController@getAddView');
+	Route::post('/tenant/add', 'TenantController@postAddView');
+	Route::get('/tenant/edit/{id}', 'TenantController@getEditView');
+	Route::post('/tenant/update', 'TenantController@postEditView');
+	Route::get('/tenant/delete/{id}', 'TenantController@getDeleteView');
+	Route::post('/tenant/delete', 'TenantController@postDeleteView');
 
 
 
+	// ------------------------ ROUTES UNDER CONSTUCTION ------------------------- //
 
-	// ROUTES UNDER CONSTUCTION
 	Route::get('preventive', 'HomeController@empty');
 	Route::get('corrective', 'HomeController@empty');
 
