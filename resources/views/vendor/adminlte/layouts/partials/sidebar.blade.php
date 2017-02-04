@@ -41,13 +41,13 @@
                     <li><a href="{{ url('corrective') }}"><i class='fa fa-magic'></i> <span>Corrective Maintenance</span></a></li>
                 </ul>
             </li>
-            <li class="treeview">
+            <!-- <li class="treeview">
                 <a href="#"><i class='fa fa-ticket'></i> <span>Manage Tickets</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="#"><i class='fa fa-folder-open'></i> <span>Open a New Ticket</span></a></li>
                     <li><a href=""><i class='fa fa-ticket'></i> <span>View All Tickets</span></a></li>
                 </ul>
-            </li>
+            </li> -->
             <li class="treeview">
                 <a href="#"><i class='fa fa-list'></i> <span>Manage Internal Records</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
@@ -61,18 +61,8 @@
                     <li><a href="{{ url('tenants') }}"><i class='fa fa-map-marker'></i> <span>Tenants</span></a></li>
                 </ul>
             </li>
-            <li class="treeview">
-                <a href="#"><i class='fa fa-list'></i> <span>Manage Reports</span> <i class="fa fa-angle-left pull-right"></i></a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ url('cma') }}"><i class='fa fa-file-text'></i> <span>CM Accomplishment</span></a></li>
-                    <li><a href="{{ url('ppma') }}"><i class='fa fa-file-text'></i> <span>PPM Accomplishment</span></a></li>
-                    <li><a href="{{ url('analysis') }}"><i class='fa fa-file-text'></i> <span>Analysis</span></a></li>
-                    <li><a href="{{ url('employee') }}"><i class='fa fa-file-text'></i> <span>Employee</span></a></li>
-                    <li><a href="{{ url('category') }}"><i class='fa fa-file-text'></i> <span>Category</span></a></li>
-                </ul>
-            </li>
-            <li class="treeview">
-                <a href="#"><i class='fa fa-book'></i> <span>Manage Categories</span> <i class="fa fa-angle-left pull-right"></i></a>
+           <li class="treeview">
+                <a href="#"><i class='fa fa-book'></i> <span>Manage Other List</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('classifications') }}"><i class='fa fa-list-ul'></i> Classifications</a></li>
                     <li><a href="{{ url('conditions') }}"><i class='fa fa-list-ul'></i> Conditions</a></li>
@@ -87,6 +77,17 @@
                     <li><a href="{{ url('work_types') }}"><i class='fa fa-list-ul'></i> Work Types</a></li>
                 </ul>
             </li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-list'></i> <span>Manage Reports</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('cma') }}"><i class='fa fa-file-text'></i> <span>CM Accomplishment</span></a></li>
+                    <li><a href="{{ url('ppma') }}"><i class='fa fa-file-text'></i> <span>PPM Accomplishment</span></a></li>
+                    <li><a href="{{ url('analysis') }}"><i class='fa fa-file-text'></i> <span>Analysis</span></a></li>
+                    <li><a href="{{ url('employee') }}"><i class='fa fa-file-text'></i> <span>Employee</span></a></li>
+                    <li><a href="{{ url('category') }}"><i class='fa fa-file-text'></i> <span>Category</span></a></li>
+                </ul>
+            </li>
+ 
             <!-- <li><a href="#"><i class='fa fa-briefcase'></i> <span>Manage Employees</span></a></li> -->
             <li><a href="{{ url('accounts') }}"><i class='fa fa-group'></i> <span>Manage User Accounts</span></a></li>
         </ul><!-- /.sidebar-menu -->
