@@ -36,25 +36,20 @@
                     		{{ csrf_field() }}
 							<div class="box-body">
 								<div class="col-sm-6">
-									@include('macro.textv3', ['data' => array('Hospital Name', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Asset Code', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Asset Name', 'code', null, null, $errors )])
+
+									@include('macro.textv3', ['data' => array('Name', 'code', null, null, $errors )])
 									@include('macro.textv3', ['data' => array('Description', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Manufacturer', 'code', null, null, $errors )])
 									@include('macro.textv3', ['data' => array('Model', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Serial Number', 'code', null, null, $errors )])
 									@include('macro.textv3', ['data' => array('Status', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Service Group', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Require PM', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Provider', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Frequency', 'code', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Barcode', 'code', null, null, $errors )])
 								</div>
 								<div class="col-sm-6">
-									@include('macro.textv3', ['data' => array('Frequency', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Frequency', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Frequency', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Frequency', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Frequency', 'code', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Availability', 'code', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Required PM', 'code', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Serial Number', 'code', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Asset Number', 'code', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Service Group', 'code', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Service Provider', 'code', null, null, $errors )])
 								</div>
 
 
