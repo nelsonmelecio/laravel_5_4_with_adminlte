@@ -34,8 +34,9 @@
             <li class="header">Menu</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-home'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
+            <li><a href="{{ url('equipments') }}"><i class='fa fa-database'></i> <span>Manage Equipments</span></a></li>
             <li class="treeview">
-                <a href="#"><i class='fa fa-gears'></i> <span>Manage Services</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-gears'></i> <span>Manage Maintenance</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('preventive') }}"><i class='fa fa-wrench'></i> <span>Preventive Maintenance</span></a></li>
                     <li><a href="{{ url('corrective') }}"><i class='fa fa-magic'></i> <span>Corrective Maintenance</span></a></li>
@@ -49,20 +50,18 @@
                 </ul>
             </li> -->
             <li class="treeview">
-                <a href="#"><i class='fa fa-list'></i> <span>Manage Internal Records</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-list'></i> <span>Manage Groups</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('equipments') }}"><i class='fa fa-database'></i> <span>Equipments</span></a></li>
-                    <li><a href="{{ url('purchases') }}"><i class='fa fa-dollar'></i> <span>Purchases</span></a></li>
+                    <li><a href="{{ url('categories') }}"><i class='fa fa-list-ul'></i> Categories</a></li>
                     <li><a href="{{ url('departments') }}"><i class='fa fa-flag'></i> <span>Departments</span></a></li>
                     <li><a href="{{ url('manufacturers') }}"><i class='fa fa-truck'></i> <span>Manufacturers</span></a></li>
                     <li><a href="{{ url('suppliers') }}"><i class='fa fa-tags'></i> <span>Suppliers</span></a></li>
-                    <li><a href="{{ url('specifications') }}"><i class='fa fa-list-ul'></i> Specifications</a></li>
                     <li><a href="{{ url('locations') }}"><i class='fa fa-map-marker'></i> <span>Locations</span></a></li>
                     <li><a href="{{ url('tenants') }}"><i class='fa fa-map-marker'></i> <span>Tenants</span></a></li>
                 </ul>
             </li>
            <li class="treeview">
-                <a href="#"><i class='fa fa-book'></i> <span>Manage Other List</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-book'></i> <span>Manage Particulars</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('classifications') }}"><i class='fa fa-list-ul'></i> Classifications</a></li>
                     <li><a href="{{ url('conditions') }}"><i class='fa fa-list-ul'></i> Conditions</a></li>

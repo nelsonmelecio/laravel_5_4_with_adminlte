@@ -176,6 +176,16 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::post('/equipment/update', 'EquipmentController@postEditView');
 	Route::get('/equipment/delete/{id}', 'EquipmentController@getDeleteView');
 	Route::post('/equipment/delete', 'EquipmentController@postDeleteView');
+
+	//  CATEGORIES Routes 
+	Route::get('/categories', 'CategoryController@index');
+	Route::get('/category/add', 'CategoryController@getAddView');
+	Route::post('/category/add', 'CategoryController@postAddView');
+	Route::get('/category/edit/{id}', 'CategoryController@getEditView');
+	Route::post('/category/update', 'CategoryController@postEditView');
+	Route::get('/category/delete/{id}', 'CategoryController@getDeleteView');
+	Route::post('/category/delete', 'CategoryController@postDeleteView');
+
 	
 	// ------------------------ MANAGE USER ACCOUNTS ------------------------- //
 
