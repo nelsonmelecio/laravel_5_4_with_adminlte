@@ -178,31 +178,31 @@ Route::group(['middleware' => 'auth'], function () {
 	
 	// ------------------------ ROUTES UNDER CONSTUCTION ------------------------- //
 
-	Route::get('preventive', 'HomeController@empty');
-	Route::get('corrective', 'HomeController@empty');
+	Route::get('preventive', 'HomeController@blankPage');
+	Route::get('corrective', 'HomeController@blankPage');
 
-	// Route::get('equipments', 'HomeController@empty');
-	Route::get('purchases', 'HomeController@empty');
-	// Route::get('departments', 'HomeController@empty');
-	// Route::get('manufacturers', 'HomeController@empty');
-	// Route::get('suppliers', 'HomeController@empty');
-	// Route::get('locations', 'HomeController@empty');
+	// Route::get('equipments', 'HomeController@blankPage');
+	Route::get('purchases', 'HomeController@blankPage');
+	// Route::get('departments', 'HomeController@blankPage');
+	// Route::get('manufacturers', 'HomeController@blankPage');
+	// Route::get('suppliers', 'HomeController@blankPage');
+	// Route::get('locations', 'HomeController@blankPage');
 
-	Route::get('cma', 'HomeController@empty');
-	Route::get('ppma', 'HomeController@empty');
-	Route::get('analysis', 'HomeController@empty');
-	Route::get('employee', 'HomeController@empty');
-	Route::get('category', 'HomeController@empty');
+	Route::get('cma', 'HomeController@blankPage');
+	Route::get('ppma', 'HomeController@blankPage');
+	Route::get('analysis', 'HomeController@blankPage');
+	Route::get('employee', 'HomeController@blankPage');
+	Route::get('category', 'HomeController@blankPage');
 
-	// Route::get('conditions', 'HomeController@empty');
-	// Route::get('requests', 'HomeController@empty');
-	Route::get('specifications', 'HomeController@empty');
-	// Route::get('statuses', 'HomeController@empty');
-	// Route::get('utilizations', 'HomeController@empty');
-	// Route::get('work_statuses', 'HomeController@empty');
-	// Route::get('work_types', 'HomeController@empty');
+	// Route::get('conditions', 'HomeController@blankPage');
+	// Route::get('requests', 'HomeController@blankPage');
+	Route::get('specifications', 'HomeController@blankPage');
+	// Route::get('statuses', 'HomeController@blankPage');
+	// Route::get('utilizations', 'HomeController@blankPage');
+	// Route::get('work_statuses', 'HomeController@blankPage');
+	// Route::get('work_types', 'HomeController@blankPage');
 
-	Route::get('accounts', 'HomeController@empty');
+	Route::get('accounts', 'HomeController@blankPage');
 
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes

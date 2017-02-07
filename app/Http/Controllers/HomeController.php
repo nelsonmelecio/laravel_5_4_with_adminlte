@@ -35,9 +35,14 @@ class HomeController extends Controller
         return view('adminlte::home');
     }
 
-    public function empty()
+    /**
+     * Show an empty page.
+     *
+     * @return Response
+     */
+    public function blankPage()
     {
-        return view('vendor.adminlte.empty');
+        return view('vendor.adminlte.blank');
     }
 
 }
