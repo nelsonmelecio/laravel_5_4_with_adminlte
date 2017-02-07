@@ -45,4 +45,17 @@ class HomeController extends Controller
         return view('vendor.adminlte.blank');
     }
 
+    // /**
+    //  * Show an empty page.
+    //  *
+    //  * @return Response
+    //  */
+    // public function signout()
+    // {
+    //     Auth::logout();
+
+    //     return redirect()->to('/');
+    // }
+
+
 }

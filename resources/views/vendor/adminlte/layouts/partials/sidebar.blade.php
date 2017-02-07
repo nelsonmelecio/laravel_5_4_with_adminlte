@@ -89,7 +89,9 @@
             </li>
  
             <!-- <li><a href="#"><i class='fa fa-briefcase'></i> <span>Manage Employees</span></a></li> -->
-            <li><a href="{{ url('accounts') }}"><i class='fa fa-group'></i> <span>Manage User Accounts</span></a></li>
+            @if(Auth::user()->type == 0)
+                <li><a href="{{ url('accounts') }}"><i class='fa fa-group'></i> <span>Manage User Accounts</span></a></li>
+            @endif
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

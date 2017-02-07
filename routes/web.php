@@ -167,6 +167,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/department/delete/{id}', 'DepartmentController@getDeleteView');
 	Route::post('/department/delete', 'DepartmentController@postDeleteView');
 
+
 	//  EQUIPMENTS Routes 
 	Route::get('/equipments', 'EquipmentController@index');
 	Route::get('/equipment/add', 'EquipmentController@getAddView');
@@ -176,33 +177,35 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/equipment/delete/{id}', 'EquipmentController@getDeleteView');
 	Route::post('/equipment/delete', 'EquipmentController@postDeleteView');
 	
+	// ------------------------ MANAGE USER ACCOUNTS ------------------------- //
+
+	Route::group(['middleware' => 'admin'], function () {
+		
+		// Only SUPER_ADMIN can make any request on this routes
+
+		Route::get('/accounts', 'AccountController@index');
+		Route::get('/account/add', 'AccountController@getAddView');
+		Route::post('/account/add', 'AccountController@postAddView');
+		Route::get('/account/edit/{id}', 'AccountController@getEditView');
+		Route::post('/account/update', 'AccountController@postEditView');
+		Route::get('/account/delete/{id}', 'AccountController@getDeleteView');
+		Route::post('/account/delete', 'AccountController@postDeleteView');
+
+	});
+
+	// Route::post('/signout', 'HomeController@signout');
+
 	// ------------------------ ROUTES UNDER CONSTUCTION ------------------------- //
 
 	Route::get('preventive', 'HomeController@blankPage');
 	Route::get('corrective', 'HomeController@blankPage');
-
-	// Route::get('equipments', 'HomeController@blankPage');
 	Route::get('purchases', 'HomeController@blankPage');
-	// Route::get('departments', 'HomeController@blankPage');
-	// Route::get('manufacturers', 'HomeController@blankPage');
-	// Route::get('suppliers', 'HomeController@blankPage');
-	// Route::get('locations', 'HomeController@blankPage');
-
 	Route::get('cma', 'HomeController@blankPage');
 	Route::get('ppma', 'HomeController@blankPage');
 	Route::get('analysis', 'HomeController@blankPage');
 	Route::get('employee', 'HomeController@blankPage');
 	Route::get('category', 'HomeController@blankPage');
-
-	// Route::get('conditions', 'HomeController@blankPage');
-	// Route::get('requests', 'HomeController@blankPage');
 	Route::get('specifications', 'HomeController@blankPage');
-	// Route::get('statuses', 'HomeController@blankPage');
-	// Route::get('utilizations', 'HomeController@blankPage');
-	// Route::get('work_statuses', 'HomeController@blankPage');
-	// Route::get('work_types', 'HomeController@blankPage');
-
-	Route::get('accounts', 'HomeController@blankPage');
 
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
