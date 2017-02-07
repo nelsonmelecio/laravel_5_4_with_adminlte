@@ -32,7 +32,7 @@
 								<th width="150">Ecri Code</th>
 								<th width="200">Description</th>
 								<th width="200">Asset Definition</th>
-								<th width="200">Department Building</th>
+								<th width="200">Life Service</th>
 								<th width="200">Critical Level</th>
 								<th width="200">Classsification level</th>
 								<th width="200">Frequency Level</th>
