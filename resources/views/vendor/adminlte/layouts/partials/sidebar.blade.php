@@ -81,9 +81,9 @@
                 <ul class="treeview-menu">
                     <li><a href="{{ url('cma') }}"><i class='fa fa-file-text'></i> <span>CM Accomplishment</span></a></li>
                     <li><a href="{{ url('ppma') }}"><i class='fa fa-file-text'></i> <span>PPM Accomplishment</span></a></li>
-                    <li><a href="{{ url('analysis') }}"><i class='fa fa-file-text'></i> <span>Analysis</span></a></li>
-                    <li><a href="{{ url('employee') }}"><i class='fa fa-file-text'></i> <span>Employee</span></a></li>
-                    <li><a href="{{ url('category') }}"><i class='fa fa-file-text'></i> <span>Category</span></a></li>
+                    <!-- <li><a href="{{ url('analysis') }}"><i class='fa fa-file-text'></i> <span>Analysis</span></a></li> -->
+                    <!-- <li><a href="{{ url('employee') }}"><i class='fa fa-file-text'></i> <span>Employee</span></a></li> -->
+                    <!-- <li><a href="{{ url('category') }}"><i class='fa fa-file-text'></i> <span>Category</span></a></li> -->
                 </ul>
             </li>
  

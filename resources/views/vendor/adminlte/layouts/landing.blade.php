@@ -65,7 +65,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         <div class="container">
             <div class="row centered">
                 <div class="col-lg-12">
-                    <h1 style="font-size: 60px !important;">Welcome to <b><a href="https://www.sgehealthcare.com"> SGE&MAK Healtcare, Inc.</a></b></h1>
+                    <h1 style="font-size: 60px !important;">Welcome to <b><a href="https://www.sgehealthcare.com"> SGE&MAK Healthcare, Inc.</a></b></h1>
                     <h4>&nbsp;</h4>
                     <h3><span>A <a href="#"><i>biomedical engineering</i></a> company and is solely dedicated</span></h3>
                     <h3><span>in integrated biomedical engineering <a href="#"><i>maintenance</i></a> and <a href="#"> <i>management </i></a>services.</span></h3>
