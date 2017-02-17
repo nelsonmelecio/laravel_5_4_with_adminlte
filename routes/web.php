@@ -186,6 +186,24 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/category/delete/{id}', 'CategoryController@getDeleteView');
 	Route::post('/category/delete', 'CategoryController@postDeleteView');
 
+	//  CORRECTIVE Routes 
+	Route::get('/correctives', 'CorrectiveController@index');
+	Route::get('/corrective/add', 'CorrectiveController@getAddView');
+	Route::post('/corrective/add', 'CorrectiveController@postAddView');
+	Route::get('/corrective/edit/{id}', 'CorrectiveController@getEditView');
+	Route::post('/corrective/update', 'CorrectiveController@postEditView');
+	Route::get('/corrective/delete/{id}', 'CorrectiveController@getDeleteView');
+	Route::post('/corrective/delete', 'CorrectiveController@postDeleteView');
+
+	//  PREVENTIVE Routes 
+	Route::get('/preventives', 'PreventiveController@index');
+	Route::get('/preventive/add', 'PreventiveController@getAddView');
+	Route::post('/preventive/add', 'PreventiveController@postAddView');
+	Route::get('/preventive/edit/{id}', 'PreventiveController@getEditView');
+	Route::post('/preventive/update', 'PreventiveController@postEditView');
+	Route::get('/preventive/delete/{id}', 'PreventiveController@getDeleteView');
+	Route::post('/preventive/delete', 'PreventiveController@postDeleteView');
+
 	
 	// ------------------------ MANAGE USER ACCOUNTS ------------------------- //
 
@@ -208,7 +226,7 @@ Route::group(['middleware' => 'auth'], function () {
 	// ------------------------ ROUTES UNDER CONSTUCTION ------------------------- //
 
 	Route::get('preventive', 'HomeController@blankPage');
-	Route::get('corrective', 'HomeController@blankPage');
+	// Route::get('corrective', 'HomeController@blankPage');
 	Route::get('purchases', 'HomeController@blankPage');
 	Route::get('cma', 'HomeController@blankPage');
 	Route::get('ppma', 'HomeController@blankPage');

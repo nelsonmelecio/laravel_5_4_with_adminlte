@@ -4,8 +4,21 @@
 <!-- Laravel App -->
 <script src="{{ asset('/js/app.js') }}" type="text/javascript"></script>
 
+
+
+
 <!-- // this is only temporary - need to learn Laravel Mix -->
+
+<!-- bootstrap datepicker -->
+<link rel="stylesheet" href="{{ asset('/plugins/datepicker/datepicker3.css') }}">
+<!-- Bootstrap time Picker -->
+<link rel="stylesheet" href="{{ asset('/plugins/timepicker/bootstrap-timepicker.min.css') }}">
+
+
+
 <script src="{{ asset('/plugins/datepicker/bootstrap-datepicker.js') }}" type="text/javascript"></script>
+<!-- bootstrap time picker -->
+<script src="{{ asset('/plugins/timepicker/bootstrap-timepicker.min.js') }}" type="text/javascript"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
       Both of these plugins are recommended to enhance the
@@ -18,12 +31,17 @@
 
 
 $(document).ready(function() {
-	//Date picker
-	$('#datepicker').datepicker({
+  //Date picker
+  $('.datepicker').datepicker({
     dateFormat: 'Y/m/d',
     setDate: new Date(),
-	  autoclose: true
-	});
+    autoclose: true
+  });
+
+  //Timepicker
+  $(".timepicker").timepicker({
+   showInputs: false
+  });
 });
 
 </script>
