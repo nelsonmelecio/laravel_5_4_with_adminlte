@@ -33,12 +33,14 @@
 							<h3 class="box-title">Register a new equipment.</h3>
 						</div>
 						<form role="form" action="{{ url('equipment/add') }}" method="POST">
-                    		{{ csrf_field() }}
+                    		
 							<div class="box-body">
+
+	                    		{{ csrf_field() }}
 							
 								<div class="col-sm-6">
-									@include('macro.textv3', ['data' => array('Equipment Name', 'name', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Equipment Description', 'description', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Equipment Name', 'equipment_name', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Equipment Description', 'equipment_description', null, null, $errors )])
 									@include('macro.textv3', ['data' => array('Model', 'model', null, null, $errors )])
 									@include('macro.textv3', ['data' => array('Barcode', 'barcode', null, null, $errors )])
 									@include('macro.textv3', ['data' => array('Serial Number', 'serial_number', null, null, $errors )])
@@ -51,13 +53,13 @@
 								<div class="col-sm-6">
 									@include('macro.select_tenant', ['data' => array('Tenant Name', 'tenant_id', $tenants, null, $errors )])
 									@include('macro.select_name', ['data' => array('Department', 'department_id', $departments, null, $errors )])
-									@include('macro.select_name', ['data' => array('Frequency', 'frequency_id', $frequency, null, $errors )])
+									@include('macro.select_name', ['data' => array('Frequency (as stated in the contract)', 'frequency_id', $frequency, null, $errors )])
 									@include('macro.select_name', ['data' => array('Location', 'location_id', $locations, null, $errors )])
 									@include('macro.select_manufacturer', ['data' => array('Manufacturer', 'manufacturer_id', $manufacturers, null, $errors )])
 									@include('macro.select_category', ['data' => array('Category', 'category_id', $categories, null, $errors )])
 									@include('macro.select_name', ['data' => array('Supplier', 'supplier_id', $suppliers, null, $errors )])
 									@include('macro.select_name', ['data' => array('Condition', 'condition_status_id', $conditions, null, $errors )])
-									@include('macro.select_name', ['data' => array('Utilization', 'utilization_idtus_id', $utilizations, null, $errors )])
+									@include('macro.select_name', ['data' => array('Utilization', 'utilization_id', $utilizations, null, $errors )])
 									@include('macro.select_name', ['data' => array('Status', 'status_id', $statuses, null, $errors )])
 
 									

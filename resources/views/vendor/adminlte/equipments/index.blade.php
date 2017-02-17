@@ -29,13 +29,13 @@
 						<thead class="thead-inverse">
 							<tr>
 								<th width="40">ID</th>
-								<th width="200">Name</th>
-								<th width="200">Description</th>
+								<th width="200">Equipment Name</th>
+								<th width="200">Equipment Description</th>
 								<th width="200">Model</th>
-								<th width="200">Status</th>
 								<th width="200">Barcode</th>
 								<th width="200">Serial Number</th>
 								<th width="200">Asset Number</th>
+								<th width="200">Status</th>
 								<th width="200">Required PM</th>
 								<th width="200">Service Group</th>
 								<th width="200">Service Provider</th>
@@ -50,10 +50,10 @@
 								<td style="vertical-align: middle;">{{ $equipment->equipment_name }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->equipment_description }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->model }}</td>
-								<td style="vertical-align: middle;">{{ $equipment->status }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->barcode }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->serial_number }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->asset_number }}</td>
+								<td style="vertical-align: middle;">{{ $equipment->status['name'] }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->required_pm }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->service_group }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->service_provider }}</td>

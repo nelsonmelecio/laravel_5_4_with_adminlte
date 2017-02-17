@@ -58,8 +58,8 @@ class EquipmentController extends Controller
     public function postAddView(Request $request) 
     {
     	$validator = Validator::make($request->all(), [
-            'code' => 'required|unique:equipments|max:50',
-            'name' => 'required|unique:equipments|max:100',
+            'equipment_description' => 'required|unique:equipments|max:50',
+            'equipment_name' => 'required|unique:equipments|max:100',
         ]);
 
         if ($validator->fails()) {
@@ -70,13 +70,25 @@ class EquipmentController extends Controller
 
     	$equipment = new Equipment();
 
-        $equipment->code = $request->input('code');
-        $equipment->name = $request->input('name');
-        $equipment->section = $request->input('section');
-        $equipment->building = $request->input('building');
-        $equipment->building_number = $request->input('building_number');
-        $equipment->building_floor = $request->input('building_floor');
-        $equipment->building_address = $request->input('building_address'); 
+        $equipment->equipment_name = $request->input('equipment_name');
+        $equipment->equipment_description = $request->input('equipment_description');
+        $equipment->model = $request->input('model');
+        $equipment->barcode = $request->input('barcode');
+        $equipment->serial_number = $request->input('serial_number');
+        $equipment->asset_number = $request->input('asset_number');
+        $equipment->service_group = $request->input('service_group');
+        $equipment->required_pm = $request->input('required_pm');
+        $equipment->service_provider = $request->input('service_provider');
+        $equipment->availability = $request->input('availability');
+        $equipment->department_id = $request->input('department_id');
+        $equipment->frequency_id = $request->input('frequency_id');
+        $equipment->location_id = $request->input('location_id');
+        $equipment->manufacturer_id = $request->input('manufacturer_id');
+        $equipment->category_id = $request->input('category_id');
+        $equipment->supplier_id = $request->input('supplier_id');
+        $equipment->condition_status_id = $request->input('condition_status_id');
+        $equipment->utilization_id = $request->input('utilization_id');
+        $equipment->status_id = $request->input('status_id');
         $equipment->tenant_id = $request->input('tenant_id');
 
     	$equipment->save();

@@ -26,10 +26,10 @@ class Equipment extends Model
      * @var array
      */
     protected $fillable = [ 'id',
-                            'name',
-                            'description',
+                            'equipment_name',
+                            'equipment_description',
                             'model',
-                            'status',
+                            // 'status', // redundant to status_id
                             'barcode',
                             'serial_number',
                             'asset_number',
@@ -42,11 +42,11 @@ class Equipment extends Model
                             'location_id',
                             'manufacturer_id',
                             'category_id',
-                            'register_id',
                             'supplier_id',
                             'condition_status_id',
                             'utilization_id',
                             'status_id',
+                            'tenant_id', // orig register_id -> change to tenant_id
                             ];
 
     /**
@@ -56,4 +56,14 @@ class Equipment extends Model
     {
         return $this->hasOne('App\Models\Tenant', 'id', 'tenant_id');
     }
+
+    /**
+     * Get the Tenant record associated with the location.
+     */
+    public function status()
+    {
+        return $this->hasOne('App\Models\Status', 'id', 'status_id');
+    }
+
+
 }
