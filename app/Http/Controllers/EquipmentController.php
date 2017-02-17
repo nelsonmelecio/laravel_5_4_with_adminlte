@@ -5,26 +5,54 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Validator;
-use App\Models\Equipment;
 use App\Models\Tenant;
+use App\Models\Equipment;
+use App\Models\Department;
+use App\Models\Frequency;
+use App\Models\Location;
+use App\Models\Manufacturer;
+use App\Models\Category;
+use App\Models\Supplier;
+use App\Models\Condition;
+use App\Models\Utilization;
+use App\Models\Status;
 
 class EquipmentController extends Controller
 {
     public function index() 
     {
     	$equipments = new Equipment();
+        $departments = new Department();
 
     	return view('vendor.adminlte.equipments.index')
-
-            ->with('equipments', $equipments->all());
+            ->with('equipments', $equipments->all())
+            ->with('departments', $departments->all());
     }
 
     public function getAddView() 
     {
         $tenants = new Tenant();
+        $departments = new Department();
+        $frequencies = new Frequency();
+        $locations = new Location();
+        $manufacturers = new Manufacturer();
+        $categories = new Category();
+        $suppliers = new Supplier();
+        $conditions = new Condition();
+        $utilizations = new Utilization();
+        $statuses = new Status();
 
     	return view('vendor.adminlte.equipments.add')
-            ->with('tenants', $tenants->all());
+            ->with('tenants', $tenants->all())
+            ->with('frequency', $frequencies->all())
+            ->with('locations', $locations->all())
+            ->with('manufacturers', $manufacturers->all())
+            ->with('categories', $categories->all())
+            ->with('suppliers', $suppliers->all())
+            ->with('conditions', $conditions->all())
+            ->with('utilizations', $utilizations->all())
+            ->with('statuses', $statuses->all())
+            ->with('departments', $departments->all());
     }
 
     public function postAddView(Request $request) 

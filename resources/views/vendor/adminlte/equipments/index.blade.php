@@ -47,8 +47,8 @@
 						@foreach($equipments as $equipment)
 							<tr>
 								<td style="vertical-align: middle;">{{ $equipment->id }}</td>
-								<td style="vertical-align: middle;">{{ $equipment->name }}</td>
-								<td style="vertical-align: middle;">{{ $equipment->description }}</td>
+								<td style="vertical-align: middle;">{{ $equipment->equipment_name }}</td>
+								<td style="vertical-align: middle;">{{ $equipment->equipment_description }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->model }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->status }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->barcode }}</td>

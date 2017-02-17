@@ -9,8 +9,8 @@
 
 	@include('vendor.adminlte.layouts.partials.contentheader_v2', 
 			[	
-				'title' => 'New Department Record',
-				'indexes' => 'Departments, Add'
+				'title' => 'New Equipment Record',
+				'indexes' => 'Equipments, Add'
 			])
 
 @endsection
@@ -22,7 +22,7 @@
 
 		<div class="col-sm-12">
 			<div class="text-left">
-				<a href=" {{ url('departments') }}" class="btn btn-info btn-md"><i class="fa fa-arrow-circle-left"></i> Back </a>
+				<a href=" {{ url('equipments') }}" class="btn btn-info btn-md"><i class="fa fa-arrow-circle-left"></i> Back </a>
 			</div>
 			<br>
 			<div class="box" style="border-top: 0;">
@@ -32,33 +32,44 @@
 						<div class="box-header with-border">
 							<h3 class="box-title">Create a new category name.</h3>
 						</div>
-						<form role="form" action="{{ url('department/add') }}" method="POST">
+						<form role="form" action="{{ url('equipment/add') }}" method="POST">
                     		{{ csrf_field() }}
 							<div class="box-body">
+							
 								<div class="col-sm-6">
-
-									@include('macro.textv3', ['data' => array('Name', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Description', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Model', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Status', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Barcode', 'code', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Name', 'name', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Description', 'description', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Model', 'model', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Status', 'status', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Barcode', 'barcode', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Serial Number', 'serial_number', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Asset Number', 'asset_number', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Service Group', 'service_group', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Required PM', 'required_pm', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Service Provider', 'service_provider', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Availability', 'availability', null, null, $errors )])
 								</div>
 								<div class="col-sm-6">
-									@include('macro.textv3', ['data' => array('Availability', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Required PM', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Serial Number', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Asset Number', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Service Group', 'code', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Service Provider', 'code', null, null, $errors )])
+									@include('macro.select_tenant', ['data' => array('Tenant Name', 'tenant_id', $tenants, null, $errors )])
+									@include('macro.select_name', ['data' => array('Department', 'department_id', $departments, null, $errors )])
+									@include('macro.select_name', ['data' => array('Frequency', 'frequency_id', $frequency, null, $errors )])
+									@include('macro.select_name', ['data' => array('Location', 'location_id', $locations, null, $errors )])
+									@include('macro.select_manufacturer', ['data' => array('Manufacturer', 'manufacturer_id', $manufacturers, null, $errors )])
+									@include('macro.select_category', ['data' => array('Category', 'category_id', $categories, null, $errors )])
+									@include('macro.select_name', ['data' => array('Supplier', 'supplier_id', $suppliers, null, $errors )])
+									@include('macro.select_name', ['data' => array('Condition', 'condition_status_id', $conditions, null, $errors )])
+									@include('macro.select_name', ['data' => array('Utilization', 'utilization_idtus_id', $utilizations, null, $errors )])
+									@include('macro.select_name', ['data' => array('Status', 'status_id', $statuses, null, $errors )])
+
+									
 								</div>
 
 
 								
-								@include('macro.select_tenant', ['data' => array('Tenant Name', 'tenant_id', $tenants, null, $errors )])
 							</div>
 							<div class="box-footer">
-								<button class="btn btn-success" type="submit">Submit</button>
-								<a href=" {{ url('departments') }}" class="btn btn-info btn-md"> Cancel </a>
+								<button class="btn btn-success" type="submit">Submit New Equipment</button>
+								<a href=" {{ url('equipments') }}" class="btn btn-info btn-md"> Cancel </a>
 							</div>
 						</form>
 					</div>
@@ -67,7 +78,7 @@
 			</div>
 		</div>
 
-	<div class="col-md-12">
+	<!-- <div class="col-md-12">
 		
 		<div class="nav-tabs-custom">
 			<ul class="nav nav-tabs pull-right">
@@ -113,7 +124,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 </div>
 
 @endsection
