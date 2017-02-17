@@ -65,5 +65,46 @@ class Equipment extends Model
         return $this->hasOne('App\Models\Status', 'id', 'status_id');
     }
 
+    
+    // /**
+    //  * Get the proficiency record associated with the location.
+    //  */
+    // public function proficiency()
+    // {
+    //     return $this->hasOne('App\Models\Proficiency', 'id', 'proficiency_id');
+    // }
+
+    // /**
+    //  * Get the risk record associated with the location.
+    //  */
+    // public function Risk()
+    // {
+    //     return $this->hasOne('App\Models\Risk', 'id', 'risk_id');
+    // }
+
+
+    // /**
+    //  * Get the frequency record associated with the location.
+    //  */
+    // public function frequency()
+    // {
+    //     return $this->hasOne('App\Models\Frequency', 'id', 'frequency_id');
+    // }
+
+    // /**
+    //  * Get the classification record associated with the location.
+    //  */
+    // public function classification()
+    // {
+    //     return $this->hasOne('App\Models\Classification', 'id', 'classification_id');
+    // }
+
+    // /**
+    //  * Get the critical record associated with the location.
+    //  */
+    // public function critical()
+    // {
+    //     return $this->hasOne('App\Models\Critical', 'id', 'critical_id');
+    // }
 
 }

@@ -45,10 +45,10 @@
 									@include('macro.textv3', ['data' => array('Barcode', 'barcode', null, null, $errors )])
 									@include('macro.textv3', ['data' => array('Serial Number', 'serial_number', null, null, $errors )])
 									@include('macro.textv3', ['data' => array('Asset Number', 'asset_number', null, null, $errors )])
-									@include('macro.select_required_pm')
-									@include('macro.select_service_group')
-									@include('macro.select_service_provider')
-									@include('macro.select_availability')
+									@include('macro.select_required_pm', ['data' => array( null )] )
+									@include('macro.select_service_group', ['data' => array( null )] )
+									@include('macro.select_service_provider', ['data' => array( null )] )
+									@include('macro.select_availability', ['data' => array( null )] )
 								</div>
 								<div class="col-sm-6">
 									@include('macro.select_tenant', ['data' => array('Tenant Name', 'tenant_id', $tenants, null, $errors )])
