@@ -40,7 +40,7 @@
 								<th width="200">Service Group</th>
 								<th width="200">Service Provider</th>
 								<th width="200">Availability</th>
-								<th width="160" class="text-center">Action</th>
+								<th width="200" class="text-center">Action</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -59,7 +59,7 @@
 								<td style="vertical-align: middle;">{{ $equipment->service_provider }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->availability }}</td>
 								<td style="vertical-align: middle;">
-									<a href="{{ url('equipment/edit/' . $equipment->id) }}" class="btn btn-info btn-xs" style="width: 48%;"> View Details </a>
+									<a href="{{ url('equipment/edit/' . $equipment->id) }}" class="btn btn-success btn-xs" style="width: 48%;"> View Details </a>
 									<a href="{{ url('equipment/delete/' . $equipment->id) }}" class="btn btn-danger btn-xs" style="width: 48%;"> Delete </a>
 								</td>
 							</tr>

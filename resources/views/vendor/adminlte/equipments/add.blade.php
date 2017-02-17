@@ -30,24 +30,23 @@
 
 					<div class="box box-primary">
 						<div class="box-header with-border">
-							<h3 class="box-title">Create a new category name.</h3>
+							<h3 class="box-title">Register a new equipment.</h3>
 						</div>
 						<form role="form" action="{{ url('equipment/add') }}" method="POST">
                     		{{ csrf_field() }}
 							<div class="box-body">
 							
 								<div class="col-sm-6">
-									@include('macro.textv3', ['data' => array('Name', 'name', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Description', 'description', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Equipment Name', 'name', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Equipment Description', 'description', null, null, $errors )])
 									@include('macro.textv3', ['data' => array('Model', 'model', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Status', 'status', null, null, $errors )])
 									@include('macro.textv3', ['data' => array('Barcode', 'barcode', null, null, $errors )])
 									@include('macro.textv3', ['data' => array('Serial Number', 'serial_number', null, null, $errors )])
 									@include('macro.textv3', ['data' => array('Asset Number', 'asset_number', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Service Group', 'service_group', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Required PM', 'required_pm', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Service Provider', 'service_provider', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Availability', 'availability', null, null, $errors )])
+									@include('macro.select_required_pm')
+									@include('macro.select_service_group')
+									@include('macro.select_service_provider')
+									@include('macro.select_availability')
 								</div>
 								<div class="col-sm-6">
 									@include('macro.select_tenant', ['data' => array('Tenant Name', 'tenant_id', $tenants, null, $errors )])
