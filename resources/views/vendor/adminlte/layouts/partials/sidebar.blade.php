@@ -52,7 +52,7 @@
             <li class="treeview">
                 <a href="#"><i class='fa fa-list'></i> <span>Manage Groups</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('categories') }}"><i class='fa fa-list-ul'></i> Categories</a></li>
+                    <li><a href="{{ url('categories') }}"><i class='fa fa-list-ul'></i> Asset Categories</a></li>
                     <li><a href="{{ url('departments') }}"><i class='fa fa-flag'></i> <span>Departments</span></a></li>
                     <li><a href="{{ url('manufacturers') }}"><i class='fa fa-truck'></i> <span>Manufacturers</span></a></li>
                     <li><a href="{{ url('suppliers') }}"><i class='fa fa-tags'></i> <span>Suppliers</span></a></li>
@@ -63,16 +63,16 @@
            <li class="treeview">
                 <a href="#"><i class='fa fa-book'></i> <span>Manage Particulars</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('classifications') }}"><i class='fa fa-list-ul'></i> Classifications</a></li>
-                    <li><a href="{{ url('conditions') }}"><i class='fa fa-list-ul'></i> Conditions</a></li>
-                    <li><a href="{{ url('criticals') }}"><i class='fa fa-list-ul'></i> Critical</a></li>
-                    <li><a href="{{ url('frequencies') }}"><i class='fa fa-list-ul'></i> Frequencies</a></li>
-                    <li><a href="{{ url('proficiencies') }}"><i class='fa fa-list-ul'></i> Proficiencies</a></li>
-                    <li><a href="{{ url('requests') }}"><i class='fa fa-list-ul'></i> Requests</a></li>
-                    <li><a href="{{ url('risks') }}"><i class='fa fa-list-ul'></i> Risks</a></li>
-                    <li><a href="{{ url('statuses') }}"><i class='fa fa-list-ul'></i> Statuses</a></li>
-                    <li><a href="{{ url('utilizations') }}"><i class='fa fa-list-ul'></i> Utilizations</a></li>
-                    <li><a href="{{ url('work_statuses') }}"><i class='fa fa-list-ul'></i> Work Statuses</a></li>
+                    <li><a href="{{ url('classifications') }}"><i class='fa fa-list-ul'></i> Classification Levels</a></li>
+                    <li><a href="{{ url('conditions') }}"><i class='fa fa-list-ul'></i> Condition Levels</a></li>
+                    <li><a href="{{ url('criticals') }}"><i class='fa fa-list-ul'></i> Critical Levels</a></li>
+                    <li><a href="{{ url('frequencies') }}"><i class='fa fa-list-ul'></i> Frequency Levels</a></li>
+                    <li><a href="{{ url('proficiencies') }}"><i class='fa fa-list-ul'></i> Proficiency Levels</a></li>
+                    <li><a href="{{ url('requests') }}"><i class='fa fa-list-ul'></i> Request Types</a></li>
+                    <li><a href="{{ url('risks') }}"><i class='fa fa-list-ul'></i> Risk Types</a></li>
+                    <li><a href="{{ url('statuses') }}"><i class='fa fa-list-ul'></i> Status Types</a></li>
+                    <li><a href="{{ url('utilizations') }}"><i class='fa fa-list-ul'></i> Utilization Types</a></li>
+                    <li><a href="{{ url('work_statuses') }}"><i class='fa fa-list-ul'></i> Work Status Types</a></li>
                     <li><a href="{{ url('work_types') }}"><i class='fa fa-list-ul'></i> Work Types</a></li>
                 </ul>
             </li>

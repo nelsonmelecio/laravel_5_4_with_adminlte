@@ -23,9 +23,9 @@
 				<a href="{{ url('corrective/add') }}" class="btn btn-success btn-md" style="min-width: 170px;"><i class="fa fa-plus"></i> Add New Corrective Maintenance </a>
 			</div>
 			<br>
-			<div class="box">
-				<div class="box-body table-responsive" style="min-height: 150px; overflow: auto;">
-					<table class="table table-bordered table-hover" style="table-layout: fixed; ">
+			<!-- <div class="box"> -->
+				<!-- <div class="box-body table-responsive" style="min-height: 150px; overflow: auto;"> -->
+					<table id="tbldatas" class="table table-striped table-bordered row-border table-hover table-compact"  style="table-layout: fixed;">
 						<thead class="thead-inverse">
 							<tr>
 							<!-- 'equipment_id',     // tbl:equipments
@@ -101,8 +101,8 @@
 						</tbody>
 						</tfoot>
 					</table>
-				</div>
-			</div>
+				<!-- </div> -->
+			<!-- </div> -->
 		</div>
 	</div>
 

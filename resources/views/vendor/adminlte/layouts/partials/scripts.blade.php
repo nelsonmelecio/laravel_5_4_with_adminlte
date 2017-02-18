@@ -8,17 +8,28 @@
 
 
 <!-- // this is only temporary - need to learn Laravel Mix -->
+<style>
+  .form-control {
+    color: #000000 !important;
+  }
+</style>
 
 <!-- bootstrap datepicker -->
 <link rel="stylesheet" href="{{ asset('/plugins/datepicker/datepicker3.css') }}">
 <!-- Bootstrap time Picker -->
 <link rel="stylesheet" href="{{ asset('/plugins/timepicker/bootstrap-timepicker.min.css') }}">
-
+<!-- DataTables -->
+<link rel="stylesheet" href="{{ asset('/plugins/datatables/dataTables.bootstrap.css') }}">
 
 
 <script src="{{ asset('/plugins/datepicker/bootstrap-datepicker.js') }}" type="text/javascript"></script>
 <!-- bootstrap time picker -->
 <script src="{{ asset('/plugins/timepicker/bootstrap-timepicker.min.js') }}" type="text/javascript"></script>
+<!-- DataTables -->
+<script src="{{ asset('/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+
+<script src="{{ asset('/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
+
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
       Both of these plugins are recommended to enhance the
@@ -42,6 +53,20 @@ $(document).ready(function() {
   $(".timepicker").timepicker({
    showInputs: false
   });
+
+  $('#tbldatas').DataTable({
+      // "paging": true,
+      // "lengthChange": false,
+      // "searching": false,
+      // "ordering": true,
+      // "info": true,
+      "autoWidth": false,
+      "scrollX": true,
+      "responsive": true,
+
+      // "select": true,
+    });
+
 });
 
 </script>
