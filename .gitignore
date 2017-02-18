@@ -15,3 +15,4 @@ app/storage/
 sge-final.sublime-project
 sge-final.sublime-workspace
 *.sublime-workspace
+*.rej
