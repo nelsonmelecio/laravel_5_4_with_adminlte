@@ -9,8 +9,8 @@
 
 	@include('vendor.adminlte.layouts.partials.contentheader_v2', 
 			[	
-				'title' => 'New Equipment Record',
-				'indexes' => 'Equipments, Add'
+				'title' => 'New Corrective Maintenance',
+				'indexes' => 'Correctives, Add'
 			])
 
 @endsection
@@ -22,7 +22,7 @@
 
 		<div class="col-sm-12">
 			<div class="text-left">
-				<a href=" {{ url('equipments') }}" class="btn btn-info btn-md"><i class="fa fa-arrow-circle-left"></i> Back </a>
+				<a href=" {{ url('correctives') }}" class="btn btn-info btn-md"><i class="fa fa-arrow-circle-left"></i> Back </a>
 			</div>
 			<br>
 			<div class="box" style="border-top: 0;">
@@ -30,47 +30,75 @@
 
 					<div class="box box-primary">
 						<div class="box-header with-border">
-							<h3 class="box-title">Register a new equipment.</h3>
+							<h3 class="box-title">Register a new corrective.</h3>
 						</div>
-						<form role="form" action="{{ url('equipment/add') }}" method="POST">
+						<form role="form" action="{{ url('corrective/add') }}" method="POST">
                     		
 							<div class="box-body">
 
 	                    		{{ csrf_field() }}
+
+                    		<!-- 'equipment_id',     // tbl:equipments
+                            'work_order_code',
+                            'work_order_date',
+                            'work_order_time',
+                            'work_type_id',     //tbl:work_type
+                            'work_status_id',   //tbl:work_status
+                            'department_id',    //tbl:department
+
+                            'request_code',
+                            'request_date',
+                            'request_time',
+                            'request_type_id',  //tbl:request_type
+                            'request_id',
+
+                            'status_id',        //tbl:status
+                            'target_date',
+                            'request_details',
+                            'tenant_id',        //tbl:tenant
+                            'condition_id',     //tbl:condition
+                            'utilization_id',   //tbl:utilization
+                            'observation',  
+                            'reported',
+                            'remarks',		 -->	
 							
-								<div class="col-sm-6">
-									@include('macro.textv3', ['data' => array('Equipment Name', 'equipment_name', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Equipment Description', 'equipment_description', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Model', 'model', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Barcode', 'barcode', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Serial Number', 'serial_number', null, null, $errors )])
-									@include('macro.textv3', ['data' => array('Asset Number', 'asset_number', null, null, $errors )])
-									@include('macro.select_required_pm', ['data' => array( null )] )
-									@include('macro.select_service_group', ['data' => array( null )] )
-									@include('macro.select_service_provider', ['data' => array( null )] )
-									@include('macro.select_availability', ['data' => array( null )] )
-								</div>
-								<div class="col-sm-6">
-									@include('macro.select_tenant', ['data' => array('Tenant Name', 'tenant_id', $tenants, null, $errors )])
+									
+									@include('macro.select_equipment', ['data' => array('Select Equipment', 'equipment_id', $equipments, null, $errors )])
+									@include('macro.date', ['data' => array('Work Order Date', 'corrective_description', null, $errors )])
+									@include('macro.time', ['data' => array('Work Order Time', 'model', null, $errors )])
+									@include('macro.select_name', ['data' => array('Work Type', 'work_type_id', $work_types, null, $errors )])
+									@include('macro.select_name', ['data' => array('Work Status', 'work_status_id', $work_statuses, null, $errors )])
 									@include('macro.select_name', ['data' => array('Department', 'department_id', $departments, null, $errors )])
-									@include('macro.select_name', ['data' => array('Frequency (as stated in the contract)', 'frequency_id', $frequency, null, $errors )])
-									@include('macro.select_name', ['data' => array('Location', 'location_id', $locations, null, $errors )])
-									@include('macro.select_manufacturer', ['data' => array('Manufacturer', 'manufacturer_id', $manufacturers, null, $errors )])
-									@include('macro.select_category', ['data' => array('Category', 'category_id', $categories, null, $errors )])
-									@include('macro.select_name', ['data' => array('Supplier', 'supplier_id', $suppliers, null, $errors )])
+
+
+									@include('macro.textv3', ['data' => array('Request Code', 'request_code', null, null, $errors )])
+									@include('macro.date', ['data' => array('Request Date', 'request_date', null, $errors )])
+									@include('macro.time', ['data' => array('Request Time', 'request_time', null, $errors )])
+
+									@include('macro.select_name', ['data' => array('Request Type', 'request_type_id', $request_types, null, $errors )])
+
+									<!-- // request_id -->
+
+
+									@include('macro.select_name', ['data' => array('Status', 'status_id', $statuses, null, $errors )])
+									@include('macro.date', ['data' => array('Target Date', 'target_date', null, $errors )])
+									@include('macro.textv3', ['data' => array('Request Details', 'request_details', null, null, $errors )])
+									@include('macro.select_tenant', ['data' => array('Tenant Hospital', 'tenant_id', $tenants, null, $errors )])
 									@include('macro.select_name', ['data' => array('Condition', 'condition_status_id', $conditions, null, $errors )])
 									@include('macro.select_name', ['data' => array('Utilization', 'utilization_id', $utilizations, null, $errors )])
-									@include('macro.select_name', ['data' => array('Status', 'status_id', $statuses, null, $errors )])
+									@include('macro.textv3', ['data' => array('Observation', 'observation', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Reported', 'reported', null, null, $errors )])
+									@include('macro.textv3', ['data' => array('Remarks', 'remarks', null, null, $errors )])
+									
 
 									
-								</div>
-
+						
 
 								
 							</div>
 							<div class="box-footer">
 								<button class="btn btn-success" type="submit">Submit New Equipment</button>
-								<a href=" {{ url('equipments') }}" class="btn btn-info btn-md"> Cancel </a>
+								<a href=" {{ url('correctives') }}" class="btn btn-info btn-md"> Cancel </a>
 							</div>
 						</form>
 					</div>

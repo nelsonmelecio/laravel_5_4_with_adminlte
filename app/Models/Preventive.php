@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Equipment extends Model
+class Preventive extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'equipments';
+    protected $table = 'preventive';
 
     /**
      * Indicates if the model should be timestamped.

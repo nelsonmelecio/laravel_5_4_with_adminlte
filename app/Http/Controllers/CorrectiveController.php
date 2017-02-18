@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Validator;
+use App\Models\Corrective;
+
 use App\Models\Tenant;
 use App\Models\Equipment;
 use App\Models\Department;
@@ -16,59 +18,82 @@ use App\Models\Supplier;
 use App\Models\Condition;
 use App\Models\Utilization;
 use App\Models\Status;
+use App\Models\WorkType;
+use App\Models\WorkStatus;
+use App\Models\RequestType;
 
-class EquipmentController extends Controller
+class CorrectiveController extends Controller
 {
     public function index() 
     {
-    	$equipments = new Equipment();
-        $departments = new Department();
+        // 'equipment_id',     // tbl:equipments
+        // 'work_order_code',
+        // 'work_order_date',
+        // 'work_order_time',
+        // 'work_type_id',     //tbl:work_type
+        // 'work_status_id',   //tbl:work_status
+        // 'department_id',    //tbl:department
+        // 'request_code',
+        // 'request_date',
+        // 'request_time',
+        // 'request_type_id',  //tbl:request_type
+        // 'request_id',
+        // 'status_id',        //tbl:status
+        // 'target_date',
+        // 'request_details',
+        // 'tenant_id',        //tbl:tenant
+        // 'condition_id',     //tbl:condition
+        // 'utilization_id',   //tbl:utilization
+        // 'observation',  
+        // 'reported',
+        // 'remarks',
 
-    	return view('vendor.adminlte.equipments.index')
-            ->with('equipments', $equipments->all())
-            ->with('departments', $departments->all());
+    	$correctives = new Corrective();
+
+    	return view('vendor.adminlte.corrective.index')
+            ->with('correctives', $correctives->all());
+            
     }
 
     public function getAddView() 
     {
-        $tenants = new Tenant();
+        $equipments = new Equipment();
+        $work_types = new WorkType();
+        $work_statuses = new WorkStatus();
         $departments = new Department();
-        $frequencies = new Frequency();
-        $locations = new Location();
-        $manufacturers = new Manufacturer();
-        $categories = new Category();
-        $suppliers = new Supplier();
+        $request_types = new RequestType();
+        $statuses = new Status();
+        $tenants = new Tenant();
         $conditions = new Condition();
         $utilizations = new Utilization();
-        $statuses = new Status();
 
-    	return view('vendor.adminlte.equipments.add')
-            ->with('tenants', $tenants->all())
-            ->with('frequency', $frequencies->all())
-            ->with('locations', $locations->all())
-            ->with('manufacturers', $manufacturers->all())
-            ->with('categories', $categories->all())
-            ->with('suppliers', $suppliers->all())
-            ->with('conditions', $conditions->all())
-            ->with('utilizations', $utilizations->all())
+    	return view('vendor.adminlte.corrective.add')
+            ->with('equipments', $equipments->all())
+            ->with('work_types', $work_types->all())
+            ->with('work_statuses', $work_statuses->all())
+            ->with('departments', $departments->all())
+            ->with('request_types', $request_types->all())
             ->with('statuses', $statuses->all())
-            ->with('departments', $departments->all());
+            ->with('tenants', $tenants->all())
+            ->with('conditions', $conditions->all())
+            ->with('utilizations', $utilizations->all());
+
     }
 
     public function postAddView(Request $request) 
     {
     	$validator = Validator::make($request->all(), [
-            'equipment_description' => 'required|unique:equipments|max:50',
-            'equipment_name' => 'required|unique:equipments|max:100',
+            'equipment_description' => 'required|unique:correctives|max:50',
+            'equipment_name' => 'required|unique:correctives|max:100',
         ]);
 
         if ($validator->fails()) {
-            return redirect()->action('EquipmentController@getAddView')
+            return redirect()->action('CorrectiveController@getAddView')
                         ->withErrors($validator)
                         ->withInput();
         }
 
-    	$equipment = new Equipment();
+    	$equipment = new Corrective();
 
         $equipment->equipment_name = $request->input('equipment_name');
         $equipment->equipment_description = $request->input('equipment_description');
@@ -93,7 +118,7 @@ class EquipmentController extends Controller
 
     	$equipment->save();
 
-    	return redirect()->action('EquipmentController@index');
+    	return redirect()->action('CorrectiveController@index');
     }
 
     public function getEditView($id) 
@@ -109,9 +134,9 @@ class EquipmentController extends Controller
         $utilizations = new Utilization();
         $statuses = new Status();
 
-        $equipment = Equipment::find($id);
+        $equipment = Corrective::find($id);
 
-    	return view('vendor.adminlte.equipments.edit')
+    	return view('vendor.adminlte.corrective.edit')
                     ->with('equipment', $equipment)
                     ->with('tenants', $tenants->all())
                     ->with('frequency', $frequencies->all())
@@ -129,8 +154,8 @@ class EquipmentController extends Controller
     public function postEditView(Request $request) 
     {
         $validator = Validator::make($request->all(), [
-            'equipment_description' => 'required|max:50|unique:equipments,id,' . $request->input('id'),
-            'equipment_name' => 'required|max:100|unique:equipments,id,'. $request->input('id'),
+            'equipment_description' => 'required|max:50|unique:correctives,id,' . $request->input('id'),
+            'equipment_name' => 'required|max:100|unique:correctives,id,'. $request->input('id'),
         ]);
 
         if ($validator->fails()) {
@@ -140,7 +165,7 @@ class EquipmentController extends Controller
                              ->withInput($request->all());
         }
 
-    	$equipment = Equipment::find($request->input('id'));
+    	$equipment = Corrective::find($request->input('id'));
 
         $equipment->equipment_name = $request->input('equipment_name');
         $equipment->equipment_description = $request->input('equipment_description');
@@ -165,22 +190,22 @@ class EquipmentController extends Controller
 
     	$equipment->update();
 
-    	return redirect()->action('EquipmentController@index');
+    	return redirect()->action('CorrectiveController@index');
     }
 
     public function getDeleteView($id) 
     {
-    	$equipment = Equipment::find($id);
+    	$equipment = Corrective::find($id);
 
-    	return view('vendor.adminlte.equipments.delete', [ 'equipment' => $equipment ]);
+    	return view('vendor.adminlte.corrective.delete', [ 'equipment' => $equipment ]);
     }
 
     public function postDeleteView(Request $request) 
     {
-    	$equipment = Equipment::find($request->input('id'));
+    	$equipment = Corrective::find($request->input('id'));
 
     	$equipment->delete();
 
-    	return redirect()->action('EquipmentController@index');
+    	return redirect()->action('CorrectiveController@index');
     }
 }

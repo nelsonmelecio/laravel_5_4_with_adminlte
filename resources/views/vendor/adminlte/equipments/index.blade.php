@@ -29,37 +29,37 @@
 						<thead class="thead-inverse">
 							<tr>
 								<th width="40">ID</th>
-								<th width="200">Name</th>
-								<th width="200">Description</th>
+								<th width="200">Equipment Name</th>
+								<th width="200">Equipment Description</th>
 								<th width="200">Model</th>
-								<th width="200">Status</th>
 								<th width="200">Barcode</th>
 								<th width="200">Serial Number</th>
 								<th width="200">Asset Number</th>
+								<th width="200">Status</th>
 								<th width="200">Required PM</th>
 								<th width="200">Service Group</th>
 								<th width="200">Service Provider</th>
 								<th width="200">Availability</th>
-								<th width="160" class="text-center">Action</th>
+								<th width="200" class="text-center">Action</th>
 							</tr>
 						</thead>
 						<tbody>
 						@foreach($equipments as $equipment)
 							<tr>
 								<td style="vertical-align: middle;">{{ $equipment->id }}</td>
-								<td style="vertical-align: middle;">{{ $equipment->name }}</td>
-								<td style="vertical-align: middle;">{{ $equipment->description }}</td>
+								<td style="vertical-align: middle;">{{ $equipment->equipment_name }}</td>
+								<td style="vertical-align: middle;">{{ $equipment->equipment_description }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->model }}</td>
-								<td style="vertical-align: middle;">{{ $equipment->status }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->barcode }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->serial_number }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->asset_number }}</td>
+								<td style="vertical-align: middle;">{{ $equipment->status['name'] }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->required_pm }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->service_group }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->service_provider }}</td>
 								<td style="vertical-align: middle;">{{ $equipment->availability }}</td>
 								<td style="vertical-align: middle;">
-									<a href="{{ url('equipment/edit/' . $equipment->id) }}" class="btn btn-info btn-xs" style="width: 48%;"> View Details </a>
+									<a href="{{ url('equipment/edit/' . $equipment->id) }}" class="btn btn-success btn-xs" style="width: 48%;"> View Details </a>
 									<a href="{{ url('equipment/delete/' . $equipment->id) }}" class="btn btn-danger btn-xs" style="width: 48%;"> Delete </a>
 								</td>
 							</tr>
