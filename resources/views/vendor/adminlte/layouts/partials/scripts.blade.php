@@ -30,6 +30,7 @@
 
 <script src="{{ asset('/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
 
+<script src="{{ asset('/js/nelson-custom.js') }}" type="text/javascript"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
       Both of these plugins are recommended to enhance the
@@ -40,33 +41,5 @@
         'csrfToken' => csrf_token(),
     ]) !!};
 
-
-$(document).ready(function() {
-  //Date picker
-  $('.datepicker').datepicker({
-    dateFormat: 'Y/m/d',
-    setDate: new Date(),
-    autoclose: true
-  });
-
-  //Timepicker
-  $(".timepicker").timepicker({
-   showInputs: false
-  });
-
-  $('#tbldatas').DataTable({
-      // "paging": true,
-      // "lengthChange": false,
-      // "searching": false,
-      // "ordering": true,
-      // "info": true,
-      "autoWidth": false,
-      "scrollX": true,
-      "responsive": true,
-
-      // "select": true,
-    });
-
-});
 
 </script>

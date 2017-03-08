@@ -28,52 +28,31 @@
 					<table id="tbldatas" class="table table-striped table-bordered row-border table-hover table-compact"  style="table-layout: fixed;">
 						<thead class="thead-inverse">
 							<tr>
-							<!-- 'equipment_id',     // tbl:equipments
-                            'work_order_code',
-                            'work_order_date',
-                            'work_order_time',
-                            'work_type_id',     //tbl:work_type
-                            'work_status_id',   //tbl:work_status
-                            'department_id',    //tbl:department
+								<th width="40">NO</th>
 
-                            'request_code',
-                            'request_date',
-                            'request_time',
-                            'request_type_id',  //tbl:request_type
-                            'request_id',
+								<!-- the ff. column data are from the equipments details  -->
+								<th width="150">Asset No.</th>
+								<th width="150">SD Number</th>
+								<th width="150">Description</th>
+								<th width="150">Brand</th>
+								<th width="150">Serial</th>
+								<th width="150">Department</th>
+								<th width="150">Risk Classification</th>
+								<th width="150">Date of Purchase</th>
 
-                            'status_id',        //tbl:status
-                            'target_date',
-                            'request_details',
-                            'tenant_id',        //tbl:tenant
-                            'condition_id',     //tbl:condition
-                            'utilization_id',   //tbl:utilization
-                            'observation',  
-                            'reported',
-                            'remarks',		 -->					
-								<th width="40">ID</th>
-								<th width="200">Equipment Name</th>
-								<th width="200">Work Order Date</th>
-								<th width="200">Work Order Time</th>
-								<th width="200">Work Type</th>
-								<th width="200">Work Status</th>
-								<th width="200">Department</th>
 
-								<th width="200">Request Code</th>
-								<th width="200">Request Date</th>
-								<th width="200">Request Time</th>
-								<th width="200">Request Type</th>
-								<th width="200">Request</th>
+								<th width="150">Problem Observed</th>
+								<th width="150">Action Taken</th>
+								<th width="150">Recommendation</th>
+								<th width="150">Status</th>
+								<th width="150">PR Supplier</th>
+								<th width="150">PR #</th>
+								<th width="150">Date Reported</th>
+								<th width="150">Date Completed</th>
+								<th width="150">Turn Around Time/Downtime</th>
+								<th width="150">Responsible Party</th>
+								<th width="150">Plan Completed</th>
 
-								<th width="200">Status</th>
-								<th width="200">Target Date</th>
-								<th width="200">Request Details</th>
-								<th width="200">Tenant Hospital</th>
-								<th width="200">Condition</th>
-								<th width="200">Utilization</th>
-								<th width="200">Obervation</th>
-								<th width="200">Reported</th>
-								<th width="200">Remarks</th>
 								<th width="200" class="text-center">Action</th>
 							</tr>
 						</thead>

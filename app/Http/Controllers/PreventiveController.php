@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Validator;
-use App\Models\Corrective;
+use App\Models\Preventive;
 
 use App\Models\Tenant;
 use App\Models\Equipment;
@@ -22,14 +22,14 @@ use App\Models\WorkType;
 use App\Models\WorkStatus;
 use App\Models\RequestType;
 
-class CorrectiveController extends Controller
+class PreventiveController extends Controller
 {
     public function index() 
     {
-    	$correctives = new Corrective();
+    	$preventives = new Preventive();
 
-    	return view('vendor.adminlte.corrective.index')
-            ->with('correctives', $correctives->all());
+    	return view('vendor.adminlte.preventive.index')
+            ->with('preventives', $preventives->all());
     }
 
     public function getAddView() 
@@ -44,7 +44,7 @@ class CorrectiveController extends Controller
         $conditions = new Condition();
         $utilizations = new Utilization();
 
-    	return view('vendor.adminlte.corrective.add')
+    	return view('vendor.adminlte.preventive.add')
             ->with('equipments', $equipments->all())
             ->with('work_types', $work_types->all())
             ->with('work_statuses', $work_statuses->all())
@@ -65,12 +65,12 @@ class CorrectiveController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect()->action('CorrectiveController@getAddView')
+            return redirect()->action('PreventiveController@getAddView')
                         ->withErrors($validator)
                         ->withInput();
         }
 
-    	$equipment = new Corrective();
+    	$equipment = new Preventive();
 
         $equipment->equipment_name = $request->input('equipment_name');
         $equipment->equipment_description = $request->input('equipment_description');
@@ -95,7 +95,7 @@ class CorrectiveController extends Controller
 
     	$equipment->save();
 
-    	return redirect()->action('CorrectiveController@index');
+    	return redirect()->action('PreventiveController@index');
     }
 
     public function getEditView($id) 
@@ -111,9 +111,9 @@ class CorrectiveController extends Controller
         $utilizations = new Utilization();
         $statuses = new Status();
 
-        $equipment = Corrective::find($id);
+        $equipment = Preventive::find($id);
 
-    	return view('vendor.adminlte.corrective.edit')
+    	return view('vendor.adminlte.preventive.edit')
                     ->with('equipment', $equipment)
                     ->with('tenants', $tenants->all())
                     ->with('frequency', $frequencies->all())
@@ -142,7 +142,7 @@ class CorrectiveController extends Controller
                              ->withInput($request->all());
         }
 
-    	$equipment = Corrective::find($request->input('id'));
+    	$equipment = Preventive::find($request->input('id'));
 
         $equipment->equipment_name = $request->input('equipment_name');
         $equipment->equipment_description = $request->input('equipment_description');
@@ -167,22 +167,22 @@ class CorrectiveController extends Controller
 
     	$equipment->update();
 
-    	return redirect()->action('CorrectiveController@index');
+    	return redirect()->action('PreventiveController@index');
     }
 
     public function getDeleteView($id) 
     {
-    	$equipment = Corrective::find($id);
+    	$equipment = Preventive::find($id);
 
-    	return view('vendor.adminlte.corrective.delete', [ 'equipment' => $equipment ]);
+    	return view('vendor.adminlte.preventive.delete', [ 'equipment' => $equipment ]);
     }
 
     public function postDeleteView(Request $request) 
     {
-    	$equipment = Corrective::find($request->input('id'));
+    	$equipment = Preventive::find($request->input('id'));
 
     	$equipment->delete();
 
-    	return redirect()->action('CorrectiveController@index');
+    	return redirect()->action('PreventiveController@index');
     }
 }

@@ -30,6 +30,7 @@
 						<th width="40">ID</th>
 						<th width="200">Equipment Name</th>
 						<th width="200">Equipment Description</th>
+						<!-- <th width="400">Details</th> -->
 						<th width="150">Model</th>
 						<th width="150">Barcode</th>
 						<th width="150">Serial Number</th>
@@ -48,6 +49,21 @@
 						<td style="vertical-align: middle;">{{ $equipment->id }}</td>
 						<td style="vertical-align: middle;">{{ $equipment->equipment_name }}</td>
 						<td style="vertical-align: middle;">{{ $equipment->equipment_description }}</td>
+						<!-- <td style="vertical-align: middle;">
+							
+								<div class="box box-default collapsed-box">
+									<div class="box-header with-border">
+										<h3 class="box-title">Expandable</h3>
+										<div class="box-tools pull-right">
+											<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+										</div>
+									</div>
+									<div class="box-body">
+										The body of the box {{ $equipment->category_id }}
+									</div>
+								</div>
+							
+						</td> -->
 						<td style="vertical-align: middle;">{{ $equipment->model }}</td>
 						<td style="vertical-align: middle;">{{ $equipment->barcode }}</td>
 						<td style="vertical-align: middle;">{{ $equipment->serial_number }}</td>

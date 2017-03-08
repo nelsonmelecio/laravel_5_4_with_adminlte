@@ -1,0 +1,5 @@
+.dataTables_wrapper { font-size: 12px }
+
+.dataTables_wrapper td {
+ white-space: nowrap;
+}
