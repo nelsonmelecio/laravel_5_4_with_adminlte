@@ -9,8 +9,8 @@
 
 	@include('vendor.adminlte.layouts.partials.contentheader_v2', 
 			[	
-				'title' => 'Supplier Records',
-				'indexes' => 'Suppliers'
+				'title' => 'Corrective Maintenance',
+				'indexes' => 'CM'
 			])
 
 @endsection
@@ -26,20 +26,35 @@
 			<table id="tbldatas" class="table table-striped table-bordered row-border table-hover table-compact"  style="table-layout: fixed;">
 				<thead class="thead-inverse">
 					<tr>
+						<td></td>
+						<td colspan="2" rowspan="2">Risk Level</td>
+						<td colspan="3">SGE & MAK</td>
+						<td colspan="3">Supplier</td>
+						<td colspan="3">In-House</td>
+						<td colspan="3">Total</td>
+					</tr>
+					<tr>
 						<th width="25">ID</th>
-						<th width="120">Code</th>
-						<th width="200">Company Name</th>
-						<th width="200">Contact Person</th>
-						<th width="200">Supplier Address</th>
-						<th width="200">City Address</th>
-						<th width="200">State/Province</th>
-						<th width="200">Postal</th>
-						<th width="200">Country</th>
-						<th width="200">Phone Number</th>
-						<th width="200">Fax Number</th>
-						<th width="200">Mobile Number</th>
-						<th width="200">Email Address</th>
+
+						<!-- <th width="200"></th> -->
+						<!-- <th width="200"></th> -->
+
+						<th width="200">YTD Dec</th>
+						<th width="200">FTM Jan</th>
 						<th width="200">Tenant</th>
+
+						<th width="200">Tenant</th>
+						<th width="200">Tenant</th>
+						<th width="200">Tenant</th>
+
+						<th width="200">Tenant</th>
+						<th width="200">Tenant</th>
+						<th width="200">Tenant</th>
+
+						<th width="200">Tenant</th>
+						<th width="200">Tenant</th>
+						<th width="200">Tenant</th>
+
 						<th width="160" class="text-center">Action</th>
 					</tr>
 				</thead>

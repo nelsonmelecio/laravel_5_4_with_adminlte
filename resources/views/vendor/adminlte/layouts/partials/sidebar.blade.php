@@ -38,8 +38,8 @@
             <li class="treeview">
                 <a href="#"><i class='fa fa-gears'></i> <span>Manage Maintenance</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('correctives') }}"><i class='fa fa-magic'></i> <span>Corrective Maintenance</span></a></li>
-                    <li><a href="{{ url('preventives') }}"><i class='fa fa-wrench'></i> <span>Preventive Maintenance</span></a></li>
+                    <li><a href="{{ url('correctives') }}"><i class='fa fa-magic'></i> <span>Corrective List</span></a></li>
+                    <li><a href="{{ url('preventives') }}"><i class='fa fa-wrench'></i> <span>Preventive List</span></a></li>
                 </ul>
             </li>
             <!-- <li class="treeview">
