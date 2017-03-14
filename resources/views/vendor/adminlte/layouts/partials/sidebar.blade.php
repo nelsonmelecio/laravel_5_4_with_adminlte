@@ -35,13 +35,8 @@
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-home'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
             <li><a href="{{ url('equipments') }}"><i class='fa fa-database'></i> <span>Manage Equipments</span></a></li>
-            <li class="treeview">
-                <a href="#"><i class='fa fa-gears'></i> <span>Manage Maintenance</span> <i class="fa fa-angle-left pull-right"></i></a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ url('correctives') }}"><i class='fa fa-magic'></i> <span>Corrective List</span></a></li>
-                    <li><a href="{{ url('preventives') }}"><i class='fa fa-wrench'></i> <span>Preventive List</span></a></li>
-                </ul>
-            </li>
+            <li><a href="{{ url('correctives') }}"><i class='fa fa-magic'></i> <span>Manage Correctives</span></a></li>
+            <li><a href="{{ url('preventives') }}"><i class='fa fa-wrench'></i> <span>Manage Preventives</span></a></li>
             <!-- <li class="treeview">
                 <a href="#"><i class='fa fa-ticket'></i> <span>Manage Tickets</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">

@@ -19,7 +19,7 @@
                 <section class="content" style="min-height: 768px; !important;">
                     @yield('main-content')
                     @include('vendor.adminlte.plugins.inventory')
-                    @include('vendor.adminlte.plugins.todo')
+                    <!-- include('vendor.adminlte.plugins.todo') -->
                     @include('vendor.adminlte.plugins.calendar')
                 </section>
             
