@@ -1,7 +1,7 @@
 <div class="container-fluid spark-screen">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="box box-solid bg-gradient">
+			<div class="box box-primary">
 				<div class="box-header">
 					<i class="fa fa-calendar"></i>
 					<h3 class="box-title">Calendar</h3><!-- tools box -->

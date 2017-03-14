@@ -36,6 +36,7 @@ $(document).ready(function() {
         m = date.getMonth(),
         y = date.getFullYear();
     $('#calendar').fullCalendar({
+      defaultView: 'agendaWeek',
       header: {
         left: 'prev,next today',
         center: 'title',
