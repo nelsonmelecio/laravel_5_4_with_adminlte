@@ -6,7 +6,7 @@
     @include('adminlte::layouts.partials.htmlheader')
 @show
 
-<body class="skin-blue sidebar-collapse sidebar-mini">
+<body class="skin-blue sidebar-mini"> <!-- sidebar-collapse -->
 
     <div id="app">
 
