@@ -12,7 +12,7 @@
 			</div><!-- /.info-box -->
 		</div>
 		<div class="col-sm-4">
-			<div class="info-box bg-red">
+			<div class="info-box bg-aqua">
 				<span class="info-box-icon"><i class="ion ion-ios-archive"></i></span>
 				<div class="info-box-content">
 					<span class="info-box-text">Corrective Summary</span> <span class="info-box-number">92,050</span>
@@ -23,8 +23,8 @@
 			</div><!-- /.info-box -->
 		</div>
 		<div class="col-sm-4">
-			<div class="info-box bg-aqua">
-				<span class="info-box-icon"><i class="ion-ios-chatbubble-outline"></i></span>
+			<div class="info-box bg-yellow">
+				<span class="info-box-icon"><i class="ion-ios-pricetag-outline"></i></span>
 				<div class="info-box-content">
 					<span class="info-box-text">Assets Summary</span> <span class="info-box-number">163,921</span>
 					<div class="progress">

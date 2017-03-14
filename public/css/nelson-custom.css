@@ -1,5 +1,16 @@
 .dataTables_wrapper { font-size: 12px }
 
 .dataTables_wrapper td {
- white-space: nowrap;
+ /*white-space: nowrap;*/
+}
+
+.datatable td {
+  overflow: hidden; /* this is what fixes the expansion */
+  text-overflow: ellipsis; /* not supported in all browsers, but I accepted the tradeoff */
+  white-space: nowrap;
+}
+
+.dataTable tbody td {
+    word-break: break-word;
+    vertical-align: top;
 }

@@ -232,8 +232,8 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('preventive', 'HomeController@blankPage');
 	// Route::get('corrective', 'HomeController@blankPage');
 	Route::get('purchases', 'HomeController@blankPage');
-	Route::get('cma', 'HomeController@blankPage');
-	Route::get('ppma', 'HomeController@blankPage');
+	// Route::get('cma', 'HomeController@blankPage');
+	// Route::get('ppma', 'HomeController@blankPage');
 	Route::get('analysis', 'HomeController@blankPage');
 	Route::get('employee', 'HomeController@blankPage');
 	Route::get('category', 'HomeController@blankPage');

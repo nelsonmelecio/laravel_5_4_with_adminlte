@@ -13,18 +13,18 @@ $(document).ready(function() {
 
   $('#tbldatas').DataTable({
       "paging": true,
-      "lengthChange": true,
+      // "lengthChange": true,
       "searching": true,
       "ordering": false,
-      "info": true,
-      "autoWidth": true,
+      // "info": true,
+      // "autoWidth": true,
       "scrollX": true,
       "responsive": true,
       "select": true,
     });
 
   $('#myModal').on('shown.bs.modal', function () {
-    $('#myInput').focus()
+    $('#myModal').focus()
   });
 
 
