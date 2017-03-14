@@ -52,7 +52,7 @@
                     <li><a href="{{ url('manufacturers') }}"><i class='fa fa-truck'></i> <span>Manufacturers</span></a></li>
                     <li><a href="{{ url('suppliers') }}"><i class='fa fa-tags'></i> <span>Suppliers</span></a></li>
                     <li><a href="{{ url('locations') }}"><i class='fa fa-map-marker'></i> <span>Locations</span></a></li>
-                    <li><a href="{{ url('tenants') }}"><i class='fa fa-map-marker'></i> <span>Tenants</span></a></li>
+                    <!-- <li><a href="{{ url('tenants') }}"><i class='fa fa-map-marker'></i> <span>Tenants</span></a></li> -->
                 </ul>
             </li>
            <li class="treeview">
