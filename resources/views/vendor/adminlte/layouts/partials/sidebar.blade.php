@@ -53,11 +53,16 @@
                 <a href="#"><i class='fa fa-gavel'></i><span>Preventive Maintenance</span><i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('preventives') }}"><i class='fa fa-list'></i> <span>Preventive Lists</span></a></li>
-                    <li><a href="{{ url('preventive/add') }}"><i class='fa fa-plus'></i> <span>Add New Corrective</span></a></li>
+                    <li><a href="{{ url('preventive/add') }}"><i class='fa fa-plus'></i> <span>Add New Preventive</span></a></li>
                 </ul>
             </li>
-            
-
+            <li class="treeview">
+                <a href="#"><i class='fa fa-briefcase'></i> <span>Manage Reports</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('reports/cm') }}"><i class='fa fa-file-text'></i> <span>CM Accomplishment</span></a></li>
+                    <li><a href="{{ url('reports/pm') }}"><i class='fa fa-file-text'></i> <span>PM Accomplishment</span></a></li>
+                </ul>
+            </li>
             <!-- <li class="treeview">
                 <a href="#"><i class='fa fa-ticket'></i> <span>Manage Tickets</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
@@ -92,18 +97,7 @@
                     <li><a href="{{ url('work_types') }}"><i class='fa fa-list-ul'></i> Work Types</a></li>
                 </ul>
             </li>
-            <li class="treeview">
-                <a href="#"><i class='fa fa-list'></i> <span>Manage Reports</span> <i class="fa fa-angle-left pull-right"></i></a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ url('reports/cm') }}"><i class='fa fa-file-text'></i> <span>CM Accomplishment</span></a></li>
-                    <li><a href="{{ url('reports/pm') }}"><i class='fa fa-file-text'></i> <span>PM Accomplishment</span></a></li>
-                    <!-- <li><a href="{{ url('analysis') }}"><i class='fa fa-file-text'></i> <span>Analysis</span></a></li> -->
-                    <!-- <li><a href="{{ url('employee') }}"><i class='fa fa-file-text'></i> <span>Employee</span></a></li> -->
-                    <!-- <li><a href="{{ url('category') }}"><i class='fa fa-file-text'></i> <span>Category</span></a></li> -->
-                </ul>
-            </li>
  
-            <!-- <li><a href="#"><i class='fa fa-briefcase'></i> <span>Manage Employees</span></a></li> -->
             @if(Auth::user()->type == 0)
                 <li><a href="{{ url('accounts') }}"><i class='fa fa-group'></i> <span>Manage User Accounts</span></a></li>
             @endif
