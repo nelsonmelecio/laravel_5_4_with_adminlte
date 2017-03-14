@@ -40,7 +40,8 @@
 								@include('macro.textv3', ['data' => array('Building Number', 'building_number', $location->building_number, null, $errors )])
 								@include('macro.textv3', ['data' => array('Floor Number', 'floor_number', $location->floor_number, null, $errors )])
 								@include('macro.textv3', ['data' => array('Room Number', 'room_number', $location->room_number, null, $errors )])
-								@include('macro.select_tenant', ['data' => array('Location Name', 'location_id', $tenants, $location->tenant['id'], null, $errors )])
+								<!-- include('macro.select_tenant', ['data' => array('Location Name', 'location_id', $tenants, $location->tenant['id'], null, $errors )]) -->
+								<input type="hidden" name="tenant_id" value="1">
 								<input type="hidden" name="id" value="{{ $location->id }}">
 							</div>
 							<div class="box-footer">

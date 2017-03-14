@@ -40,7 +40,7 @@
 								@include('macro.text_disabled', ['data' => array('Building Number', 'building_number', $location->building_number, null, $errors )])
 								@include('macro.text_disabled', ['data' => array('Floor Number', 'floor_number', $location->floor_number, null, $errors )])
 								@include('macro.text_disabled', ['data' => array('Room Number', 'room_number', $location->room_number, null, $errors )])
-								@include('macro.select_single_tenant_disabled', ['data' => array('Tenant Name', 'tenant_id', $location->tenant, null, $errors )])
+								<!-- include('macro.select_single_tenant_disabled', ['data' => array('Tenant Name', 'tenant_id', $location->tenant, null, $errors )]) -->
 								<input type="hidden" name="id" value="{{ $location->id }}">
 							</div>
 							<div class="box-footer">

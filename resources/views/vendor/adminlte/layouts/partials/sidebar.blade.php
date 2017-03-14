@@ -35,14 +35,18 @@
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-dashboard'></i> <span>Dashboard</span></a></li>
             <li class="treeview">
-                <a href="#"><i class='fa fa-database'></i><span>Manage Assets</span><i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-database'></i><span>Manage Equipments</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('equipments') }}"><i class='fa fa-list-ul'></i> <span>List of Assets</span></a></li>
-                    <li><a href="{{ url('equipment/add') }}"><i class='fa fa-list-ul'></i> <span>Add New Asset</span></a></li>
+                    <li><a href="{{ url('equipments') }}"><i class='fa fa-list-ul'></i> <span>List of Equipments</span></a></li>
+                    <li><a href="{{ url('equipment/add') }}"><i class='fa fa-list-ul'></i> <span>Add New Equipment</span></a></li>
                 </ul>
             </li>
             <li class="treeview">
-                <a href="#"><i class='fa fa-wrench'></i><span>Corrective Maintenance</span><i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-wrench'></i><span>Corrective Maintenance</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('correctives') }}"><i class='fa fa-list'></i> <span>Corrective Lists</span></a></li>
                     <li><a href="{{ url('corrective/add') }}"><i class='fa fa-plus'></i> <span>Add New Corrective</span></a></li>
@@ -50,17 +54,12 @@
             </li>
 
             <li class="treeview">
-                <a href="#"><i class='fa fa-gavel'></i><span>Preventive Maintenance</span><i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-gavel'></i><span>Preventive Maintenance</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('preventives') }}"><i class='fa fa-list'></i> <span>Preventive Lists</span></a></li>
                     <li><a href="{{ url('preventive/add') }}"><i class='fa fa-plus'></i> <span>Add New Preventive</span></a></li>
-                </ul>
-            </li>
-            <li class="treeview">
-                <a href="#"><i class='fa fa-briefcase'></i> <span>Manage Reports</span> <i class="fa fa-angle-left pull-right"></i></a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ url('reports/cm') }}"><i class='fa fa-file-text'></i> <span>CM Accomplishment</span></a></li>
-                    <li><a href="{{ url('reports/pm') }}"><i class='fa fa-file-text'></i> <span>PM Accomplishment</span></a></li>
                 </ul>
             </li>
             <!-- <li class="treeview">
@@ -71,7 +70,9 @@
                 </ul>
             </li> -->
             <li class="treeview">
-                <a href="#"><i class='fa fa-list'></i> <span>Manage Groups</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-list'></i> <span>Manage Groups</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('categories') }}"><i class='fa fa-list-ul'></i> Asset Categories</a></li>
                     <li><a href="{{ url('departments') }}"><i class='fa fa-flag'></i> <span>Departments</span></a></li>
@@ -81,8 +82,19 @@
                     <!-- <li><a href="{{ url('tenants') }}"><i class='fa fa-map-marker'></i> <span>Tenants</span></a></li> -->
                 </ul>
             </li>
-           <li class="treeview">
-                <a href="#"><i class='fa fa-book'></i> <span>Manage Particulars</span> <i class="fa fa-angle-left pull-right"></i></a>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-briefcase'></i> <span>Manage Reports</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('reports/cm') }}"><i class='fa fa-file-text'></i> <span>CM Accomplishment</span></a></li>
+                    <li><a href="{{ url('reports/pm') }}"><i class='fa fa-file-text'></i> <span>PM Accomplishment</span></a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-book'></i> <span>Manage Particulars</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('classifications') }}"><i class='fa fa-list-ul'></i> Classification Levels</a></li>
                     <li><a href="{{ url('conditions') }}"><i class='fa fa-list-ul'></i> Condition Levels</a></li>

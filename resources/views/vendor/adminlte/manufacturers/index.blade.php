@@ -40,7 +40,7 @@
 						<th width="200">Mobile Number 2</th>
 						<th width="200">Website</th>
 						<th width="200">Country</th>
-						<th width="200">Tenant</th>
+						<!-- <th width="200">Tenant</th> -->
 						<th width="160" class="text-center">Action</th>
 					</tr>
 				</thead>
@@ -61,7 +61,7 @@
 						<td style="vertical-align: middle;">{{ $manufacturer->mobile_number2 }}</td>
 						<td style="vertical-align: middle;">{{ $manufacturer->web_addess }}</td>
 						<td style="vertical-align: middle;">{{ $manufacturer->country }}</td>
-						<td style="vertical-align: middle;">{{ $manufacturer->tenant['company_name'] }}</td>
+						<!-- <td style="vertical-align: middle;">{{ $manufacturer->tenant['company_name'] }}</td> -->
 						<td style="vertical-align: middle;">
 							<a href="{{ url('manufacturer/edit/' . $manufacturer->id) }}" class="btn btn-info btn-xs" style="width: 48%;"> Edit </a>
 							<a href="{{ url('manufacturer/delete/' . $manufacturer->id) }}" class="btn btn-danger btn-xs" style="width: 48%;"> Delete </a>

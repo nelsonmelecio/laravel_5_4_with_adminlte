@@ -46,7 +46,8 @@
 								@include('macro.textv3', ['data' => array('Mobile Number 2', 'mobile_number2', null, null, $errors )])
 								@include('macro.textv3', ['data' => array('Website', 'web_addess', null, null, $errors )])
 								@include('macro.textv3', ['data' => array('Country', 'country', null, null, $errors )])
-								@include('macro.select_tenant', ['data' => array('Tenant Name', 'tenant_id', $tenants, null, $errors )])
+								<!-- include('macro.select_tenant', ['data' => array('Tenant Name', 'tenant_id', $tenants, null, $errors )]) -->
+								<input type="hidden" name="tenant_id" value="1">
 							</div>
 							<div class="box-footer">
 								<button class="btn btn-success" type="submit">Submit</button>

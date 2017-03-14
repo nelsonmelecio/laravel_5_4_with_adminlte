@@ -46,7 +46,7 @@
 								@include('macro.text_disabled', ['data' => array('Mobile Number', 'mobile_number', $supplier->mobile_number, null, $errors )])
 								@include('macro.text_disabled', ['data' => array('Email Address', 'email', $supplier->email, null, $errors )])
 
-								@include('macro.select_single_tenant_disabled', ['data' => array('Tenant Name', 'tenant_id', $supplier->tenant, null, $errors )])
+								<!-- include('macro.select_single_tenant_disabled', ['data' => array('Tenant Name', 'tenant_id', $supplier->tenant, null, $errors )]) -->
 								<input type="hidden" name="id" value="{{ $supplier->id }}">
 							</div>
 							<div class="box-footer">

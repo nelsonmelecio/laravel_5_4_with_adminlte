@@ -23,9 +23,15 @@ $(document).ready(function() {
       "select": true,
     });
 
-  $('#myModal').on('shown.bs.modal', function () {
-    $('#myModal').focus()
-  });
+  // $('#myModal').on('shown.bs.modal', function () {
+  //   $('#myModal').focus()
+  // });
+
+  // $('#myModall').modal({
+  //                       backdrop: 'static',
+  //                       keyboard: true, 
+  //                       show: true
+  //               });
 
 
 /* initialize the calendar

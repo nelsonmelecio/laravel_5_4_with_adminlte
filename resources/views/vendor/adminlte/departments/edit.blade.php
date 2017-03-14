@@ -40,8 +40,9 @@
 								@include('macro.textv3', ['data' => array('Building Number', 'building_number', $department->building_number, null, $errors )])
 								@include('macro.textv3', ['data' => array('Building Floor', 'building_floor', $department->building_floor, null, $errors )])
 								@include('macro.textv3', ['data' => array('Building Address', 'building_address', $department->building_address, null, $errors )])
-								@include('macro.select_tenant', ['data' => array('Tenant Name', 'tenant_id', $tenants, $department->tenant['id'], null, $errors )])
+								<!-- include('macro.select_tenant', ['data' => array('Tenant Name', 'tenant_id', $tenants, $department->tenant['id'], null, $errors )]) -->
 								<input type="hidden" name="id" value="{{ $department->id }}">
+								<input type="hidden" name="tenant_id" value="1">
 							</div>
 							<div class="box-footer">
 								<button class="btn btn-success" type="submit">Update</button>

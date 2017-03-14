@@ -39,7 +39,7 @@
 						<th width="200">Fax Number</th>
 						<th width="200">Mobile Number</th>
 						<th width="200">Email Address</th>
-						<th width="200">Tenant</th>
+						<!-- <th width="200">Tenant</th> -->
 						<th width="160" class="text-center">Action</th>
 					</tr>
 				</thead>
@@ -59,7 +59,7 @@
 						<td style="vertical-align: middle;">{{ $supplier->fax_number }}</td>
 						<td style="vertical-align: middle;">{{ $supplier->mobile_number }}</td>
 						<td style="vertical-align: middle;">{{ $supplier->email }}</td>
-						<td style="vertical-align: middle;">{{ $supplier->tenant['company_name'] }}</td>
+						<!-- <td style="vertical-align: middle;">{{ $supplier->tenant['company_name'] }}</td> -->
 						<td style="vertical-align: middle;">
 							<a href="{{ url('supplier/edit/' . $supplier->id) }}" class="btn btn-info btn-xs" style="width: 48%;"> Edit </a>
 							<a href="{{ url('supplier/delete/' . $supplier->id) }}" class="btn btn-danger btn-xs" style="width: 48%;"> Delete </a>

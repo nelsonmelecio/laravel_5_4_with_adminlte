@@ -6,11 +6,28 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link href="{{ asset('/css/all.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('/css/nelson-custom.css') }}" rel="stylesheet" type="text/css" />
-    
-    <!-- probably duplication -->
-    <link href="{{ asset('/css/AdminLTE.min.css') }}" rel="stylesheet" type="text/css" /> 
 
+    <!-- bootstrap datepicker -->
+    <link rel="stylesheet" href="{{ asset('/plugins/datepicker/datepicker3.css') }}">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="{{ asset('/plugins/daterangepicker/daterangepicker.css') }}">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="{{ asset('/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
+    <!-- Bootstrap time Picker -->
+    <link rel="stylesheet" href="{{ asset('/plugins/timepicker/bootstrap-timepicker.min.css') }}">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{ asset('/plugins/datatables/dataTables.bootstrap.css') }}">
+    <!-- fullCalendar 2.2.5-->
+    <link rel="stylesheet" href="{{ asset('/plugins/fullcalendar/fullcalendar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/plugins/fullcalendar/fullcalendar.print.css') }}" media="print">
+    <link href="{{ asset('/css/nelson-custom.css') }}" rel="stylesheet" type="text/css" />
+
+    <!-- // this is only temporary - need to learn Laravel Mix -->
+    <style>
+      .form-control {
+        color: #000000 !important;
+      }
+    </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

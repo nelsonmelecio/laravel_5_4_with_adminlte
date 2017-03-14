@@ -35,7 +35,7 @@
 						<th width="120">Building Number</th>
 						<th width="100">Building Floor</th>
 						<th width="200">Building Address</th>
-						<th width="200">Tenant</th>
+						<!-- <th width="200">Tenant</th> -->
 						<th width="160" class="text-center">Action</th>
 					</tr>
 				</thead>
@@ -50,7 +50,7 @@
 						<td style="vertical-align: middle;">{{ $department->building_number }}</td>
 						<td style="vertical-align: middle;">{{ $department->building_floor }}</td>
 						<td style="vertical-align: middle;">{{ $department->building_address }}</td>
-						<td style="vertical-align: middle;">{{ $department->tenant['company_name'] }}</td>
+						<!-- <td style="vertical-align: middle;">{{ $department->tenant['company_name'] }}</td> -->
 						<td style="vertical-align: middle;">
 							<a href="{{ url('department/edit/' . $department->id) }}" class="btn btn-info btn-xs" style="width: 48%;"> Edit </a>
 							<a href="{{ url('department/delete/' . $department->id) }}" class="btn btn-danger btn-xs" style="width: 48%;"> Delete </a>

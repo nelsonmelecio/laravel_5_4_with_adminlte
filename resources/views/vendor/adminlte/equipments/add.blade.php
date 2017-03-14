@@ -71,7 +71,7 @@
 							<div class="box-footer">
 								<button class="btn btn-success" type="submit">Submit New Equipment</button>
 								<a href=" {{ url('equipments') }}" class="btn btn-info btn-md"> Cancel </a>
-								<button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
+								<button type="button" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">Launch modal</button>
 							</div>
 						</form>
 					</div>

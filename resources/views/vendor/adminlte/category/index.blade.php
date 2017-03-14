@@ -36,7 +36,7 @@
 						<th width="120">Frequency Level</th>
 						<th width="120">Risk Level</th>
 						<th width="130">Proficiency Level</th>
-						<th width="160">Tenant</th>
+						<!-- <th width="160">Tenant</th> -->
 						<th width="160" class="text-center">Action</th>
 					</tr>
 				</thead>
@@ -53,7 +53,7 @@
 						<td style="vertical-align: middle;">{{ $category->frequency['name'] }}</td>
 						<td style="vertical-align: middle;">{{ $category->risk['name'] }}</td>
 						<td style="vertical-align: middle;">{{ $category->proficiency['name'] }}</td>
-						<td style="vertical-align: middle;">{{ $category->tenant['company_name'] }}</td>
+						<!-- <td style="vertical-align: middle;">{{ $category->tenant['company_name'] }}</td> -->
 						<td style="vertical-align: middle;">
 							<a href="{{ url('category/edit/' . $category->id) }}" class="btn btn-info btn-xs" style="width: 48%;"> Edit </a>
 							<a href="{{ url('category/delete/' . $category->id) }}" class="btn btn-danger btn-xs" style="width: 48%;"> Delete </a>
