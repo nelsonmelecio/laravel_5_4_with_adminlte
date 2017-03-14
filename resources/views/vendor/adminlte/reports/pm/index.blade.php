@@ -59,7 +59,7 @@
 					</tr>
 				</thead>
 				<tbody>
-				@foreach($suppliers as $supplier)
+				@foreach($reports as $supplier)
 					<tr>
 						<td style="vertical-align: middle;">{{ $supplier->id }}</td>
 						<td style="vertical-align: middle;">{{ $supplier->code }}</td>

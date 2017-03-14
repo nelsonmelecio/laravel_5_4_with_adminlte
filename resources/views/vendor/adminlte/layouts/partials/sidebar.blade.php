@@ -33,7 +33,7 @@
         <ul class="sidebar-menu">
             <li class="header">Menu</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="{{ url('home') }}"><i class='fa fa-home'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
+            <li class="active"><a href="{{ url('home') }}"><i class='fa fa-dashboard'></i> <span>Dashboard</span></a></li>
             <li class="treeview">
                 <a href="#"><i class='fa fa-database'></i><span>Manage Assets</span><i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
@@ -42,10 +42,18 @@
                 </ul>
             </li>
             <li class="treeview">
-                <a href="#"><i class='fa fa-wrench'></i><span>Manage Maintenance</span><i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-wrench'></i><span>Corrective Maintenance</span><i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('correctives') }}"><i class='fa fa-magic'></i> <span>Corrective</span></a></li>
-                    <li><a href="{{ url('preventives') }}"><i class='fa fa-wrench'></i> <span>Preventive</span></a></li>
+                    <li><a href="{{ url('correctives') }}"><i class='fa fa-list'></i> <span>Corrective Lists</span></a></li>
+                    <li><a href="{{ url('corrective/add') }}"><i class='fa fa-plus'></i> <span>Add New Corrective</span></a></li>
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#"><i class='fa fa-gavel'></i><span>Preventive Maintenance</span><i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('preventives') }}"><i class='fa fa-list'></i> <span>Preventive Lists</span></a></li>
+                    <li><a href="{{ url('preventive/add') }}"><i class='fa fa-plus'></i> <span>Add New Corrective</span></a></li>
                 </ul>
             </li>
             
@@ -87,8 +95,8 @@
             <li class="treeview">
                 <a href="#"><i class='fa fa-list'></i> <span>Manage Reports</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('cma') }}"><i class='fa fa-file-text'></i> <span>CM Accomplishment</span></a></li>
-                    <li><a href="{{ url('ppma') }}"><i class='fa fa-file-text'></i> <span>PM Accomplishment</span></a></li>
+                    <li><a href="{{ url('reports/cm') }}"><i class='fa fa-file-text'></i> <span>CM Accomplishment</span></a></li>
+                    <li><a href="{{ url('reports/pm') }}"><i class='fa fa-file-text'></i> <span>PM Accomplishment</span></a></li>
                     <!-- <li><a href="{{ url('analysis') }}"><i class='fa fa-file-text'></i> <span>Analysis</span></a></li> -->
                     <!-- <li><a href="{{ url('employee') }}"><i class='fa fa-file-text'></i> <span>Employee</span></a></li> -->
                     <!-- <li><a href="{{ url('category') }}"><i class='fa fa-file-text'></i> <span>Category</span></a></li> -->
