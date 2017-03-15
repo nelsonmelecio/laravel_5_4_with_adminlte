@@ -18,6 +18,45 @@
 @section('main-content')
 
 	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-solid">
+				<div class="box-header with-border">
+					<h3 class="box-title"><i class="fa fa-th"></i> Filters</h3>
+				</div>
+				<div class="box-body">
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label>Date range:</label>
+							<div class="input-group">
+								<div class="input-group-addon">
+									<i class="fa fa-calendar"></i>
+								</div>
+								<input type="text" class="form-control pull-right" id="reservation">
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="form-group">
+							<label>&nbsp;</label>
+							<div class="input-group">
+								<a href="#" class="btn btn-success btn-md" style="min-width: 170px;">Evaluate </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3  text-right">
+						<div class="form-group">
+							<label>&nbsp;</label>
+							<div class="input-group">
+								<a href="#" class="btn btn-primary btn-md" style="min-width: 170px;"><i class="fa fa-file-excel-o"></i> Export to Excel </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+       
+	<div class="row">
 		<div class="col-sm-12">
 			<table id="tblreports" class="table table-striped table-bordered row-border table-hover table-compact"  style="table-layout: fixed; border-color: #565051 !important;">
 				<thead class="thead-inverse" style="border-color: #565051 !important;">

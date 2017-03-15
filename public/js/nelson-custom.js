@@ -1,4 +1,9 @@
 $(document).ready(function() {
+
+
+  //Date range picker
+  $('#reservation').daterangepicker();
+  
   //Date picker
   $('.datepicker').datepicker({
     dateFormat: 'Y/m/d',
@@ -34,6 +39,8 @@ $(document).ready(function() {
       "responsive": true,
       "select": true,
     });
+
+
   // $('#myModal').on('shown.bs.modal', function () {
   //   $('#myModal').focus()
   // });
