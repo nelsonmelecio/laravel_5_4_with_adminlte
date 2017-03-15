@@ -44,7 +44,7 @@
                 </ul>
             </li>
             <li class="treeview">
-                <a href="#"><i class='fa fa-wrench'></i><span>Corrective Maintenance</span>
+                <a href="#"><i class='fa fa-wrench'></i><span>Manage Correctives</span>
                     <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                 </a>
                 <ul class="treeview-menu">
@@ -54,7 +54,7 @@
             </li>
 
             <li class="treeview">
-                <a href="#"><i class='fa fa-gavel'></i><span>Preventive Maintenance</span>
+                <a href="#"><i class='fa fa-gavel'></i><span>Manage Preventives</span>
                     <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                 </a>
                 <ul class="treeview-menu">
@@ -87,8 +87,8 @@
                     <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('reports/cm') }}"><i class='fa fa-file-text'></i> <span>CM Accomplishment</span></a></li>
-                    <li><a href="{{ url('reports/pm') }}"><i class='fa fa-file-text'></i> <span>PM Accomplishment</span></a></li>
+                    <li><a href="{{ url('cm_reports') }}"><i class='fa fa-file-text'></i> <span>CM Accomplishment</span></a></li>
+                    <li><a href="{{ url('pm_reports') }}"><i class='fa fa-file-text'></i> <span>PM Accomplishment</span></a></li>
                 </ul>
             </li>
             <li class="treeview">

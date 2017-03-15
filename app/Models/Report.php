@@ -11,7 +11,7 @@ class Report extends Model
      *
      * @var string
      */
-    protected $table = 'critical';
+    protected $table = 'report';
 
     /**
      * Indicates if the model should be timestamped.

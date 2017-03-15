@@ -23,6 +23,17 @@ $(document).ready(function() {
       "select": true,
     });
 
+  $('#tblreports').DataTable({
+      "paging": false,
+      // "lengthChange": true,
+      "searching": false,
+      "ordering": false,
+      // "info": true,
+      // "autoWidth": true,
+      "scrollX": false,
+      "responsive": true,
+      "select": true,
+    });
   // $('#myModal').on('shown.bs.modal', function () {
   //   $('#myModal').focus()
   // });

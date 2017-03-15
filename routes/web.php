@@ -205,8 +205,8 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::post('/preventive/delete', 'PreventiveController@postDeleteView');
 
 	//  PREVENTIVE Routes 
-	Route::get('/reports/cm', 'ReportController@CorrectiveIndex');
-	Route::get('/reports/pm', 'ReportController@PreventiveIndex');
+	Route::get('/cm_reports', 'ReportController@CorrectiveIndex');
+	Route::get('/pm_reports', 'ReportController@PreventiveIndex');
 
 	
 	// ------------------------ MANAGE USER ACCOUNTS ------------------------- //

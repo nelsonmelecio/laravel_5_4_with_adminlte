@@ -9,8 +9,8 @@
 
 	@include('vendor.adminlte.layouts.partials.contentheader_v2', 
 			[	
-				'title' => 'Corrective Maintenance',
-				'indexes' => 'CM'
+				'title' => 'Preventive Accomplishment',
+				'indexes' => 'PM Reports'
 			])
 
 @endsection
@@ -19,68 +19,469 @@
 
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="text-right">
-				<a href="{{ url('supplier/add') }}" class="btn btn-success btn-md" style="min-width: 170px;"><i class="fa fa-plus"></i> Add New Supplier </a>
-			</div>
-			<br>
-			<table id="tbldatas" class="table table-striped table-bordered row-border table-hover table-compact"  style="table-layout: fixed;">
-				<thead class="thead-inverse">
-					<tr>
-						<td></td>
-						<td colspan="2" rowspan="2">Risk Level</td>
-						<td colspan="3">SGE & MAK</td>
-						<td colspan="3">Supplier</td>
-						<td colspan="3">In-House</td>
-						<td colspan="3">Total</td>
+			<table id="tblreports" class="table table-striped table-bordered row-border table-hover table-compact"  style="table-layout: fixed; border-color: #565051 !important;">
+				<thead class="thead-inverse" style="border-color: #565051 !important;">
+					<tr style="border-color: #565051 !important;">
+						<td class="text-center" colspan="2" rowspan="2" style="vertical-align: middle; border-color: #565051;">Risk Level</td>
+						<td class="text-center" colspan="3" style="background-color: #F4A460; border-color: #565051;">SGE & MAK</td> 
+						<td class="text-center" colspan="3" style="background-color: #FFDEAD; border-color: #565051;">Supplier</td> 
+						<td class="text-center" colspan="3" style="background-color: #95B9C7; border-color: #565051 !important;">In-House</td> 
+						<td class="text-center" colspan="3" style="background-color: #FFD700; border-color: #565051 !important;">Total</td>
 					</tr>
-					<tr>
-						<th width="25">ID</th>
+					<tr style="border-color: #565051 !important;">
+						<td class="text-center" style="background-color: #6495ED; border-color: #565051 !important; ">YTD Dec</td>
+						<td class="text-center" style="background-color: #6495ED; border-color: #565051 !important;">FTM Jan</td>
+						<td class="text-center" style="background-color: #6495ED; border-color: #565051 !important;">YTD Jan</td>
 
-						<!-- <th width="200"></th> -->
-						<!-- <th width="200"></th> -->
+						<td class="text-center" style="background-color: #6495ED; border-color: #565051 !important;">YTD Dec</td>
+						<td class="text-center" style="background-color: #6495ED; border-color: #565051 !important;">FTM Jan</td>
+						<td class="text-center" style="background-color: #6495ED; border-color: #565051 !important;">YTD Jan</td>
 
-						<th width="200">YTD Dec</th>
-						<th width="200">FTM Jan</th>
-						<th width="200">Tenant</th>
+						<td class="text-center" style="background-color: #6495ED; border-color: #565051 !important;">YTD Dec</td>
+						<td class="text-center" style="background-color: #6495ED; border-color: #565051 !important;">FTM Jan</td>
+						<td class="text-center" style="background-color: #6495ED; border-color: #565051 !important;">YTD Jan</td>
 
-						<th width="200">Tenant</th>
-						<th width="200">Tenant</th>
-						<th width="200">Tenant</th>
-
-						<th width="200">Tenant</th>
-						<th width="200">Tenant</th>
-						<th width="200">Tenant</th>
-
-						<th width="200">Tenant</th>
-						<th width="200">Tenant</th>
-						<th width="200">Tenant</th>
-
-						<th width="160" class="text-center">Action</th>
+						<td class="text-center" style="background-color: #6495ED; border-color: #565051 !important;">YTD Dec</td>
+						<td class="text-center" style="background-color: #6495ED; border-color: #565051 !important;">FTM Jan</td>
+						<td class="text-center" style="background-color: #6495ED; border-color: #565051 !important;">YTD Jan</td>
 					</tr>
 				</thead>
 				<tbody>
-				@foreach($reports as $supplier)
+					
+					<!-- 1 -->
 					<tr>
-						<td style="vertical-align: middle;">{{ $supplier->id }}</td>
-						<td style="vertical-align: middle;">{{ $supplier->code }}</td>
-						<td style="vertical-align: middle;">{{ $supplier->name }}</td>
-						<td style="vertical-align: middle;">{{ $supplier->supplier_person }}</td>
-						<td style="vertical-align: middle;">{{ $supplier->supplier_address }}</td>
-						<td style="vertical-align: middle;">{{ $supplier->city_address }}</td>
-						<td style="vertical-align: middle;">{{ $supplier->state_province }}</td>
-						<td style="vertical-align: middle;">{{ $supplier->postal }}</td>
-						<td style="vertical-align: middle;">{{ $supplier->country }}</td>
-						<td style="vertical-align: middle;">{{ $supplier->phone_number }}</td>
-						<td style="vertical-align: middle;">{{ $supplier->fax_number }}</td>
-						<td style="vertical-align: middle;">{{ $supplier->mobile_number }}</td>
-						<td style="vertical-align: middle;">{{ $supplier->email }}</td>
-						<td style="vertical-align: middle;">{{ $supplier->tenant['company_name'] }}</td>
-						<td style="vertical-align: middle;">
-							<a href="{{ url('supplier/edit/' . $supplier->id) }}" class="btn btn-info btn-xs" style="width: 48%;"> Edit </a>
-							<a href="{{ url('supplier/delete/' . $supplier->id) }}" class="btn btn-danger btn-xs" style="width: 48%;"> Delete </a>
-						</td>
+						<td>High Risk</td>
+						<td></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
 					</tr>
-				@endforeach
+
+					<tr>
+						<td></td>
+						<td>Planned</td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>Done</td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>Spill over</td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td style="background-color: #6495ED;">%</td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+					</tr>
+
+					<!-- 2 -->
+
+					<tr>
+						<td>Medium II</td>
+						<td></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>Planned</td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>Done</td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>Spill over</td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td style="background-color: #6495ED;">%</td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+					</tr>
+
+					<!-- 3 -->
+
+					<tr>
+						<td>Medium I</td>
+						<td></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>Planned</td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>Done</td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>Spill over</td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td style="background-color: #6495ED;">%</td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+					</tr>
+
+					<!-- 4 -->
+
+					<tr>
+						<td>Low</td>
+						<td></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>Planned</td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>Done</td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>Spill over</td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td style="background-color: #6495ED;">%</td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+					</tr>
+
+					<!-- 5 -->
+
+					<tr>
+						<td>TOTAL</td>
+						<td></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>Planned</td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>Done</td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>Spill over</td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #F4A460;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #FFDEAD;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #95B9C7;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+						<td style="background-color: #FFD700;"></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td style="background-color: #6495ED;">%</td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+						<td style="background-color: #6495ED;"></td>
+					</tr>
+				
 				</tbody>
 				</tfoot>
 			</table>

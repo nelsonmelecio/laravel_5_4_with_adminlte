@@ -28,3 +28,7 @@
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
+
+#tblreports, #tblreports tbody td, #tblreports thead td {
+  border-color: #565051;
+}
