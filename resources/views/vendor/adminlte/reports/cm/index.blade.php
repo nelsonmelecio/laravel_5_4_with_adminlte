@@ -107,7 +107,7 @@
 
 					<tr>
 						<td></td>
-						<td>Planned</td>
+						<td>For CM</td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
@@ -141,7 +141,7 @@
 
 					<tr>
 						<td></td>
-						<td>Spill over</td>
+						<td>Pending</td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
@@ -194,7 +194,7 @@
 
 					<tr>
 						<td></td>
-						<td>Planned</td>
+						<td>For CM</td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
@@ -228,7 +228,7 @@
 
 					<tr>
 						<td></td>
-						<td>Spill over</td>
+						<td>Pending</td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
@@ -281,7 +281,7 @@
 
 					<tr>
 						<td></td>
-						<td>Planned</td>
+						<td>For CM</td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
@@ -315,7 +315,7 @@
 
 					<tr>
 						<td></td>
-						<td>Spill over</td>
+						<td>Pending</td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
@@ -368,7 +368,7 @@
 
 					<tr>
 						<td></td>
-						<td>Planned</td>
+						<td>For CM</td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
@@ -402,7 +402,7 @@
 
 					<tr>
 						<td></td>
-						<td>Spill over</td>
+						<td>Pending</td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
@@ -455,7 +455,7 @@
 
 					<tr>
 						<td></td>
-						<td>Planned</td>
+						<td>For CM</td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
@@ -489,7 +489,7 @@
 
 					<tr>
 						<td></td>
-						<td>Spill over</td>
+						<td>Pending</td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
 						<td style="background-color: #F4A460;"></td>
