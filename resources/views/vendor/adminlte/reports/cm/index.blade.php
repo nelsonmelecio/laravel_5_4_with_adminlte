@@ -9,7 +9,7 @@
 
 	@include('vendor.adminlte.layouts.partials.contentheader_v2', 
 			[	
-				'title' => 'Preventive Accomplishment',
+				'title' => 'Preventive Accomplishment Report',
 				'indexes' => 'PM Reports'
 			])
 
