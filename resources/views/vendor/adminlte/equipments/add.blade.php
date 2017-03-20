@@ -53,7 +53,7 @@
 								<div class="col-sm-6">
 									@include('macro.select_name', ['data' => array('Status', 'status_id', $statuses, null, $errors )])
 									@include('macro.select_availability', ['data' => array( null )] )
-									@include('macro.select_tenant', ['data' => array('Tenant Name', 'tenant_id', $tenants, null, $errors )])
+									<!-- include('macro.select_tenant', ['data' => array('Tenant Name', 'tenant_id', $tenants, null, $errors )]) -->
 									@include('macro.select_name', ['data' => array('Department', 'department_id', $departments, null, $errors )])
 									@include('macro.select_name', ['data' => array('Frequency (as stated in the contract)', 'frequency_id', $frequency, null, $errors )])
 									<!-- include('macro.select_name', ['data' => array('Location', 'location_id', $locations, null, $errors )]) -->
@@ -64,6 +64,8 @@
 
 									
 								</div>
+
+								<input type="hidden" name="tenant_id" value="1">
 
 
 								

@@ -5,7 +5,7 @@
 		<label>{{ $data[0] }}</label>
 
 		<div class="input-group"  >
-			<input type="text" name="{{ $data[1] }}" class="form-control timepicker" style="color: #000 !important;">
+			<input type="text" name="{{ $data[1] }}" class="form-control timepicker input-sm" style="color: #000 !important;">
 
 			<div class="input-group-addon">
 			<i class="fa fa-clock-o"></i>

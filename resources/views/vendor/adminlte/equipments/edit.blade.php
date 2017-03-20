@@ -61,6 +61,7 @@
 								</div>
 
 								<input type="hidden" name="id" value="{{ $equipment->id }}">
+								<input type="hidden" name="tenant_id" value="1">
 							</div>
 							<div class="box-footer">
 								<button class="btn btn-success" type="submit">Update Equipment Record</button>

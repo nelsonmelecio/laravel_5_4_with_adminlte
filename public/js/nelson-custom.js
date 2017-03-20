@@ -2,7 +2,16 @@ $(document).ready(function() {
 
 
   //Date range picker
-  $('#reservation').daterangepicker();
+  // $('#reservation').daterangepicker();
+
+    //Date picker
+  $('.reservation').datepicker({
+    dateFormat: "mm-yyyy",
+    startView: "months", 
+    minViewMode: "months",
+    //setDate: new Date(),
+    autoclose: true
+  });
   
   //Date picker
   $('.datepicker').datepicker({
@@ -39,6 +48,11 @@ $(document).ready(function() {
       "responsive": true,
       "select": true,
     });
+
+  //Initialize Select2 Elements
+    $(".select2").select2();
+    $('.select2-selection').css('border-radius','0px');
+    $('.select2-container').children().css('border-radius','0px');
 
 
   // $('#myModal').on('shown.bs.modal', function () {

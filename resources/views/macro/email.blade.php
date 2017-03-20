@@ -9,7 +9,7 @@
 
 <div class="form-group {{ $hasError ? 'has-error' : '' }}">
 	<label for="{{ $data[1] }}">{{ $data[0] }}</label>
-	<input class="form-control"  value="{{ !empty(old($data[1])) ? old( $data[1] ) : $data[2] }}" name="{{ $data[1] }}" placeholder="{{ $data[3] ?? $data[0] }}" type="email" style="color: #000 !important;" >
+	<input class="form-control input-sm"  value="{{ !empty(old($data[1])) ? old( $data[1] ) : $data[2] }}" name="{{ $data[1] }}" placeholder="{{ $data[3] ?? $data[0] }}" type="email" style="color: #000 !important;" >
 	@if($hasError)
 		<span class="help-block">{{ $errorValue }}</span>
 	@endif

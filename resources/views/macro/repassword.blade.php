@@ -9,7 +9,7 @@
 
 <div class="form-group {{ $hasError ? 'has-error' : '' }}">
 	<label for="{{ $data[1] }}">{{ $data[0] }}</label>
-	<input class="form-control"  name="password" value="{{ $data[2] }}" placeholder="Enter your new password" type="password" style="color: #000 !important;" >
+	<input class="form-control input-sm"  name="password" value="{{ $data[2] }}" placeholder="Enter your new password" type="password" style="color: #000 !important;" >
 	@if($hasError)
 		<span class="help-block">{{ $errorValue }}</span>
 	@endif

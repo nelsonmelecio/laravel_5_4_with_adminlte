@@ -20,14 +20,11 @@
     <!-- fullCalendar 2.2.5-->
     <link rel="stylesheet" href="{{ asset('/plugins/fullcalendar/fullcalendar.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/plugins/fullcalendar/fullcalendar.print.css') }}" media="print">
-    <link href="{{ asset('/css/nelson-custom.css') }}" rel="stylesheet" type="text/css" />
 
-    <!-- // this is only temporary - need to learn Laravel Mix -->
-    <style>
-      .form-control {
-        color: #000000 !important;
-      }
-    </style>
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{ asset('/plugins/select2/select2.min.css') }}">
+
+    <link href="{{ asset('/css/nelson-custom.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
