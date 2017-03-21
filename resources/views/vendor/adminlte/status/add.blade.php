@@ -35,7 +35,7 @@
 							<div class="box-body">
 								@include('macro.text', ['data' => array('Code', 'code', null, 'code', $errors->has('code'), $errors->first('code') )])
 								@include('macro.text', ['data' => array('Name', 'name', null, 'name', $errors->has('name'), $errors->first('name') )])
-								@include('macro.text', ['data' => array('Color Code', 'color', null, 'color', $errors->has('color'), $errors->first('color') )])
+								@include('macro.colorpicker', ['data' => array('Color Code', 'color', null, 'color', $errors->has('color'), $errors->first('color') )])
 							</div>
 							<div class="box-footer">
 								<button class="btn btn-success" type="submit">Submit</button>

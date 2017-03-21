@@ -16,6 +16,7 @@ use App\Models\Supplier;
 use App\Models\Condition;
 use App\Models\Utilization;
 use App\Models\Status;
+use App\Models\Purchase;
 
 class EquipmentController extends Controller
 {
@@ -58,8 +59,8 @@ class EquipmentController extends Controller
     public function postAddView(Request $request) 
     {
     	$validator = Validator::make($request->all(), [
-            'equipment_description' => 'required|unique:equipments|max:50',
-            'equipment_name' => 'required|unique:equipments|max:100',
+            'asset_number' => 'required|unique:equipments|max:50',
+            // 'equipment_name' => 'required|unique:equipments|max:100',
         ]);
 
         if ($validator->fails()) {
@@ -90,8 +91,19 @@ class EquipmentController extends Controller
         $equipment->utilization_id = $request->input('utilization_id');
         $equipment->status_id = $request->input('status_id');
         $equipment->tenant_id = $request->input('tenant_id');
+        $equipment->outsourced_supplier_id = $request->input('outsourced_supplier_id');
 
     	$equipment->save();
+
+        $purchase = new Purchase();
+        $purchase->equipment_id =  $equipment->id;
+        $purchase->purchase_no = $request->input('purchase_no');
+        $purchase->purchase_cost = $request->input('purchase_cost');
+        $purchase->purchase_date = date("Y-m-d", strtotime( $request->input('purchase_date') )); 
+        $purchase->warranty_start = date("Y-m-d", strtotime( $request->input('warranty_start') )); 
+        $purchase->warranty_expire = date("Y-m-d", strtotime( $request->input('warranty_expire') )); 
+        $purchase->date_commissioned = date("Y-m-d", strtotime( $request->input('date_commissioned') )); 
+        $purchase->save();
 
     	return redirect()->action('EquipmentController@index');
     }
@@ -108,8 +120,10 @@ class EquipmentController extends Controller
         $conditions = new Condition();
         $utilizations = new Utilization();
         $statuses = new Status();
+        
 
         $equipment = Equipment::find($id);
+        $purchase = Purchase::where( 'equipment_id', $equipment->id)->first();
 
     	return view('vendor.adminlte.equipments.edit')
                     ->with('equipment', $equipment)
@@ -122,15 +136,16 @@ class EquipmentController extends Controller
                     ->with('conditions', $conditions->all())
                     ->with('utilizations', $utilizations->all())
                     ->with('statuses', $statuses->all())
-                    ->with('departments', $departments->all());
+                    ->with('departments', $departments->all())
+                    ->with('purchase', $purchase);
 
     }
 
     public function postEditView(Request $request) 
     {
         $validator = Validator::make($request->all(), [
-            'equipment_description' => 'required|max:50|unique:equipments,id,' . $request->input('id'),
-            'equipment_name' => 'required|max:100|unique:equipments,id,'. $request->input('id'),
+            'asset_number' => 'required|max:50|unique:equipments,id,' . $request->input('id'),
+            // 'equipment_name' => 'required|max:100|unique:equipments,id,'. $request->input('id'),
         ]);
 
         if ($validator->fails()) {
@@ -165,7 +180,21 @@ class EquipmentController extends Controller
 
     	$equipment->update();
 
-    	return redirect()->action('EquipmentController@index');
+    	return redirect()->action('EquipmentController@getEditView');
+    }
+
+    public function postPurchaseUpdate(Request $request)
+    {
+        $purchase = Purchase::where( 'equipment_id', $request->input('id'))->first();
+        $purchase->purchase_no = $request->input('purchase_no');
+        $purchase->purchase_cost = $request->input('purchase_cost');
+        $purchase->purchase_date = date("Y-m-d", strtotime( $request->input('purchase_date') )); 
+        $purchase->warranty_start = date("Y-m-d", strtotime( $request->input('warranty_start') )); 
+        $purchase->warranty_expire = date("Y-m-d", strtotime( $request->input('warranty_expire') )); 
+        $purchase->date_commissioned = date("Y-m-d", strtotime( $request->input('date_commissioned') )); 
+        $purchase->save();
+
+        return redirect()->action('EquipmentController@getEditView' , $request->input('id'));
     }
 
     public function getDeleteView($id) 

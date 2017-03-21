@@ -36,6 +36,7 @@ class CreateEquipmentsTable extends Migration
             $table->integer('condition_status_id')->nullable();
             $table->integer('utilization_id')->nullable();
             $table->integer('status_id')->nullable();
+            $table->integer('outsourced_supplier_id')->nullable();
             $table->timestamps();
         });
     }

@@ -35,7 +35,7 @@
 							<div class="box-body">
 								@include('macro.text', ['data' => array('Code', 'code', $code, 'code', $errors->has('code'), $errors->first('code') )])
 								@include('macro.text', ['data' => array('Name', 'name', $name, 'name', $errors->has('name'), $errors->first('name') )])
-								@include('macro.text', ['data' => array('Color', 'color', $color, 'color', $errors->has('color'), $errors->first('color') )])
+								@include('macro.colorpicker', ['data' => array('Color', 'color', $color, 'color', $errors->has('color'), $errors->first('color') )])
 								<input type="hidden" name="id" value="{{ $id }}">
 							</div>
 							<div class="box-footer">

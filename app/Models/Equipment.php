@@ -47,6 +47,7 @@ class Equipment extends Model
                             'utilization_id',
                             'status_id',
                             'tenant_id', // orig register_id -> change to tenant_id
+                            'outsourced_supplier_id',
                             ];
 
     /**

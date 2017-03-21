@@ -20,7 +20,8 @@
     <!-- fullCalendar 2.2.5-->
     <link rel="stylesheet" href="{{ asset('/plugins/fullcalendar/fullcalendar.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/plugins/fullcalendar/fullcalendar.print.css') }}" media="print">
-
+    <!-- Bootstrap Color Picker -->
+    <link rel="stylesheet" href="{{ asset('/plugins/colorpicker/bootstrap-colorpicker.min.css') }}">
     <!-- Select2 -->
     <link rel="stylesheet" href="{{ asset('/plugins/select2/select2.min.css') }}">
 

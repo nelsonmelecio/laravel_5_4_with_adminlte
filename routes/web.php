@@ -176,6 +176,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::post('/equipment/update', 'EquipmentController@postEditView');
 	Route::get('/equipment/delete/{id}', 'EquipmentController@getDeleteView');
 	Route::post('/equipment/delete', 'EquipmentController@postDeleteView');
+	Route::post('/purchase/update', 'EquipmentController@postPurchaseUpdate');
 
 	//  CATEGORIES Routes 
 	Route::get('/categories', 'CategoryController@index');
