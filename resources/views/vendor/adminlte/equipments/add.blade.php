@@ -46,6 +46,7 @@
 									@include('macro.textv3', ['data' => array('Barcode', 'barcode', null, null, $errors )])
 									@include('macro.textv3', ['data' => array('Serial Number', 'serial_number', null, null, $errors )])
 									@include('macro.textv3', ['data' => array('Asset Number', 'asset_number', null, null, $errors )])
+									@include('macro.select_manufacturer', ['data' => array('Manufacturer', 'manufacturer_id', $manufacturers, null, $errors )])
 									@include('macro.select_required_pm', ['data' => array( null )] )
 									@include('macro.select_service_group', ['data' => array( null )] )
 									@include('macro.select_service_provider', ['data' => array( null )] )
@@ -53,11 +54,9 @@
 								<div class="col-sm-6">
 									@include('macro.select_name', ['data' => array('Status', 'status_id', $statuses, null, $errors )])
 									@include('macro.select_availability', ['data' => array( null )] )
-									<!-- include('macro.select_tenant', ['data' => array('Tenant Name', 'tenant_id', $tenants, null, $errors )]) -->
 									@include('macro.select_name', ['data' => array('Department', 'department_id', $departments, null, $errors )])
 									@include('macro.select_name', ['data' => array('Frequency (as stated in the contract)', 'frequency_id', $frequency, null, $errors )])
 									<!-- include('macro.select_name', ['data' => array('Location', 'location_id', $locations, null, $errors )]) -->
-									@include('macro.select_manufacturer', ['data' => array('Manufacturer', 'manufacturer_id', $manufacturers, null, $errors )])
 									@include('macro.select_name', ['data' => array('Supplier', 'supplier_id', $suppliers, null, $errors )])
 									@include('macro.select_name', ['data' => array('Service Status', 'condition_status_id', $conditions, null, $errors )])
 									<!-- include('macro.select_name', ['data' => array('Utilization', 'utilization_id', $utilizations, null, $errors )]) -->
@@ -73,7 +72,7 @@
 							<div class="box-footer">
 								<button class="btn btn-success" type="submit">Submit New Equipment</button>
 								<a href=" {{ url('equipments') }}" class="btn btn-info btn-md"> Cancel </a>
-								<button type="button" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">Launch modal</button>
+								<!-- <button type="button" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">Launch modal</button> -->
 							</div>
 						</form>
 					</div>
