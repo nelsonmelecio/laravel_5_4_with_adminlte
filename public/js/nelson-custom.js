@@ -2,16 +2,16 @@ $(document).ready(function() {
 
 
   //Date range picker
-  // $('#reservation').daterangepicker();
+  $('#reservation').daterangepicker();
 
-    //Date picker
-  $('.reservation').datepicker({
-    dateFormat: "mm-yyyy",
-    startView: "months", 
-    minViewMode: "months",
-    //setDate: new Date(),
-    autoclose: true
-  });
+  //   //Date picker
+  // $('.reservation').datepicker({
+  //   dateFormat: "mm-yyyy",
+  //   startView: "months", 
+  //   minViewMode: "months",
+  //   //setDate: new Date(),
+  //   autoclose: true
+  // });
   
   //Date picker
   $('.datepicker').datepicker({
