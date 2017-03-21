@@ -40,7 +40,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('equipments') }}"><i class='fa fa-list-ul'></i> <span>List of Equipments</span></a></li>
-                    <li><a href="{{ url('equipment/add') }}"><i class='fa fa-list-ul'></i> <span>Add New Equipment</span></a></li>
+                    <li><a href="{{ url('equipment/add') }}"><i class='fa fa-plus'></i> <span>Add New Equipment</span></a></li>
                 </ul>
             </li>
             <li class="treeview">
@@ -70,7 +70,7 @@
                 </ul>
             </li> -->
             <li class="treeview">
-                <a href="#"><i class='fa fa-list'></i> <span>Manage Groups</span>
+                <a href="#"><i class='fa fa-object-group'></i> <span>Manage Groups</span>
                     <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                 </a>
                 <ul class="treeview-menu">
