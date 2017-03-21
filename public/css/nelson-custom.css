@@ -69,3 +69,7 @@
 .select2-container--default .select2-selection--single .select2-selection__rendered {
     line-height: 21px;
 }
+
+.datepicker table tr td span.disabled, .datepicker table tr td span.disabled:hover {
+  color: #999 !important;
+}

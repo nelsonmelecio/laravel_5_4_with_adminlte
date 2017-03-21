@@ -2,16 +2,18 @@ $(document).ready(function() {
 
 
   //Date range picker
-  $('#reservation').daterangepicker();
+  // $('#reservation').daterangepicker();
 
   //   //Date picker
-  // $('.reservation').datepicker({
-  //   dateFormat: "mm-yyyy",
-  //   startView: "months", 
-  //   minViewMode: "months",
-  //   //setDate: new Date(),
-  //   autoclose: true
-  // });
+  $('#reservation').datepicker({
+    minViewMode: 1,
+    format: 'mm/yyyy',
+    setDate: new Date(),
+    startDate : new Date('2015-01-01'),
+    endDate : new Date(),
+    autoclose: true,
+    fixedColumns:   true,
+  });
   
   //Date picker
   $('.datepicker').datepicker({
@@ -39,11 +41,8 @@ $(document).ready(function() {
 
   $('#tblreports').DataTable({
       "paging": false,
-      // "lengthChange": true,
       "searching": false,
       "ordering": false,
-      // "info": true,
-      // "autoWidth": true,
       "scrollX": false,
       "responsive": true,
       "select": true,
