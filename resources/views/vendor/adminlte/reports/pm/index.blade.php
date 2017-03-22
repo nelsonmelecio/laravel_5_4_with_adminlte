@@ -26,12 +26,12 @@
 				<div class="box-body">
 					<div class="col-sm-3">
 						<div class="form-group">
-							<label>Date range:</label>
+							<label>Date:</label>
 							<div class="input-group">
 								<div class="input-group-addon">
 									<i class="fa fa-calendar"></i>
 								</div>
-								<input type="text" class="form-control pull-right" id="reservation">
+								<input type="text" class="form-control pull-right" id="reservation" value="{{ date('m/Y') }}">
 							</div>
 						</div>
 					</div>
