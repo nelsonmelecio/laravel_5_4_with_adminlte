@@ -209,8 +209,9 @@ class EquipmentController extends Controller
     public function postDeleteView(Request $request) 
     {
     	$equipment = Equipment::find($request->input('id'));
-
     	$equipment->delete();
+        $purchase = Purchase::where( 'equipment_id', $request->input('id'))->first();
+        $purchase->delete();
 
     	return redirect()->action('EquipmentController@index');
     }
