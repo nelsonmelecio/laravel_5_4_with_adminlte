@@ -55,6 +55,7 @@ $(document).ready(function() {
     $(".select2").select2();
     $('.select2-selection').css('border-radius','0px');
     $('.select2-container').children().css('border-radius','0px');
+
     $(document.body).on("change","#service_provider",function(){
       if(this.value == "Outsourced") {
         $('#outsourced_supplier_id').prop( "disabled", false );
@@ -62,6 +63,15 @@ $(document).ready(function() {
         $('#outsourced_supplier_id').prop( "disabled", true );
       }
     });
+
+    // On load purposes
+    if( $('#service_provider').val() == "Outsourced") {
+      $('#outsourced_supplier_id').prop( "disabled", false );
+    } else {
+      $('#outsourced_supplier_id').prop( "disabled", true );
+    }
+
+    
 
   // $('#myModal').on('shown.bs.modal', function () {
   //   $('#myModal').focus()

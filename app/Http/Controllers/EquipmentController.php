@@ -60,7 +60,7 @@ class EquipmentController extends Controller
     {
     	$validator = Validator::make($request->all(), [
             'asset_number' => 'required|unique:equipments|max:50',
-            // 'equipment_name' => 'required|unique:equipments|max:100',
+            'category_id' => 'required|integer',
         ]);
 
         if ($validator->fails()) {
@@ -144,8 +144,9 @@ class EquipmentController extends Controller
     public function postEditView(Request $request) 
     {
         $validator = Validator::make($request->all(), [
-            'asset_number' => 'required|max:50|unique:equipments,id,' . $request->input('id'),
-            // 'equipment_name' => 'required|max:100|unique:equipments,id,'. $request->input('id'),
+            'asset_number' => 'required|unique:equipments,asset_number,' . $request->input('id'),
+            'category_id' => 'required|integer',
+
         ]);
 
         if ($validator->fails()) {
@@ -177,10 +178,11 @@ class EquipmentController extends Controller
         $equipment->utilization_id = $request->input('utilization_id');
         $equipment->status_id = $request->input('status_id');
         $equipment->tenant_id = $request->input('tenant_id');
+        $equipment->outsourced_supplier_id = $request->input('outsourced_supplier_id');
 
     	$equipment->update();
 
-    	return redirect()->action('EquipmentController@getEditView');
+    	return redirect()->action('EquipmentController@getEditView', $request->input('id'));
     }
 
     public function postPurchaseUpdate(Request $request)
@@ -194,7 +196,7 @@ class EquipmentController extends Controller
         $purchase->date_commissioned = date("Y-m-d", strtotime( $request->input('date_commissioned') )); 
         $purchase->save();
 
-        return redirect()->action('EquipmentController@getEditView' , $request->input('id'));
+        return redirect()->action('EquipmentController@getEditView', $request->input('id'));
     }
 
     public function getDeleteView($id) 

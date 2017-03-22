@@ -24,7 +24,7 @@
 		
 		<div class="nav-tabs-custom">
 			<ul class="nav nav-tabs pull-right">
-				<li class="pull-left header"><i class="fa fa-th"></i>New Equipment Regitration</li>
+				<li class="pull-left header"><i class="fa fa-th"></i>New Equipment Registration</li>
 			</ul>
 			<div class="tab-content">
 				<div class="tab-pane active">
@@ -41,32 +41,30 @@
 									<div class="box-body">
 										{{ csrf_field() }}
 										<input type="hidden" name="tenant_id" value="1">
-
+										@if ($errors->any())
+										        {{ implode('', $errors->all('<div>:message</div><br>')) }}
+										@endif
 										<div class="col-sm-6">
-											@include('macro.select_category', ['data' => array('Category', 'category_id', $categories, null, $errors )])
+											@include('macro.select', ['data' => array('Category', 'category_id', $categories, null, $errors, 'description' )])
 											@include('macro.textv3', ['data' => array('Asset Number', 'asset_number', null, null, $errors )])											
 											@include('macro.textv3', ['data' => array('Equipment Name', 'equipment_name', null, null, $errors )])
 											@include('macro.textv3', ['data' => array('Equipment Description', 'equipment_description', null, null, $errors )])
 											@include('macro.textv3', ['data' => array('Model', 'model', null, null, $errors )])
 											@include('macro.textv3', ['data' => array('Barcode', 'barcode', null, null, $errors )])
 											@include('macro.textv3', ['data' => array('Serial Number', 'serial_number', null, null, $errors )])
-											@include('macro.select_name', ['data' => array('Department', 'department_id', $departments, null, $errors )])											
-											@include('macro.select_manufacturer', ['data' => array('Manufacturer', 'manufacturer_id', $manufacturers, null, $errors )])
+											@include('macro.select', ['data' => array('Department', 'department_id', $departments, null, $errors, 'name' )])		
+											@include('macro.select', ['data' => array('Manufacturer', 'manufacturer_id', $manufacturers, null, $errors, 'company_name' )])
 										</div>
 										<div class="col-sm-6">
-											@include('macro.select_name', ['data' => array('Status', 'status_id', $statuses, null, $errors )])
+											@include('macro.select', ['data' => array('Status', 'status_id', $statuses, null, $errors, 'name' )])
 											@include('macro.select_availability', ['data' => array( null )] )
 											@include('macro.select_required_pm', ['data' => array( null )] )
-											@include('macro.select_name', ['data' => array('Frequency (as stated in the contract)', 'frequency_id', $frequency, null, $errors )])
-											<!-- include('macro.select_name', ['data' => array('Location', 'location_id', $locations, null, $errors )]) -->
-											@include('macro.select_name', ['data' => array('Supplier', 'supplier_id', $suppliers, null, $errors )])
-											@include('macro.select_name', ['data' => array('Service Status', 'condition_status_id', $conditions, null, $errors )])
-											<!-- include('macro.select_name', ['data' => array('Utilization', 'utilization_id', $utilizations, null, $errors )]) -->		
+											@include('macro.select', ['data' => array('Frequency (as stated in the contract)', 'frequency_id', $frequency, null, $errors, 'name' )])
+											@include('macro.select', ['data' => array('Supplier', 'supplier_id', $suppliers, null, $errors, 'name' )])
+											@include('macro.select', ['data' => array('Service Status', 'condition_status_id', $conditions, null, $errors, 'name' )])
 											@include('macro.select_service_group', ['data' => array( null )] )
 											@include('macro.select_service_provider', ['data' => array( null )] )
-											@include('macro.select_outsource_provider', ['data' => array('Supplier - Service Povider (Outsourced)', 'outsourced_supplier_id', $suppliers, null, $errors )])
-												
-
+											@include('macro.select', ['data' => array('Supplier - Service Povider (Outsourced)', 'outsourced_supplier_id', $suppliers, null, $errors, 'name', null, true )])
 										</div>
 									</div>
 								</div>
