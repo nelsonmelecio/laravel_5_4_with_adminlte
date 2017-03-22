@@ -36,14 +36,11 @@
 							<div class="row">
 								<div class="box ">
 									<div class="box-header with-border">
-										<h3 class="box-title">Equipment Information</h3>
+										<h3 class="box-title">A. Equipment Details</h3>
 									</div>
 									<div class="box-body">
 										{{ csrf_field() }}
 										<input type="hidden" name="tenant_id" value="1">
-										@if ($errors->any())
-										        {{ implode('', $errors->all('<div>:message</div><br>')) }}
-										@endif
 										<div class="col-sm-6">
 											@include('macro.select', ['data' => array('Category', 'category_id', $categories, null, $errors, 'description' )])
 											@include('macro.textv3', ['data' => array('Asset Number', 'asset_number', null, null, $errors )])											
@@ -73,7 +70,7 @@
 							<div class="row">
 								<div class="box ">
 									<div class="box-header with-border">
-										<h3 class="box-title">Purchase Details</h3>
+										<h3 class="box-title">B. Purchase Details</h3>
 									</div>
 									<div class="box-body">
 									<div class="col-sm-6">

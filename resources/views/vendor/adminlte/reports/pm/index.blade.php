@@ -24,7 +24,7 @@
 					<h3 class="box-title"><i class="fa fa-th"></i> Filters</h3>
 				</div>
 				<div class="box-body">
-					<div class="col-sm-6">
+					<div class="col-sm-3">
 						<div class="form-group">
 							<label>Date range:</label>
 							<div class="input-group">
@@ -43,8 +43,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-3  text-right">
-						<div class="form-group">
+					<div class="col-sm-6  ">
+						<div class="form-group pull-right">
 							<label>&nbsp;</label>
 							<div class="input-group">
 								<a href="#" class="btn btn-primary btn-md" style="min-width: 170px;"><i class="fa fa-file-excel-o"></i> Export to Excel </a>
