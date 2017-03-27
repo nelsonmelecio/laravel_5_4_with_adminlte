@@ -4,7 +4,7 @@
 @endphp
 <div class="form-group">
 	<label>{{ $data[0] }}</label>
-	<select class="form-control input-sm select2" style="color: #000 !important;" disabled>
+	<select class="form-control input-sm select2" style="color: #000 !important; width: 100%;" disabled>
 	@if( !is_null($data[2]) )
 		<option value="{{ $item->code }}">
 			{{ $item->company_name }}

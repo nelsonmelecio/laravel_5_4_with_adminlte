@@ -41,21 +41,24 @@
 									<div class="box-body">
 										{{ csrf_field() }}
 										<input type="hidden" name="tenant_id" value="1">
-										<div class="col-sm-6">
+										<div class="col-sm-4">
 											@include('macro.select', ['data' => array('Category', 'category_id', $categories, null, $errors, 'description' )])
 											@include('macro.textv3', ['data' => array('Asset Number', 'asset_number', null, null, $errors )])											
 											@include('macro.textv3', ['data' => array('Equipment Name', 'equipment_name', null, null, $errors )])
 											@include('macro.textv3', ['data' => array('Equipment Description', 'equipment_description', null, null, $errors )])
 											@include('macro.textv3', ['data' => array('Model', 'model', null, null, $errors )])
 											@include('macro.textv3', ['data' => array('Barcode', 'barcode', null, null, $errors )])
+											
+										</div>
+										<div class="col-sm-4">
+											@include('macro.select', ['data' => array('Status', 'status_id', $statuses, null, $errors, 'name' )])
 											@include('macro.textv3', ['data' => array('Serial Number', 'serial_number', null, null, $errors )])
 											@include('macro.select', ['data' => array('Department', 'department_id', $departments, null, $errors, 'name' )])		
 											@include('macro.select', ['data' => array('Manufacturer', 'manufacturer_id', $manufacturers, null, $errors, 'company_name' )])
-										</div>
-										<div class="col-sm-6">
-											@include('macro.select', ['data' => array('Status', 'status_id', $statuses, null, $errors, 'name' )])
 											@include('macro.select_availability', ['data' => array( null )] )
 											@include('macro.select_required_pm', ['data' => array( null )] )
+										</div>
+										<div class="col-sm-4">
 											@include('macro.select', ['data' => array('Frequency (as stated in the contract)', 'frequency_id', $frequency, null, $errors, 'name' )])
 											@include('macro.select', ['data' => array('Supplier', 'supplier_id', $suppliers, null, $errors, 'name' )])
 											@include('macro.select', ['data' => array('Service Status', 'condition_status_id', $conditions, null, $errors, 'name' )])
@@ -73,15 +76,17 @@
 										<h3 class="box-title">B. Purchase Details</h3>
 									</div>
 									<div class="box-body">
-									<div class="col-sm-6">
+									<div class="col-sm-4">
 										@include('macro.textv3', ['data' => array('Purchase No.', 'purchase_no', null, null, $errors )])
 										@include('macro.textv3', ['data' => array('Purchase Cost', 'purchase_cost', null, null, $errors )])
-										@include('macro.date', ['data' => array('Purchase Date', 'purchase_date', null, $errors )])
 									</div>
-									<div class="col-sm-6">
+									<div class="col-sm-4">
+										@include('macro.date', ['data' => array('Purchase Date', 'purchase_date', null, $errors )])
+										@include('macro.date', ['data' => array('Date Commissioned', 'date_commissioned', null, $errors )])
+									</div>
+									<div class="col-sm-4">
 										@include('macro.date', ['data' => array('Warranty Starting Date', 'warranty_start', null, $errors )])
 										@include('macro.date', ['data' => array('Warranty Expiration Date', 'warranty_expire', null, $errors )])
-										@include('macro.date', ['data' => array('Date Commissioned', 'date_commissioned', null, $errors )])
 									</div>
 									</div>
 								</div>

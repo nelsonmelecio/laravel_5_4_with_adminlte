@@ -36,21 +36,25 @@
 											<h3 class="box-title">A. Equipment Details</h3>
 										</div>
 										<div class="pull-right">
-											<button class="btn btn-success pull" type="button">Select Equipment For Corrective</button>
+											<button class="btn btn-success pull" type="button">Select an equipment for corrective</button>
 										</div>
 									</div>
 									<div class="box-body">
 										{{ csrf_field() }}
 										<input type="hidden" name="tenant_id" value="1">
-										<div class="col-sm-6">
+										<div class="col-sm-3">
 											@include('macro.textv3', ['data' => array('Asset Number', 'asset_number', null, null, $errors )])
 											@include('macro.textv3', ['data' => array('Equipment Description', 'equipment_description', null, null, $errors )])
+										</div>
+										<div class="col-sm-3">
 											@include('macro.textv3', ['data' => array('Model', 'model', null, null, $errors )])
 											@include('macro.textv3', ['data' => array('Serial Number', 'serial_number', null, null, $errors )])
 										</div>
-										<div class="col-sm-6">
+										<div class="col-sm-3">
 											@include('macro.textv3', ['data' => array('Department', 'department_id', null, null, $errors )])		
 											@include('macro.textv3', ['data' => array('Risk Classification', 'risk_id', null, null, $errors )])		
+										</div>
+										<div class="col-sm-3">
 											@include('macro.textv3', ['data' => array('Date of Purchased', 'date_purchase', null, null, $errors )])		
 										</div>
 									</div>
@@ -63,12 +67,26 @@
 										<h3 class="box-title">B. Corrective Details</h3>
 									</div>
 									<div class="box-body">
-									<div class="col-sm-6">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae inventore facere modi amet alias beatae eos, placeat cumque, nam voluptatum voluptate delectus culpa sapiente nemo dignissimos accusamus asperiores magnam. Molestiae!
-									</div>
-									<div class="col-sm-6">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus numquam magni placeat ullam dignissimos vel deserunt inventore blanditiis harum doloremque, eos rem modi vitae nemo at. Eaque quis voluptates aut.
-									</div>
+										<div class="col-sm-3">
+											@include('macro.textv3', ['data' => array('XXX', 'XXX', null, null, $errors )])		
+											@include('macro.textv3', ['data' => array('XXX', 'XXX', null, null, $errors )])		
+											@include('macro.textv3', ['data' => array('XXX', 'XXX', null, null, $errors )])		
+										</div>
+										<div class="col-sm-3">
+											@include('macro.textv3', ['data' => array('XXX', 'XXX', null, null, $errors )])		
+											@include('macro.textv3', ['data' => array('XXX', 'XXX', null, null, $errors )])		
+											@include('macro.textv3', ['data' => array('XXX', 'XXX', null, null, $errors )])		
+										</div>
+										<div class="col-sm-3">
+											@include('macro.textv3', ['data' => array('XXX', 'XXX', null, null, $errors )])		
+											@include('macro.textv3', ['data' => array('XXX', 'XXX', null, null, $errors )])		
+											@include('macro.textv3', ['data' => array('XXX', 'XXX', null, null, $errors )])		
+										</div>
+										<div class="col-sm-3">
+											@include('macro.textv3', ['data' => array('XXX', 'XXX', null, null, $errors )])		
+											@include('macro.textv3', ['data' => array('XXX', 'XXX', null, null, $errors )])		
+											@include('macro.textv3', ['data' => array('XXX', 'XXX', null, null, $errors )])		
+										</div>
 									</div>
 								</div>
 							</div>	                    								

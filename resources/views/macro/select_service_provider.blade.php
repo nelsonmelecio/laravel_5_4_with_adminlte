@@ -2,7 +2,7 @@
 
 <div class="form-group">
 	<label>Service Provider</label>
-	<select class="form-control input-sm select2" name="service_provider" id="service_provider" style="color: #000 !important;" >
+	<select class="form-control input-sm select2" name="service_provider" id="service_provider" style="color: #000 !important; width: 100%;" >
 		<option value="Hospital-BIOMED" {{ $data[0] == "Hospital-BIOMED" ?  'selected="selected"' : '' }}>Hospital-BIOMED</option>
 		<option value="SGE-BIOMED (PM)" {{ $data[0] == "SGE-BIOMED (PM)" ?  'selected="selected"' : '' }}>SGE-BIOMED (PM)</option>
 		<option value="SGE-BIOMED (PM/CM)" {{ $data[0] == "SGE-BIOMED (PM/CM)" ?  'selected="selected"' : '' }}>SGE-BIOMED (PM/CM)</option>

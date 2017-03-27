@@ -2,7 +2,7 @@
 
 <div class="form-group">
 	<label>{{ $data[0] }}</label>
-	<select class="form-control input-sm select2" name="{{ $data[1] }}" style="color: #000 !important;" >
+	<select class="form-control input-sm select2" name="{{ $data[1] }}" style="color: #000 !important; width: 100%;" >
 	@foreach($data[2] as $item)
 		<option value="{{ $item->id }}" {{ $data[3] == $item->id ? 'selected' : '' }}>
 			{{ $item->id }} / {{ $item->barcode }} / {{ $item->equipment_name }}
